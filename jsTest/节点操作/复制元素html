@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<p style="color: red">点我复制<b>里面</b></p>
+	</div>
+	
+	<script type="text/javascript">
+		var box = document.getElementById('box');
+		var clonebtn = document.getElementsByTagName('p');
+		for(var i=0; i<clonebtn.length; i++){
+			clonebtn[i].onclick = function(){
+				alert(111);
+				box.appendChild(this.cloneNode(true));
+			};
+		}
+		
+	</script>
+</body>
+</html>

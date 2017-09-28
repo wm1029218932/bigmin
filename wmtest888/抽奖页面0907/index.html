@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="block block1">
+    	<img src="images/block1.png"/>
+    </div>
+    <div class="block">
+        <img src="images/QRcode.png"/>
+    </div>
+    <div class="block block2">
+        <img src="images/block2.png"/>
+    </div>
+    <div class="block block3">
+        <div id="lottery">
+            <table border="0" cellpadding="0" cellspacing="5">
+                <tr>
+                    <td class="lottery-unit lottery-unit-0" title="万向拉杆箱"><img src="images/award_01.png" alt="万向拉杆箱"></td>
+                    <td class="lottery-unit lottery-unit-1" title="信泰商城积分1000个"><img src="images/award_02.png" alt="信泰商城积分1000个"></td>
+                    <td class="lottery-unit lottery-unit-2" title="少儿国学大礼包"><img src="images/award_03.png" alt="少儿国学大礼包"></td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-7" title="信泰商城积分10个"><img src="images/award_04.png" alt="信泰商城积分10个"></td>
+                    <td class="lottery_btn"><img src="images/lottery.png"></td>
+                    <td class="lottery-unit lottery-unit-3" title="信泰商城积分100个"><img src="images/award_05.png" alt="信泰商城积分100个"></td>
+                </tr>
+                <tr>
+                    <td class="lottery-unit lottery-unit-6" title="信泰商城积分100个"><img src="images/award_05.png" alt="信泰商城积分100个"></td>
+                    <td class="lottery-unit lottery-unit-5" title="出行保半价购买权"><img src="images/award_06.png" alt="出行保半价购买权"></td>
+                    <td class="lottery-unit lottery-unit-4" title="信泰商城积分10个"><img src="images/award_04.png" alt="信泰商城积分10个"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="aword_link"><a>我的奖品&gt;&gt;</a></div>
+    </div>
+    <div class="block block4">
+        <img src="images/block4.png"/>
+    </div>
+
+</div>
+
+<!--遮罩弹框-->
+<!--抽中弹框-->
+<div class="popup" id="popup1">
+    <div class="zhezhao"></div>
+    <div class="zhezhao_content bg1">
+        <div class="title">
+            <span class="close_btn close">×</span>
+        </div>
+        <div class="content">
+            <div class="text">
+                <b>恭喜您！</b><br/>
+                抽中 <span class="award-text"></span>
+            </div>
+            <div class="desc">手气真好，随便一抽就抽到奖品啦！</div>
+        </div>
+        <div class="btn-groups">
+            <a class="btn btn-s close">确定</a>
+            <a class="btn btn-s btn-bg" href="###">查看奖品</a>
+        </div>
+    </div>
+</div>
+
+<!--抽奖次数用完弹框-->
+<div class="popup" id="popup2">
+    <div class="zhezhao"></div>
+    <div class="zhezhao_content bg2">
+        <div class="title">
+            <span class="close_btn close">×</span>
+        </div>
+        <div class="content">
+            <div class="text">
+                <b>不好意思<br/>您的抽奖次数已用完</b>
+            </div>
+        </div>
+        <div class="btn-groups">
+            <a class="btn close">确定</a>
+        </div>
+    </div>
+</div>
+
+<!--未登陆弹框-->
+<div class="popup" id="popup3">
+    <div class="zhezhao"></div>
+    <div class="zhezhao_content bg1">
+        <div class="title">
+            <span class="close_btn close">×</span>
+        </div>
+        <div class="content">
+            <div class="text">
+                <b>为了确保奖品正常发放<br/>请先登录后抽奖！</b>
+            </div>
+        </div>
+        <div class="btn-groups">
+            <a class="btn" href="###">点此登录</a>
+        </div>
+    </div>
+</div>
+
+
+<!--抽中反馈-提示再抽一次弹框-->
+<div class="popup" id="popup4">
+    <div class="zhezhao"></div>
+    <div class="zhezhao_content bg1">
+        <div class="title">
+            <span class="close_btn close">×</span>
+        </div>
+        <div class="content">
+            <div class="text">
+                <b>您的抽奖机会已用完<br/>分享本链接可再抽奖一次！</b>
+            </div>
+            <div class="desc">每个账户最多可抽奖2次</div>
+        </div>
+        <div class="btn-groups">
+            <a class="btn btn-bg close">分享本链接</a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+//九宫格转盘
+var lottery={
+	index:-1,	//当前转动到哪个位置，起点位置
+	count:0,	//总共有多少个位置
+	timer:0,	//setTimeout的ID，用clearTimeout清除
+	speed:20,	//初始转动速度
+	times:0,	//转动次数
+	cycle:50,	//转动基本次数：即至少需要转动多少次再进入抽奖环节
+	prize:-1,	//中奖位置
+	init:function(id){
+		if ($("#"+id).find(".lottery-unit").length>0) {
+			$lottery = $("#"+id);
+			$units = $lottery.find(".lottery-unit");
+			this.obj = $lottery;
+			this.count = $units.length;
+			/*$lottery.find(".lottery-unit-"+this.index).addClass("active");*/
+		};
+	},
+	roll:function(){
+		var index = this.index;
+		var count = this.count;
+		var lottery = this.obj;
+		$(lottery).find(".lottery-unit-"+index).removeClass("active");
+		index += 1;
+		if (index>count-1) {
+			index = 0;
+		};
+		$(lottery).find(".lottery-unit-"+index).addClass("active");
+		this.index=index;
+		return false;
+	},
+	stop:function(index){
+		this.prize=index;
+		return false;
+	}
+};
+function roll(){
+	lottery.times += 1;
+	lottery.roll();
+	if (lottery.times > lottery.cycle+10 && lottery.prize==lottery.index) {
+		clearTimeout(lottery.timer);
+		var aword=$(".lottery-unit-"+lottery.index).attr('title');
+		setTimeout(function(){
+			$('#popup1').popup(aword);
+		},400);
+		lottery.prize=-1;
+		lottery.times=0;
+		click=false;
+		
+	}else{
+		if (lottery.times<lottery.cycle) {
+			lottery.speed -= 10;
+		}else if(lottery.times==lottery.cycle) {
+			var index = Math.random()*(lottery.count)|0;
+			lottery.prize = index;		
+		}else{
+			if (lottery.times > lottery.cycle+10 && ((lottery.prize==0 && lottery.index==7) || lottery.prize==lottery.index+1)) {
+				lottery.speed += 110;
+			}else{
+				lottery.speed += 20;
+			}
+		}
+		if (lottery.speed<40) {
+			lottery.speed=40;
+		};
+		//console.log(lottery.times+'^^^^^^'+lottery.speed+'^^^^^^^'+lottery.prize);
+		lottery.timer = setTimeout(roll,lottery.speed);
+	}
+	return false;
+}
+var click=false;
+window.onload=function(){
+	lottery.init('lottery');
+	$("#lottery .lottery_btn").click(function(){
+		if(click) {
+			return false;
+		}
+		else{
+			lottery.speed=100;
+			roll();
+			click=true;
+			return false;
+		}
+	});
+};
+
+
+/*弹框*/
+$.fn.popup=function(desc){
+    if(desc){
+        $(this).find('.award-text').text(desc);
+    };
+    $(this).show();
+    $('.close').click(function(){
+        $(this).parents('.popup').hide();
+    });
+};
+
+/*抽奖次数用完提示弹框调用*/
+/*$('#popup2').popup();*/
+
+/*未登录弹框调用*/
+/*$('#popup3').popup();*/
+
+/*提醒再抽一次弹框调用*/
+/*$('#popup4').popup();*/
+</script>
+</body>
+</html>

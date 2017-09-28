@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰在线</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<img src="images/top-img.jpg" alt=""/>
+		</div>
+		<div class="block1">
+			<div class="flex-wrp">
+				<div class="left">
+					<img src="images/block1.png" alt=""/>
+				</div>
+				<div class="right">
+					<h2 class="title">出行宝宝<br/>综合人身意外险</h2>
+					<p class="sub-title">一般意外&交通意外<br/>皆能保</p>
+					<a href="###" class="link">65元起 立即投保</a>
+				</div>
+			</div>
+			<div class="hr clearfix">
+				<p>一毛钱领保障、随走随激活</p>
+			</div>
+			<div class="flex-wrp">
+				<div class="col">
+					<dl>
+						<dt><img src="images/pro1.png" alt=""/></dt>
+						<dd><h3>客运汽车意外险</h3></dd>
+						<dd><a href="###" class="link">立即投保</a></dd>
+					</dl>
+				</div>
+				<div class="col">
+					<dl>
+						<dt><img src="images/pro2.png" alt=""/></dt>
+						<dd><h3>航空意外险</h3></dd>
+						<dd><a href="###" class="link">立即投保</a></dd>
+					</dl>
+				</div>
+				<div class="col">
+					<dl>
+						<dt><img src="images/pro3.png" alt=""/></dt>
+						<dd><h3>火车/地铁意外险</h3></dd>
+						<dd><a href="###" class="link">立即投保</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="block2">
+			<div class="block-bg"><img src="images/block2-bg.png"></div>
+			<h2 class="title">新品上线</h2>
+			<div class="discount">
+				<img src="images/discount.png" alt=""/>
+			</div>
+			<div class="pro pro1">
+				<h3 class="title">莫非尔丽70种疾病保障</h3>
+				<div class="flex-wrp">
+					<div class="left">
+						<p class="sub-title">确诊即赔.<br/>先赔付后就医</p>
+						<a href="###" class="link">立即购买</a>
+					</div>
+					<div class="right">
+						<img src="images/pro4.png" alt=""/>
+					</div>
+				</div>
+			</div>
+
+			<div class="pro pro2">
+				<h3 class="title">惊喜五一、买五送一</h3>
+				<div class="flex-wrp">
+					<div class="left">
+						<p class="sub-title">好妈妈母婴保险<br/>1份保险，母婴共享</p>
+						<p class="text-border">最高保额10万元</p>
+						<a href="###" class="link">立即购买</a>
+					</div>
+					<div class="right">
+						<img src="images/pro5.png" alt=""/>
+					</div>
+				</div>
+			</div>
+			<div class="rules">
+				<h4>详细规则：</h4>
+				<p>买5送1：参与买5送1的客户需要您拍6份，我们会将1份的钱以集分宝的方式返还到您的支付宝。您拍下付款后要及时联系我们的在线客服留下支付宝账户和您的姓名。</p>
+				<p>满减活动：例如满1000减200的活动，需要您拍1000元以上，是可以减200元的，您拍下付款后及时联系我们的在线客服留下支付宝账户和您的姓名，我们会在犹豫期结束后5个工作日将200元以集分宝的方式返到您的支付宝账户。</p>
+			</div>
+		</div>
+		<div class="block3">
+			<div class="block-bg"><img src="images/block3-bg.png"></div>
+			<div class="rules">
+				<h4>温馨提示：</h4>
+				<p>活动时间：5月1日-5月31日</p>
+				<p>本次活动的最终解释权归信泰人寿官方旗舰店所有</p>
+			</div>
+		</div>
+
+	</div>
+	<!--微信分享提示遮罩-->
+	<div id="dialog">
+		<div class="mask"></div>
+		<div class="dialog">
+			<div class="dialog-content"><img src="images/tips.png" alt=""/></div>
+		</div>
+	</div>
+	<style>
+		#dialog .mask {
+			position: fixed;
+			z-index: 1000;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.6);
+		}
+		.dialog {
+			position: fixed;
+			z-index: 5000;
+			width: 100%;
+			text-align: center;
+			max-width: 640px;
+			top: 10px;
+			left: 50%;
+			-webkit-transform: translate(-50%, 0);
+			transform: translate(-50%, 0);
+		}
+		.dialog .dialog-content img{
+			width: 90%;
+		}
+	</style>
+	<script>
+		$('#dialog').click(function(){
+			$(this).hide();
+		})
+	</script>
+</body>
+</html>

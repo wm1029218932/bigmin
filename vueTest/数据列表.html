@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #tb {
+            width: 800px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        #tb th {
+            background-color: #0094ff;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid #000
+        }
+
+        #tb td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+    <script src="js/vue1028.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" name="id" value="0" v-model="id"/>
+    <input type="text" name="name" v-model="name"/>
+    <button v-on:click="addData">添加数据</button>
+    <input type="text" placeholder="请输入搜索内容" v-model="searchname"/>
+    <table id="tb">
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>创建时间</th>
+            <th>操作</th>
+        </tr>
+        <tr v-show="list.length==0">
+            <td colspan="4">暂无数据</td>
+        </tr>
+        <tr v-for = "item in list | filterBy searchname in 'name'">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.date | dateformat "yyyy-mm-dd hh:mm:ss"}}</td>
+            <td><a href="###" v-on:click="deleteData(item.id)">删除</a></td>
+        </tr>
+    </table>
+</div>
+<script>
+    //自定义过滤器
+    //input参数为默认参数，为管道符号前面的内容
+    Vue.filter('dateformat', function(input,fstring){
+        var year = input.getFullYear();
+        var month = input.getMonth()+1;
+        var day = input.getDate();
+        var hour = input.getHours();
+        var minute = input.getMinutes();
+        var second = input.getSeconds();
+        if(fstring == 'yyyy-mm-dd'){
+            return year+'-'+month+'-'+day;
+        }else{
+            return year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+        }
+
+    });
+    new Vue({
+        el : '#app',
+        data :{
+            list : [
+                {
+                    'id' : 1,
+                    'name' : '品牌一',
+                    'date' : new Date()
+                },
+                {
+                    'id' : 2,
+                    'name' : '品牌二',
+                    'date' : new Date()
+                }
+            ],
+            id : 0,
+            name : '',
+            searchname:''
+        },
+        methods : {
+            addData : function(){
+                var newData = {'id':this.id,'name':this.name,'date':new Date()};
+                this.list.push(newData);
+                this.id = 0;
+                this.name = '';
+            },
+            deleteData : function(id){
+                if(!confirm('确定要删除该条数据吗？')){
+                    return;
+                }
+                var index = this.list.findIndex(function(item){return id == item.id});
+                this.list.splice(index,1);
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

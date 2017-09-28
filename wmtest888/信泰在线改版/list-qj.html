@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>推荐记录</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/records.css"/>
+	<script src="js/jquery-1.11.0.js"></script>
+</head>
+<body style="background:#fff;">
+	<div class="toggle-list">
+		<div class="select-box pull-left">
+			<span class="select-btn">所有时间</span>
+			<div class="select-list">
+				<ul>
+					<li>最近一天</li>
+					<li>最近一周</li>
+					<li>所有时间</li>
+				</ul>
+			</div>
+		</div>
+		<div class="select-box pull-right">
+			<span class="select-btn">产品名称</span>
+			<div class="select-list">
+				<ul>
+					<li>产品名称1</li>
+					<li>产品名称2</li>
+					<li>产品名称3产品名</li>
+				</ul>
+			</div>
+		</div>
+		<table border="0" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr>
+				<th>姓名</th>
+				<th class="text-ellipsis">产品名称</th>
+				<th>手机号码</th>
+				<th>成交时间</th>
+				<th>保费</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>王敏王</td>
+				<td class="text-ellipsis text-show">这是产品名称啊这是产品名称啊产品名称产品名称</td>
+				<td>15665692521</td>
+				<td>2017-07-01</td>
+				<td>100000</td>
+			</tr>
+			<tr>
+				<td>王敏</td>
+				<td class="text-ellipsis text-show">这是产品名</td>
+				<td>15665692521</td>
+				<td>2017-07-01</td>
+				<td>100000</td>
+			</tr>
+			<tr>
+				<td>王敏</td>
+				<td class="text-ellipsis text-show">这是产品名称啊产品名称</td>
+				<td>15665692521</td>
+				<td>2017-07-01</td>
+				<td>100000</td>
+			</tr>
+			<tr>
+				<td>王敏</td>
+				<td class="text-ellipsis text-show">这是产品名称啊产品名称</td>
+				<td>15665692521</td>
+				<td>2017-07-01</td>
+				<td>100000</td>
+			</tr>
+			<tr>
+				<td>王敏</td>
+				<td class="text-ellipsis text-show">这是产品名称啊产品名称</td>
+				<td>15665692521</td>
+				<td>2017-07-01</td>
+				<td>100000</td>
+			</tr>
+			</tbody>
+		</table>
+		<div class="count">
+			<div class="pull-left">合计</div>
+			<div class="pull-right">1000000</div>
+		</div>
+
+		
+	</div>
+	<script>
+		$('.select-box .select-btn').on('click',function(e){
+			$(this).siblings('.select-list').toggleClass('list-show');
+			e.stopPropagation()
+		});
+
+		$('.select-box .select-list ul li').on('click',function(e){
+			var selTxt=$(this).text();
+			$(this).parents('.select-box').find('.select-btn').text(selTxt).next('.select-list').removeClass('list-show');
+			e.stopPropagation()
+		});
+		$(document).on('click',function(){
+			$('.select-box .select-list').removeClass('list-show');
+		});
+
+		$('tbody tr').on('click',function(){
+			$(this).find('.text-ellipsis').toggleClass('text-show');
+		})
+	</script>
+
+</body>
+
+</html>

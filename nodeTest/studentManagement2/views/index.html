@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>学生管理系统</h1>
+        <table id="tb">
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>籍贯</td>
+            </tr>
+
+        </table>
+    </section>
+
+    <div>
+        <a href="/add">添加数据</a>
+    </div>
+
+
+<script type="text/template" id="myTemplate">
+    <tr>
+        <td>@@= name @@</td>
+        <td>@@= age @@</td>
+        <td>@@= sex @@</td>
+        <td>@@= province @@</td>
+    </tr>
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/myunderscore-min.js"></script>
+<script>
+    var templateHtml = $('#myTemplate').html();
+    // 模板编译函数
+    var compiler = _.template(templateHtml);
+    $.get('/allStudents',function(data){
+
+        _.each(data.results,function(dictionary){
+            var str = compiler ({
+                "name":dictionary.name,
+                "age":dictionary.age,
+                "sex":dictionary.sex,
+                "province":dictionary.province
+            });
+            $("#tb").append($(str));
+        })
+    });
+</script>
+</body>
+</html>

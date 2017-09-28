@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost:8081/光大银行页面/entry.do -->
+<html lang="zh_cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>信泰爱驾宝两全保险</title>
+		
+		
+ 
+
+
+
+
+
+
+<!-- disable iPhone inital scale -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0" id="viewport"> -->
+	
+<!-- 禁止手机格式化电话号码 -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- 缩放屏幕分辨率 -->
+<script>
+// 	var useragent = navigator.userAgent.toLowerCase(),
+// 		meta = '<meta name="viewport" content="width=device-width,target-densitydpi=340,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0">';
+	
+// 	if(useragent.match(/ucbrowser/i)){
+// 		meta = '<meta name="viewport" content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0">';
+// 	}
+	
+// 	document.write(meta);
+
+/*
+	var useragent = navigator.userAgent.toLowerCase();
+	
+	//不需要使用target-densitydpi属性的ua关键字，需要手动维护
+	var dpiMathList = [/ucbrowser/i,/ios/i];
+	
+	var scale,dpi,usedpi=true;
+	
+	var pw = 640,//页面设计宽度
+		sw = window.screen.width;//屏幕宽度
+	
+	//计算缩放比例
+	if(sw < pw){
+	  	scale = sw/pw;
+	}else{
+	  	scale = 1;
+	}
+		
+	for(var i = 0 ; i < dpiMathList.length ; i++){
+	  if(useragent.match(dpiMathList[i])){
+	    usedpi = false;
+	  }
+	}
+	
+	var meta = '<meta name="viewport" content="width=device-width,';
+	
+	if(usedpi){
+// 	  dpi = pw / sw * window.devicePixelRatio * 160;
+		dpi = 340;
+	  	meta += ('target-densitydpi=' + dpi);
+	}
+	
+	meta += ',initial-scale='+scale+', minimum-scale='+scale+', maximum-scale='+scale+', user-scalable=0">';
+	
+	document.write(meta);
+	*/
+</script>
+
+<script>
+	var phoneWidth =  parseInt(window.screen.width);
+	var phoneScale = phoneWidth/640;
+	var ua = navigator.userAgent;
+	if (/Android (\d+\.\d+)/.test(ua)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	} else {
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+</script>
+<!-- <meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale = 0.5, target-densitydpi=device-dpi"> -->
+
+<script>
++function eventAdapt(){
+
+	var touchAble = 'ontouchstart' in window;
+		window.tap = 'click';
+	
+	if(touchAble){
+		window.tap = 'tap';
+	}
+}();
+</script>
+<script src="./index_files/jquery-2.1.0.min.js"></script>
+<script src="./index_files/jweixin-1.0.0.js"></script>
+<script src="./index_files/jquery.mobile.event.js"></script>
+<link href="./index_files/main.css" rel="stylesheet">
+		<script type="text/javascript">
+			function browserRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+				if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc
+						|| bIsAndroid || bIsCE || bIsWM || bIsWX)) {
+					window.location.href = "/index.jsp";
+				}
+			}
+			
+// 			browserRedirect();
+// 			var sua = navigator.userAgent.toLowerCase();
+// 			var bIsWX = sua.match(/MicroMessenger/i) == "micromessenger";
+// 			if (!bIsWX) {
+// 				window.location.href = "/index.jsp";
+// 			}
+		</script>
+		
+		<script src="./index_files/main.js" type="text/javascript"></script>
+		<link href="./index_files/main(1).css" rel="stylesheet" type="text/css">
+		
+		<link href="./index_files/insure.css" rel="stylesheet">
+		<script src="./index_files/citySelectTravel.js" type="text/javascript"></script>
+		<link href="./index_files/jSelect.css" rel="stylesheet" type="text/css">
+		<script src="./index_files/jquery.sinosoft.select.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./index_files/dateUtils.js"></script>
+		
+		<script>
+			var head_title = '信息填写';
+			$(function(){
+				$('#ui-notice-view2').on('tap',function(){
+					var self = $(this);
+					if(self.hasClass('open')){
+						self.removeClass('open');
+						$('#ui-notice-panel2').slideUp(300);
+					}else{
+						self.addClass('open');
+						$('#ui-notice-panel2').slideDown(300);
+					}
+				});
+
+			    $('#check_info_simu').click(function(){
+			        if($("#check_info").is(':checked')){
+			            $("#check_info").prop("checked",false);
+			        	$(this).css("background","url(/resources/image/common/gz-uncheck.png) no-repeat center");
+			        }else{
+			            $("#check_info").prop("checked",true);
+			            $(this).css("background","url(/resources/image/common/gz-check.png) no-repeat center");
+			        }
+			    });
+			})
+			$(document).ready(function() { 
+				var code = $("#productCode").val();
+				if (code != null && code == '00116600') {
+					document.title = "信泰爱驾宝两全保险";
+				} else {
+					document.title = "信泰出行保意外伤害保险";
+				}
+			});
+		</script>
+		
+	</head>
+	<body id="insure">
+
+		
+
+
+ 
+
+
+
+
+
+<script type="text/javascript" src="./index_files/base64.js"></script>
+<form action="http://localhost:8081/everbrightbank/confirm.do" id="fill_frm" method="post">
+<input type="hidden" name="loginFlag" id="loginFlag" value="N">
+<input type="hidden" name="checkFlag" id="checkFlag" value="N">
+<input type="hidden" id="sex" value="0">
+<input type="hidden" name="openId" id="openId" value="">
+<input type="hidden" name="userId" id="userId" value="">
+<input type="hidden" id="agePeriod" value="0">
+<input type="hidden" id="productCode" value="00116600">
+<input type="hidden" name="orderNo" id="orderNo" value="">
+<input type="hidden" name="channel" id="channel" value="">
+<input type="hidden" name="insuredFlow" id="insuredFlow">
+
+<input type="hidden" name="type" value="0">
+<script type="text/javascript">
+var timenum = 120;
+var intervalProcess = null;
+insuredFlow = eval("(" + "{\"address\":\"\",\"agePeriod\":\"0\",\"agentCode\":\"\",\"applicantDTO\":{\"age\":0,\"alias\":\"\",\"birthDate\":\"\",\"bloodType\":\"\",\"citizenShip\":\"\",\"city\":\"\",\"cityName\":\"\",\"county\":\"\",\"countyName\":\"\",\"email\":\"\",\"fullENName\":\"\",\"fullName\":\"\",\"gender\":0,\"height\":0,\"hobby\":\"\",\"homeAddress\":\"\",\"idNumber\":\"\",\"idType\":0,\"mobileNumber\":\"\",\"occupationCode\":\"\",\"occupationDescription\":\"\",\"postalCode\":\"\",\"province\":\"\",\"provinceName\":\"\",\"roleSerialNo\":\"\",\"serialNo\":\"\",\"weight\":0},\"area\":\"\",\"areaName\":\"\",\"benefitPeriod\":\"30\",\"benefitPeriodType\":\"42\",\"birthday\":\"\",\"channelType\":\"\",\"city\":\"\",\"cityName\":\"\",\"email\":\"\",\"idNumber\":\"\",\"idType\":0,\"insuredAmount\":2000000,\"liabilityDTO\":[{\"benefitPeriod\":\"30\",\"benefitPeriodType\":\"42\",\"insuredAmount\":100000,\"paymentDuration\":\"5\",\"paymentDurationMode\":\"1\",\"premium\":2390,\"productCode\":\"00116600\",\"productName\":\"信泰爱驾宝两全保险\"},{\"benefitPeriod\":\"30\",\"benefitPeriodType\":\"42\",\"insuredAmount\":1000000,\"paymentDuration\":\"5\",\"paymentDurationMode\":\"1\",\"premium\":750,\"productCode\":\"00136600\",\"productName\":\"信泰附加爱驾宝意外伤害保险\"}],\"mobilePhone\":\"\",\"nationalityCode\":\"\",\"nationalityName\":\"\",\"occupationCode\":\"\",\"occupationName\":\"\",\"openId\":\"\",\"paymentDuration\":\"5\",\"paymentDurationMode\":\"1\",\"premium\":3140,\"productCode\":\"00116600\",\"productName\":\"信泰爱驾宝两全保险\",\"province\":\"\",\"provinceName\":\"\",\"recommend\":\"\",\"sex\":0,\"userId\":\"\",\"userName\":\"\"}" + ")");
+</script>
+<p class="ui-tip">信息填写</p>
+<div class="ui-panel applicant white">
+	<span class="err-mes"></span>
+	<div class="ui-form-group">
+		<label style="">真实姓名</label>
+		
+		
+			<input class="ui-input" type="text" id="userName" value="" maxlength="10" style="padding-left: 20px;">
+		
+	</div>
+	<div class="ui-form-group">
+		<label style="">身份证号</label>
+		
+		
+			<input class="ui-input" type="text" id="idnumber" value="" maxlength="18" style="padding-left: 20px;">
+		
+	</div>
+	<div class="ui-form-group">
+		<label>手机号码</label>
+		<input class="ui-input" type="text" id="mobilePhone" value="" maxlength="11" style="padding-left: 20px;">
+	</div>
+	<div class="ui-form-group">
+		<label>电子邮箱</label>
+		<input class="ui-input" type="text" id="email" value="" maxlength="60" style="padding-left: 20px;">
+	</div>
+	<div class="ui-form-group ui-form-inline clearfix">
+		<select id="appProvince" class="ui-select province" style="width: 49.5%; margin-right: 2px;"><option value="110000">北京市</option><option value="130000">河北省</option><option value="210000">辽宁省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="440000">广东省</option></select>
+		<select id="appCity" class="ui-select city" style="display: none; width: 49.5%;"><option value="110100">市辖区</option><option value="110200">县</option></select>
+		<select id="appArea" class="ui-select area" style="width: 49.5%;"><option value="110101">东城区</option><option value="110102">西城区</option><option value="110105">朝阳区</option><option value="110106">丰台区</option><option value="110107">石景山区</option><option value="110108">海淀区</option><option value="110109">门头沟区</option><option value="110111">房山区</option><option value="110112">通州区</option><option value="110113">顺义区</option><option value="110114">昌平区</option><option value="110115">大兴区</option><option value="110116">怀柔区</option><option value="110117">平谷区</option><option value="110228">密云县</option><option value="110229">延庆县</option></select>
+
+		<input type="hidden" id="provinceCode" value="">
+		<input type="hidden" id="cityCode" value="">
+		<input type="hidden" id="areaCode" value="">
+	</div>
+	<div class="ui-form-group">
+		<label>详细地址</label>
+		<input class="ui-input" type="text" id="address" value="" maxlength="30" style="padding-left: 20px;">
+	</div>
+
+	<div class="ui-form-group">
+		<label>职业类型</label>
+		<input class="ui-input ocp-input" id="ocp" style="padding-left: 20px;" value="" type="text" readonly="readonly" placeholder="">
+		<input type="hidden" id="occupationCode" value="">
+	</div>
+	
+
+<!-- 		<div class="ui-form-group"> -->
+
+<!-- 				<label css="margin-top: 0px;line-height: 35px;height: 70px;">在小飞侠注册的手机号</label> -->
+
+
+
+<!-- 				<label>业务员编号</label> -->
+
+
+
+<!-- 		</div> -->
+
+<!-- 	<div class="pwd" css="display:none;"> -->
+<!-- 		<span class="err-mes error-Mes"></span> -->
+<!-- 		<div class="ui-form-group" css="margin-right:35px;padding-bottom:20px;"> -->
+<!-- 			<label css="">密码</label> -->
+<!-- 			<input class="ui-input password" name="password" type="password" placeholder="密码" max="20" css="padding-left: 20px;"/> -->
+<!-- 		</div> -->
+<!-- 		<div class="err-mes reset-mes" css="text-align: right;padding-right: 20px;"></div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+<div class="ui-panel notice white" style="padding-top: 30px;padding-left: 30px;">
+	<div class="ui-panel-title">
+		<span style="font-size:32px">健康告知</span>
+		<div class="ui-notice-view" id="ui-notice-view2">
+			查看内容<b></b>
+		</div>
+	</div>
+	<div class="ui-notice-panel" id="ui-notice-panel2">
+		
+		
+			
+		 		<div class="kuang_main">
+		 			<div class="kuang_text">
+		 				<span>
+		 					<span class="informbook-content"><p>1、您是否患有、被怀疑患有会接受治疗过以下一种或几种疾病？<br>如：恶性肿瘤、脑血管疾病、心功能不全II级以上、高血压II级以上、心肌梗塞、肝硬化、慢性肾脏疾病、肾功能不全、尿毒症、再生障碍性贫血、癫痫、系统性红斑狼疮、白血病、慢性酒精中毒、精神疾病、智力障碍、阿尔茨海默氏症、帕金森氏病、重症肌无力、失明、瘫痪、聋哑、艾滋病毒或艾滋病毒携带者</p></span>
+					 	</span>
+		 			</div>
+				</div>
+			
+		 		<div class="kuang_main">
+		 			<div class="kuang_text">
+		 				<span>
+		 					<span class="informbook-content"><p>2、您是否曾经或目前正在使用成瘾药物？<br>如：止痛药、麻醉药、镇静安眠药、迷幻药、毒品或其他违禁药物。</p></span>
+					 	</span>
+		 			</div>
+				</div>
+			
+		 		<div class="kuang_main">
+		 			<div class="kuang_text">
+		 				<span>
+		 					<span class="informbook-content"><p>3、您是否已投保或正在申请其他保险公司的以被保险人死亡或全残为给付保险金条件的人身保险，且累计保额超过50万元？</p></span>
+					 	</span>
+		 			</div>
+				</div>
+			
+		
+	</div>
+   		<div class="tips">
+  			<span>请您认真阅读并确认以上健康告知</span>
+  		</div>
+  		<div>
+			<div class="ui-agree-select" value="N">否</div>
+			<div class="ui-agree-select active" value="Y">是</div>
+		</div>
+  		
+</div>
+<div class="ui-panel policy-date white">
+	<label class="ui-info" for="username" style="border-right: 0px solid #cccccc;width: 100%;">生效日期：<span>2016-12-10零时起</span></label>
+</div>
+<div class="ui-panel beneficiary white">
+	<label class="ui-info" for="username" style="border-right: 0px solid #cccccc;width: 100%;">受益人类型：法定</label>
+</div>
+<p class="err-mes err-mes_d"></p>
+<div class="ui-panel pd0">
+	<a class="ui-btn btn-insure" href="javascript:toInsured();" style="text-align: center;">下一步</a>
+</div>
+
+
+<div class="ocp-mask fade"></div>
+<div class="ocp fade" id="ocp-search">
+	<div class="ocp-dialog">
+		<div class="ocp-head">职业选择<a class="ocp-close"></a></div>
+		<div class="ocp-search">
+			<input class="ocp-search-input" id="keyword" name="keyword">
+			<a class="ocp-search-btn" onclick="javascript:obtainOccupation();">搜索</a>
+		</div>
+		<ul class="ocp-result">
+			<li class="ocp-result-item" value="3010202"><a>公务员</a></li>
+			<li class="ocp-result-item" value="8000001"><a>自由职业人员</a></li>
+			<li class="ocp-result-item" value="1050104"><a>企业负责人</a></li>
+			<li class="ocp-result-item" value="4010201"><a>销售人员</a></li>
+			<li class="ocp-result-item" value="4071203"><a>家庭主妇</a></li>
+			<li class="ocp-result-item" value="1050102"><a>企事业单位管理人员</a></li>
+			<li class="ocp-result-item" value="4019903"><a>个体经营户</a></li>
+			<li class="ocp-result-item" value="8000002"><a>退休人员</a></li>
+			<li class="ocp-result-item" value="3010101"><a>企事业单位工作人员</a></li>
+			<li class="ocp-result-item" value="5010101"><a>农民</a></li>
+			<li class="ocp-result-item" value="2099907"><a>学生</a></li>
+		</ul>
+		<ul style="display: none;">
+			<li class="ocp-result-item targetOcp" id="" value=""><a></a></li>
+		</ul>
+		<div id="targets"></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.ui-agree-select').on('click', function() {
+		var self = $(this);
+		if (!self.hasClass('active')) {
+			self.addClass('active');
+			self.siblings().removeClass('active');
+		}
+	});
+	Sinosoft.initCitySelector($('#appProvince'),$('#appCity'),$('#appArea'),$("#provinceCode").val(), $("#cityCode").val(), $("#areaCode").val());
+	$("#userName").blur(function(){
+		checkUserName();
+	});
+	$("#idnumber").blur(function(){
+		checkIdNumber();
+	});
+	$("#mobilePhone").blur(function(){
+		checkMobilePhone();
+	});
+	$("#email").blur(function(){
+		checkEmail();
+	});
+	$("#address").blur(function(){
+		var address = $(this).val();
+		if (address == "") {
+			$(".err-mes_d").text("通讯地址不能为空");
+		}
+	});
+
+// 	//职业
+	$('#ocp').on('tap',function(e){
+	  openOcpSearch();
+	  e.preventDefault();
+	});
+
+	$('#ocp-search .ocp-close').on('tap',function(){
+	  closeOcpSearch();
+	});
+
+	$('#ocp-search').on('tap','.ocp-result-item',function(){
+	  var $this = $(this);
+
+	  $this.addClass('select');
+	  $this.siblings().removeClass('select');
+
+	  //职业代码
+	  $("#occupationCode").val($this.val());
+	  insuredFlow.occupationName = $this.find('a').text();
+	  //职业名称
+	  $('#ocp').val($this.find('a').text());
+
+	  setTimeout(function(){
+	    closeOcpSearch();
+	  },100);
+	});
+
+	//自定义分享
+	$.ajax({
+		url : "/share/wechatShare.do",
+		type : "POST",
+		async : true,
+		dataType : "json",
+		data : {
+			'url' : window.location.href
+		},
+		success : function(data) {
+			wx.config({
+				debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				appId : data.appId, // 必填，公众号的唯一标识
+				timestamp : data.timestamp, // 必填，生成签名的时间戳
+				nonceStr : data.nonceStr, // 必填，生成签名的随机串
+				signature : data.signature,// 必填，签名，见附录1
+				jsApiList : [ 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo' ]
+			});
+
+			var title = "躺着也赚钱 不用玩心跳";
+			var requestUrl = data.uri + "/web/product/one/swipes/index.jsp";
+			var imgUrl = data.uri + "/resources/image/product/one/oneFinance.jpg";
+			wx.ready(function() {
+				wx.onMenuShareTimeline({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareAppMessage({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareQQ({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareWeibo({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+			});
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	});
+	
+	if ($("#checkFlag").val() == "Y") {
+		$(".pwd").attr("style", "display: block;width: 98%;");
+	}
+});
+
+//职业代码搜索
+function obtainOccupation() {
+	var keyword = $("#keyword").val();
+	var _result = "";
+	$.ajax({
+		url : '/oneInsure/obtainOccupation.do',
+		type : 'POST',
+		async : false,
+		dataType : "json",
+		data : {
+			'keyword' : keyword
+		},
+		success : function(data) {
+			_result = data;
+		}
+	});
+	$(".ocp-result").html("");
+	$("#targets").html("");
+	var ocp = null;
+	var ocps = new Array();
+	if (_result.length == 0) {
+	} else {
+		for(var i = 0; i < _result.length; i ++) {
+			ocp = $(".targetOcp").clone(true);
+
+			$(ocp).attr("id", "ocp_" + i);
+			$(ocp).val($.trim(_result[i].OCCUPATIONCODE));
+			$(ocp).find("a").text($.trim(_result[i].OCCUPATIONNAME));
+
+			ocps.push(ocp);
+		}
+		for(var j = 0; j < ocps.length; j ++) {
+			$("#targets").append(ocps[j]);
+		}
+	}
+}
+
+var canClose = true;
+function openOcpSearch(){
+  $('.ocp-mask').show().addClass('in');
+  $('.ocp').show().addClass('in');
+  $('body').addClass('ocp-open');
+
+  var dh = $('.ocp-dialog').outerHeight(),
+	bh = document.documentElement.clientHeight;
+	if(dh < bh){
+	  $('.ocp-dialog').css('margin-top',(bh - dh)/2);
+	}
+	canClose = false;
+	setTimeout(function(){
+	  canClose = true;
+	},1000);
+}
+
+function closeOcpSearch(){
+  if(!canClose){
+    return;
+  }
+
+  $('.ocp-mask').removeClass('in');
+  $('.ocp').removeClass('in');
+
+  setTimeout(function(){
+    $('.ocp-mask').hide();
+    $('.ocp').hide();
+    $('body').removeClass('ocp-open');
+  },150);
+}
+function checkUserName(){
+	var userName = $("#userName").val();
+	if (userName == "") {
+		$(".err-mes_d").text("姓名不能为空").show();
+		return false;
+	}
+	var reg = /[u4e00-u9fa5]/.test(userName);
+	if (reg) {
+		$(".err-mes_d").text("姓名只能是中文").show();
+		return false;
+	}
+	$(".err-mes_d").text("");
+	return true;
+}
+function checkIdNumber() {
+	var idnumber = $("#idnumber").val();
+	if (idnumber == "") {
+		$(".err-mes_d").text("身份证号不能为空").show();
+		return false;
+	}
+	var eighteenCard = /^[\d]{6}(19|20)*[\d]{2}((0[1-9])|(10|11|12))([012][\d]|(30|31))[\d]{3}[xX\d]$/;
+	var regFlag = eighteenCard.test(idnumber);
+	if (!regFlag) {
+		$(".err-mes_d").text("身份证号不合法").show();
+		return false;
+	}
+	var productCode = $("#productCode").val();
+	//出行保校验性别
+	if (productCode == "24K00030") {
+		var idFlag = idnumber.substring(17,1) % 2;
+		if (idFlag == $("#sex").val()) {
+			$(".err-mes_d").text("您的性别与试算页面选择的性别不一致，请修改").show();
+			return false;
+		}
+	} else if (productCode == "00116600") {//百万身价校验年龄
+		var flag = false;
+		var agePeriod = $("#agePeriod").val();
+		var birthday = idnumber.substring(6,10) + "-" +idnumber.substring(10, 12) + "-" + idnumber.substring(12, 14);
+		var age = calculationAge(new Date(), birthday);
+		if (agePeriod == 0 && age >= 18 && age <= 25) {
+			flag = true;
+		} else if (agePeriod == 1 && age >= 26 && age <= 40) {
+			flag = true;
+		} else if (agePeriod == 2 && age >= 41 && age <= 45) {
+			flag = true;
+		} else if (agePeriod == 3 && age >= 46 && age <= 50) {
+			flag = true;
+		}
+		if (!flag) {
+			$(".err-mes_d").text("您的年龄与试算页面选择的年龄区间不一致，请修改").show();
+			return false;
+		}
+	}
+	
+	var result = null;
+	$.ajax({
+		async : false,
+		url : "/oneFinance/checkIdNumber.do",
+		type : "POST",
+		dataType : "json",
+		data : {
+			'idNumber' : idnumber
+		},
+		success : function(data) {
+			result = data.flag;
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown){
+
+		}
+	});
+	if (result == "N") {
+		$(".err-mes_d").text("身份证号不合法").show();
+		return false;
+	}
+	$(".err-mes_d").text("");
+	return true;
+}
+
+function checkMobilePhone() {
+	var mobilePhone = $("#mobilePhone").val();
+	if (mobilePhone == "") {
+		$(".err-mes_d").text("手机号不能为空").show();
+		return false;
+	}
+	var regFlag = /^(1[3|4|5|7|8][0-9]\d{8})$/.test(mobilePhone);
+	if (!regFlag) {
+		$(".err-mes_d").text("手机号不合法").show();
+		return false;
+	}
+	$(".err-mes_d").text("");
+	return true;
+}
+function checkEmail() {
+	var email = $("#email").val();
+	if (email == "") {
+		$(".err-mes_d").text("邮箱地址不能为空").show();
+		return false;
+	}
+	var regEmail = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
+	var regFlag = regEmail.test(email);
+	if (!regFlag) {
+		$(".err-mes_d").text("邮箱地址不合法").show();
+		return false;
+	}
+	$(".err-mes_d").text("");
+	return true;
+}
+
+function toInsured() {
+	$(".btn-insure").attr("href", "javascript:void(0)");
+	
+	if (!checkUserName() || !checkIdNumber() || !checkMobilePhone() || !checkEmail()) {
+		$(".btn-insure").attr("href", "javascript:toInsured()");
+		return;
+	}
+	$(".err-mes_d").text("");
+
+	var address = $("#address").val();
+	if (address == "") {
+		$(".err-mes_d").text("通讯地址不能为空").show();
+		$(".btn-insure").attr("href", "javascript:toInsured()");
+		return;
+	}
+	if (address.length < 5) {
+		$(".btn-insure").attr("href", "javascript:toInsured()");
+		$(".err-mes_d").text("通讯地址不完整").show();
+		return;
+	}
+	var loginFlag = $("#loginFlag").val();
+	if (loginFlag == "N") {
+		var checkFlag = $("#checkFlag").val();
+		if (checkFlag == "Y") {
+			$(".pwd").attr("style", "display: block;width: 98%;");
+			var password = $(".password").val();
+			if (password == "") {
+				$(".btn-insure").attr("href", "javascript:toInsured()");
+				$(".error-Mes").text("请输入会员登录密码").show();
+				$(".reset-mes").html("忘记密码，点击<a href='javascript:sendPwd();'>重置密码</a>");
+				return;
+			} else {
+	 			var userId = userLogin();
+	 			if (userId != "") {//用户名密码正确，提交表单
+	 				$("#userId").val(userId);
+	 				setFlow();
+	 				$("#fill_frm").submit();
+	 			} else {//用户名密码错误
+	 				return;
+	 			}
+			}
+		}
+
+		var result = checkUser();
+		if (result == "err") {
+			$(".error-Mes").text("系统异常").show();
+			$(".btn-insure").attr("href", "javascript:toInsured()");
+			return;
+		}
+		//自动注册，并绑定，不需要输入密码
+		if (result == "register") {
+			var userId = autoRegister();
+			$("#userId").val(userId);
+			setFlow();
+			$("#fill_frm").submit();
+			return;
+		}
+		//手机号
+		if (result == "login") {
+			$(".pwd").attr("style", "display: block;width: 98%;");
+			$(".btn-insure").attr("href", "javascript:toInsured()");
+			$(".error-Mes").html("您的手机号为信泰会员，请输入登录密码").show();
+			$(".reset-mes").html("忘记密码，点击<a href='javascript:sendPwd();'>重置密码</a>").show();
+			$("#checkFlag").val("Y");
+			return;
+		}
+		if (result == "active") {
+			$(".pwd").attr("style", "display: block;");
+			$(".btn-insure").attr("href", "javascript:toInsured()");
+			$(".error-Mes").html("您的手机号为信泰会员，请输入登录密码").show();
+			$(".reset-mes").html("忘记密码，点击<a href='javascript:sendPwd();'>重置密码</a>");
+			$("#checkFlag").val("Y");
+			return;
+		}
+	}
+	
+	var check_ = false;
+	$(".ui-agree-select").each(function(_ind) {
+		if ($(this).hasClass("active") && $(this).attr("value") == "N") {
+			check_ = true;
+		}
+	});
+	
+	if (!check_) {
+		$(".err-mes_d").text("请您确认健康告知").show();
+		$(".btn-insure").attr("href", "javascript:toInsured()");
+		return;
+	}
+	var ocp = $("#ocp").val();
+	if (ocp == "") {
+		$(".err-mes_d").text("请选择职业类型").show();
+		$(".btn-insure").attr("href", "javascript:toInsured()");
+		return;
+	}
+	setFlow();
+	$("#fill_frm").submit();
+};
+function setFlow() {
+	insuredFlow.userName = $("#userName").val();
+	insuredFlow.idNumber = $("#idnumber").val();
+	insuredFlow.mobilePhone  = $("#mobilePhone").val();
+	insuredFlow.email  = $("#email").val();
+	insuredFlow.province  = $("#appProvince").val();
+	insuredFlow.city  = $("#appCity").val();
+	insuredFlow.area  = $("#appArea").val();
+	insuredFlow.address  = $("#address").val();
+	insuredFlow.occupationCode  = $("#occupationCode").val();
+	insuredFlow.agentCode = $("#agentCode").val();
+		
+
+	//获取选中的项的对应文本
+ 	var appProvince = $("#appProvince option:selected");
+	var appCity = $("#appCity option:selected");
+	var appArea = $("#appArea option:selected");
+	insuredFlow.provinceName = appProvince.text();
+	insuredFlow.cityName = appCity.text();
+	insuredFlow.areaName = appArea.text();
+
+	$("#insuredFlow").val(Base64.encode(encodeURI(JSON.stringify(insuredFlow))));
+}
+
+function userLogin() {
+	var mobilePhone = $('#mobilePhone').val();
+	var password = $('.password').val();
+	var openId = $('#openId').val();
+	var result = "";
+	$.ajax({
+		type : "POST",
+		async : false,
+		url : "/userLogin/userLogin.do",
+		dataType : "json",
+		data : {
+			'userAccount' : mobilePhone,
+			'password' : password,
+			'openId' : openId
+		},
+		success : function(data) {
+			if (data.flag == 'succ') {
+				result = data.userId;
+			} else if (data.flag == "fail") {
+				$(".btn-insure").attr("href", "javascript:toInsured()");
+				$(".error-Mes").html("密码错误，请重新输入").show();
+			}
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown){}
+	});
+	return result;
+}
+function autoRegister() {
+	var result = null;
+	var mobilePhone = $("#mobilePhone").val();
+	var fullName = $("#userName").val();
+	var idnumber = $("#idnumber").val();
+	var address = $("#address").val();
+	var appProvince = $(".province").val();
+	var appCity = $(".city").val();
+	var appArea = $(".area").val();
+	var openId = $("#openId").val();
+
+	$.ajax({
+		async : false,
+		url : "/register/autoRegister.do",
+		type : "POST",
+		dataType : "json",
+		data : {
+			'userAccount' : mobilePhone,
+			'fullName' : fullName,
+			'idnumber' : idnumber,
+			'address' : address,
+			'appProvince' : appProvince,
+			'appCity' : appCity,
+			'appArea' : appArea,
+			'idType' : '0',
+			'openId' : openId
+		},
+		success : function(data) {
+			result = data.userId;
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown){
+
+		}
+	});
+	return result;
+}
+function checkUser() {
+	var userAccount = $("#mobilePhone").val();
+	var result = "";
+	$.ajax({
+		type : "POST",
+		async : false,
+		url : "/userLogin/checkUser.do",
+		dataType : "text",
+		data : {
+			'userAccount' : userAccount,
+			'openId' : $("#openId").val()
+		},
+		success : function(data) {
+			result = data;
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown){}
+	});
+	return result;
+}
+function sendPwd() {
+	var userAccount = $('#mobilePhone').val();
+	$.ajax({
+		type : "POST",
+		async : false,
+		url : "/register/sendPwd.do",
+		dataType : "json",
+		data : {
+			'userAccount' : userAccount
+		},
+		success : function(data) {
+			if (data.flag == 'true') {
+				var mobileStr = userAccount.substring(0, 3)  + "****" + userAccount.substring(7, userAccount.length);
+				$(".error-Mes").html("密码已发送至您的手机" + mobileStr).show();
+				$(".reset-mes").html("<span class='timeNum'>120</span>秒后可重新发送");
+				timenum = 120;
+				intervalProcess = setInterval('counttime()', 1000);
+			} else if (data.flag == 'limit') {
+				$(".error-Mes").html("手机验证码发送次数过多,请稍后重试").show();
+			} else if (data.flag == 'out') {
+				$(".reset-mes").html("<span class='timeNum'>" + data.time + "</span>秒后可重新发送");
+				timenum = data.time;
+				intervalProcess = setInterval('counttime()', 1000);
+			} else {
+				$(".error-Mes").html("密码发送失败").show();
+			}
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	});
+}
+
+function counttime() {
+	if (timenum > 0) {
+		$('.timeNum').text(timenum);
+		timenum = timenum - 1;
+	} else {
+		clearInterval(intervalProcess);
+		$(".reset-mes").html("忘记密码，点击<a href='javascript:sendPwd();'>重置密码</a>");
+		$("#checkFlag").val("Y");
+	}
+}
+</script>
+	
+
+</div>
+</form>
+</body>
+</html>

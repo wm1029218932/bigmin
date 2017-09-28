@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style-type: none;
+        }
+        #box{
+            width: 730px;
+            height: 300px;
+            margin:0 auto;
+            position: relative;
+        }
+        .inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        #box ul{
+            width: 1000%;
+            position: absolute;
+            top:0;
+            left:0;
+
+        }
+        #box ul li{
+            float: left;
+        }
+        #box ul li img{
+            width: 730px;
+            height:300px;
+        }
+        ol{
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            margin-left:-60px;
+            margin-bottom: 10px;
+        }
+        ol li{
+            float: left;
+            width: 20px;
+            height:20px;
+            margin-right:10px;
+            line-height: 20px;
+            border:1px solid #F96D2F;
+            text-align: center;
+            cursor: pointer;
+        }
+        ol li.current{
+            background: #F96D2F;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="box">
+    <div class="inner">
+        <ul id="images">
+            <li><img src="images/banner01.jpg" alt=""/></li>
+            <li><img src="images/banner02.jpg" alt=""/></li>
+            <li><img src="images/banner03.jpg" alt=""/></li>
+            <li><img src="images/banner04.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <ol id="index">
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    };
+    var ollist = $('index').children;
+    var timer2 = null;  //自动播放定时器
+    var timer = null;  //缓动定时器
+    var leader = 0;   //缓动起始位置
+    var target = 0;   //缓动目标位置
+    var num = 0;        //当前播放位置
+    var imgs = $('images').children;
+    //点击下标数字轮播
+    for(var i=0; i<ollist.length; i++){
+
+        ollist[i].index = i;
+        ollist[i].onclick = function(){
+            clearInterval(timer);
+            for(var j=0; j<ollist.length; j++){
+                ollist[j].className = '';
+            }
+            this.className = 'current';
+            //1 -- 0
+            //2 -- -730*1    -730
+            //3 -- -730*2    -1460
+            //4 -- -730*3    -2190
+            num = this.index;
+            target = -730*num;
+            //缓动动画定时器
+            timer = setInterval(scroll,10);
+
+        };
+
+        imgs[i].onmouseover = function(){
+            clearInterval(timer2);
+        };
+        imgs[i].onmouseout = function(){
+            timer2 = setInterval(autoplay,2000);
+        }
+
+    }
+
+
+    //自动轮播定时器
+    timer2 = setInterval(autoplay,2000);
+
+
+
+
+    //缓动公式
+    function scroll(){
+        leader = leader + (target - leader)/10;
+        $('images').style.left = leader + 'px';
+    }
+
+    //数字点击样式切换
+    function numStyleChange(index){
+        for(var i=0; i<ollist.length; i++){
+            ollist[i].className = '';
+        }
+        ollist[index].className = 'current';
+    }
+
+    //自动轮播函数
+    function autoplay(){
+        clearInterval(timer);
+        num = num +1;
+        target = -730*num;
+        if(num >= ollist.length){
+            num = 0;
+            target = 0;
+        }
+        numStyleChange(num);
+        console.log(target);
+        timer = setInterval(scroll,10);
+    }
+
+
+</script>
+</body>
+</html>

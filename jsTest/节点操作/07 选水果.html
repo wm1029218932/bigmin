@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select {
+            width: 150px;
+            height: 200px;
+            background-color: #0099cc;
+        }
+    </style>
+</head>
+<body>
+    <select id="all" size="10" multiple="multiple">
+        <option>苹果</option>
+        <option>香蕉</option>
+        <option>西瓜</option>
+        <option>牛油果</option>
+        <option>西红柿</option>
+    </select>
+    <input type="button" value=">>" id="btn1">
+    <input type="button" value="<<" id="btn2">
+    <input type="button" value=">" id="btn3">
+    <input type="button" value="<" id="btn4">
+
+    <select id="select" size="10" multiple="multiple">
+    </select>
+
+  
+    <script type="text/javascript">
+      var btn1 = document.getElementById('btn1');
+      var btn2 = document.getElementById('btn2');
+      var btn3 = document.getElementById('btn3');
+      var all = document.getElementById('all');
+      var select = document.getElementById('select');
+      var leftoption = all.getElementsByTagName('option');
+      var str = '';
+      
+
+      btn3.onclick = function(){
+        for(var i=0; i<leftoption.length; i++){
+          if(leftoption[i].selected){
+            select.appendChild(leftoption[i]);
+          }
+        }
+      };
+
+
+      btn1.onclick = function(){
+        var allfruits = all.innerHTML;
+        select.innerHTML = allfruits;
+        all.innerHTML = '';
+          
+      };
+    </script>
+</body>
+</html>

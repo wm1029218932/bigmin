@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>二级联动</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div>
+    请选择地区：
+    <select id="proc">
+        <option value="-1">--请选择省--</option>
+    </select>
+    <select id="city">
+        <option value="-1">--请选择市--</option>
+    </select>
+    <select id="dist">
+        <option value="-1">--请选择区--</option>
+    </select>
+</div>
+
+</select>
+<script>
+    var oProc=["四川省","湖南省","广东省"];//随意选择三个省，如需更多，添加便是
+    var oCity=
+            [
+                ["成都市","绵阳市","达州市"],
+                ["长沙市","常德市","湘潭市"],
+                ["广州市","深圳市","珠海市"]
+            ];
+
+    var oDist=
+            [
+                [
+                    ["武侯区","锦江区","金牛区"],
+                    ["梓潼县","安县","罗江县"],
+                    ["达县","通川县","宣汉县"]
+                ],
+                [
+                    ["长沙区","开福区","芙蓉区"],
+                    ["武陵区","鼎城区","汉寿县"]
+                    ,["湘潭县","雨湖区","岳塘区"]
+                ],
+                [
+                    ["白云区","天河区","黄埔区"],
+                    ["罗湖区","宝安区","福田区"],
+                    ["香洲区","金湾区","斗门区"]
+                ]
+            ];
+
+
+    var pro=$('#proc');
+    var city=$('#city');
+    var dist=$('#dist');
+
+    $(function(){
+        for(var i=0;i < oProc.length;i++){
+            pro.append('<option>' + oProc[i] + '</option>');
+        };
+    });
+    pro.on('change',function(){
+        city.find('option').not(':first').remove();
+        dist.find('option').not(':first').remove();
+        if($(this).val()==-1){
+            city.find('option').not(':first').remove();
+            dist.find('option').not(':first').remove();
+        }else{
+            var proval=pro.find('option:selected').index()-1;
+            for(var i=0;i<oCity[proval].length;i++){
+                city.append('<option>'+ oCity[proval][i] +'</option>');
+            }
+        };
+
+    });
+    city.on('change',function(){
+        dist.find('option').not(':first').remove();
+        if($(this).val()==-1){
+            dist.find('option').not(':first').remove();
+        }else{
+            var proval=pro.find('option:selected').index()-1;
+            var cityval=city.find('option:selected').index()-1;
+            for(var i=0;i<oDist[proval][cityval].length;i++){
+                dist.append('<option>'+ oDist[proval][cityval][i] +'</option>');
+            }
+        };
+
+    });
+</script>
+</body>
+
+</html>

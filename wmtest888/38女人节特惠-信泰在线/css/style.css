@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, hr, dl, dd, ul, ol, form, input, textarea, th, td, select { margin: 0; padding: 0;}
+body { font: 16px/1.5 "Microsoft Yahei", "Simsun" ,"sans-serif"; -webkit-text-size-adjust: none; background: #fff; color: #555;}
+i, em, b { font-style: normal; vertical-align: top; color: #333;}
+li { list-style: none;}
+a { text-decoration: none;}
+img, fieldset { border: none; vertical-align: top;}
+/*table { border-collapse: collapse;}*/
+input, textarea, select ,button { outline: none; color: #333;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+textarea { resize: none; overflow: auto;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+input,select,a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+body{
+    max-width:640px;
+    margin:0 auto;
+
+}
+.container{
+    max-width:640px;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.top img{
+    width: 100%;
+    height:auto;
+}
+.pro{
+    margin-bottom: 5px;
+}
+.title h2{
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    color: #FF477B;
+    font-size:2.2rem;
+}
+.title h2 img{
+    width: 5rem;
+    margin-right:.5rem;
+}
+.detail{
+    background: #F4C747;
+    width: 88%;
+    margin: 0 auto;
+    padding:10px;
+    border-radius: 6px;
+    position: relative;
+    top:-5px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+}
+.detail .left{
+    width: 68%;
+    position: relative;
+}
+.detail .left img{
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.detail .right{
+    width: 32%;
+    text-align: center;
+    position: relative;
+}
+.detail .right p{
+    color: #fff;
+    font-size: 2.2rem;
+    height: auto;
+    width: 90%;
+    margin: 20% auto 0;
+    line-height: 150%;
+}
+.detail .right .link{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.detail .right .link a{
+    height: 3rem;
+    line-height: 3rem;
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    background: #FDFF64;
+    border-bottom: 2px solid #FCDA5B;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: #F4762A;
+    font-weight: bold;
+    margin: 0 auto;
+
+}
+.pro2 .left .award{
+    width: 5rem;
+    position: absolute;
+    right:-10px;
+    top:25%;
+}
+.pro2 .right{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+.pro2 .right p{
+    font-size: 1.3rem;
+    text-align: left;
+    padding-left: 1.2rem;
+    width: 85%;
+    display: table-cell;
+    vertical-align:middle;
+    margin-top:0;
+}
+.rule{
+    width: 92%;
+    margin: 2rem auto 1rem;
+    color: #797AB3;
+}
+.rule h3{
+    font-size: 1.5rem;
+}
+.rule p{
+    font-size: 1.3rem;
+    line-height: 180%;
+}
+.bottom{
+    position: relative;
+}
+.bottom p{
+    height:3rem;
+    background: #CEC1CB;
+    line-height: 3rem;
+    color: #fff;
+    text-indent: 4%;
+    font-size: 1.3rem;
+
+}
+.bottom img{
+    position: absolute;
+    right:0;
+    bottom:0;
+    width: 10rem;
+}
+/*font reset*/
+html{font-size: 62.5%}
+@media screen and (min-width:320px){
+    html{font-size:60%}
+}
+@media screen and (min-width:375px){
+    html{font-size:68%}
+}
+@media screen and (min-width:414px){
+    html{font-size:73.24%}
+}
+@media screen and (min-width:481px){
+    html{font-size:94%}
+}
+@media screen and (min-width:561px){
+    html{font-size:109%}
+}
+@media screen and (min-width:641px){
+    html{font-size:115%}
+}

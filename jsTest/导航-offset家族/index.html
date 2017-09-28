@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: #000;
+        }
+        .nav{
+            background: #fff url("images/rss.png") no-repeat right center;
+            border-radius: 10px;
+            width: 800px;
+            height: 42px;
+            margin: 50px auto;
+            position: relative;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        .nav ul{
+            position: absolute;
+            top:0;
+            left:0;
+
+        }
+        .nav ul li{
+            float: left;
+            width: 83px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .nav .cloud{
+            position: absolute;
+            left:0;
+            display: inline-block;
+            width: 83px;
+            height: 42px;
+            background: url("images/cloud.gif") no-repeat left center;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="nav">
+        <span class="cloud"></span>
+        <ul>
+            <li>首页新闻</li>
+            <li>师资力量</li>
+            <li>活动策划</li>
+            <li>企业文化</li>
+            <li>招聘信息</li>
+            <li>公司简介</li>
+            <li>上海校区</li>
+            <li>广州校区</li>
+        </ul>
+    </div>
+<script>
+    var cloud = document.getElementsByTagName('span')[0];
+
+    var lis = document.getElementsByTagName('li');
+
+    var timer = null;
+
+    var leader = 0,target = 0;
+    var current = 0;  //当前位置
+    for(var i=0; i<lis.length; i++){
+        lis[i].index = i;
+        lis[i].onmouseenter = function(){
+            //index == 0,left == 0;
+            //index == 1,left == 83;
+            target = this.offsetLeft;
+        };
+
+        lis[i].onmouseleave = function(){
+            target = current;
+        };
+
+        lis[i].onclick = function(){
+            current = this.offsetLeft;
+        };
+    }
+
+    timer = setInterval(function(){
+        leader = leader + (target-leader)/10;
+        cloud.style.left = leader + 'px';
+    },10)
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+微信测试公众号信息：
+appid:wx869b5e2326767aed
+secret:d2d6f03e1490ccf9b24f3f2e0da886d2
+
+
+
+获取access_token
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx869b5e2326767aed&secret=d2d6f03e1490ccf9b24f3f2e0da886d2
+
+
+
+自定义菜单
+{
+    "button": [
+        {
+            "type": "view",
+            "name": "微信测试",
+            "url": "http://wmtest888.applinzi.com/test.php"
+        },
+        {
+            "type": "view",
+            "name": "touch事件",
+            "url": "http://wmtest888.applinzi.com/testtouch.html"
+        },
+        {
+            "name": "其他",
+            "sub_button": [
+                {
+                    "type": "view",
+                    "name": "五一",
+                    "url": "http://wmtest888.applinzi.com/index.html"
+                },
+                {
+                    "type": "view",
+                    "name": "其他",
+                    "url": "http://wmtest888.applinzi.com/index.html"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2286 @@
+
+/*������ʽ*/
+body{
+	background: #F5F5F5;
+}
+
+.row{margin-left:0;margin-right:0;}
+.row:before,.row:after{content:" ";display:table}
+.row:after{clear:both}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-13,.col-14,.col-15,.col-16,.col-17,.col-18,.col-19,.col-20,.col-21,.col-22,.col-23,.col-24{position:relative;min-height:1px;padding-left:0;padding-right:0;float:left}
+.col-24{width:100%}
+.col-23{width:95.83333333333334%}
+.col-22{width:91.66666666666666%}
+.col-21{width:87.5%}
+.col-20{width:83.33333333333334%}
+.col-19{width:79.16666666666666%}
+.col-18{width:60%}
+.col-17{width:70.83333333333334%}
+.col-16{width:66.66666666666666%}
+.col-15{width:62.5%}
+.col-14{width:58.333333333333336%}
+.col-13{width:54.166666666666664%}
+.col-12{width:49.99999999999999%}
+.col-11{width:45.83333333333333%}
+.col-10{width:41.66666666666667%}
+.col-9{width:37.5%}
+.col-8{width:33.33333333333333%}
+.col-7{width:29.166666666666668%}
+.col-6{width:25%}
+.col-5{width:20.833333333333336%}
+.col-4{width:16.666666666666664%}
+.col-3{width:12.5%}
+.col-2{width:8.333333333333332%}
+.col-1{width:4.166666666666666%}
+
+
+.ui-head{
+	height:88px;
+	line-height:88px;
+	background:#31251f;
+	text-align: center;
+}
+
+.ui-head-title{
+	vertical-align: middle;
+}
+.ui-action-travel{
+	text-align: center;
+}
+.ui-action{
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	z-index: 10000;
+}
+.ui-btn-one{
+	display: inline-block;
+	height:83px;
+	width:42%;
+	margin:0 2%;
+	background: url(../../image/oneInsure/btn-one.jpg) no-repeat center;
+	background-size: 100% 100%;
+	line-height:83px;
+}
+.ui-btn-one img{
+	vertical-align: middle;
+}
+
+.ui-btn-val{
+	display: inline-block;
+	height:83px;
+	width:85%;
+	margin-top:60px;
+	background: url(../../image/oneInsure/btn-val-bg.jpg) no-repeat center;
+	background-size: 100% 100%;
+	line-height:83px;
+	text-align: center;
+}
+.ui-btn-val-wrapper{
+	width: 100%;
+	text-align: center;
+}
+#ui-btn-val-wrapper-last .ui-btn-val-search{
+	margin-top: 26%;
+}
+.ui-btn-val-search{
+	display:inline-block;
+	z-index:9999;
+	height:40px;
+	line-height:40px;
+	width:110px;
+	margin-top:-20px;
+	background: url(../../image/oneInsure/btn-val-bg.jpg) no-repeat center;
+	text-align: center;
+	font-size: 1.4em;
+	color:#FFFFFF;
+	cursor: pointer;
+}
+
+.ui-btn-val-search:active{
+	color:#fff;
+}
+
+.ui-btn-val img{
+	vertical-align: middle;
+}
+/*ţƤֽ����*/
+.ui-paper{
+	position:relative; 
+	z-index: 1;
+}
+
+.ui-paper a:link{
+	color:#6b1b1b;
+}
+.ui-paper a:visited{
+	color:#6b1b1b;
+}
+.ui-paper a:hover{
+	color:#6b1b1b;
+}
+
+.ui-paper-bg{
+	position: absolute;
+	top:0;
+	width:100%;
+	z-index:-1;
+	
+}
+.ui-paper-bg img{
+	vertical-align: top;
+	width:100%;
+}
+.ui-paper-bg img.ui-paper-top{
+	height:212px;
+}
+.ui-paper-bg img.ui-paper-bot{
+	height:176px;
+}
+.ui-paper-bg-mid{
+	/* background:url(../../image/oneInsure/paper-mid.jpg) repeat-y top; */
+	/* background-size:100% 111px;  */
+}
+.ui-paper-bg-mid.row-1{height:111px}
+.ui-paper-bg-mid.row-2{height:222px}
+.ui-paper-bg-mid.row-3{height:333px}
+.ui-paper-bg-mid.row-4{height:444px}
+.ui-paper-bg-mid.row-5{height:555px}
+.ui-paper-bg-mid.row-6{height:666px}
+.ui-paper-bg-mid.row-7{height:777px}
+.ui-paper-bg-mid.row-8{height:888px}
+.ui-paper-bg-mid.row-9{height:999px}
+.ui-paper-bg-mid.row-10{height:1110px}
+.ui-paper-bg-mid.row-11{height:1221px}
+.ui-paper-bg-mid.row-12{height:1332px}
+.ui-paper-bg-mid.row-13{height:1443px}
+.ui-paper-bg-mid.row-14{height:1554px}
+.ui-paper-bg-mid.row-15{height:1665px}
+.ui-paper-bg-mid.row-16{height:1776px}
+.ui-paper-bg-mid.row-17{height:1887px}
+.ui-paper-bg-mid.row-18{height:1998px}
+.ui-paper-bg-mid.row-19{height:2109px}
+.ui-paper-bg-mid.row-20{height:2220px}
+.ui-paper-bg-mid.row-21{height:2331px}
+.ui-paper-bg-mid.row-22{height:2442px}
+.ui-paper-bg-mid.row-23{height:2553px}
+.ui-paper-bg-mid.row-24{height:2664px}
+.ui-paper-bg-mid.row-25{height:2775px}
+.ui-paper-bg-mid.row-26{height:2886px}
+.ui-paper-bg-mid.row-27{height:2997px}
+.ui-paper-bg-mid.row-28{height:3108px}
+.ui-paper-bg-mid.row-29{height:3219px}
+.ui-paper-bg-mid.row-30{height:3330px}
+.ui-paper-bg-mid.row-31{height:3441px}
+.ui-paper-bg-mid.row-32{height:3552px}
+.ui-paper-bg-mid.row-33{height:3663px}
+.ui-paper-bg-mid.row-34{height:3774px}
+.ui-paper-bg-mid.row-35{height:3885px}
+.ui-paper-bg-mid.row-36{height:3996px}
+.ui-paper-bg-mid.row-37{height:4107px}
+.ui-paper-bg-mid.row-38{height:4218px}
+.ui-paper-bg-mid.row-39{height:4329px}
+.ui-paper-bg-mid.row-40{height:4440px}
+.ui-paper-bg-mid.row-41{height:4551px}
+.ui-paper-bg-mid.row-42{height:4662px}
+.ui-paper-bg-mid.row-43{height:4773px}
+.ui-paper-bg-mid.row-44{height:4884px}
+.ui-paper-bg-mid.row-45{height:4995px}
+.ui-paper-bg-mid.row-46{height:5106px}
+.ui-paper-bg-mid.row-47{height:5217px}
+.ui-paper-bg-mid.row-48{height:5328px}
+.ui-paper-bg-mid.row-49{height:5439px}
+.ui-paper-bg-mid.row-50{height:5550px}
+.ui-paper-bg-mid.row-51{height:5661px}
+.ui-paper-bg-mid.row-52{height:5772px}
+.ui-paper-bg-mid.row-53{height:5883px}
+.ui-paper-bg-mid.row-54{height:5994px}
+.ui-paper-bg-mid.row-55{height:6105px}
+.ui-paper-bg-mid.row-56{height:6216px}
+.ui-paper-bg-mid.row-57{height:6327px}
+.ui-paper-bg-mid.row-58{height:6438px}
+.ui-paper-bg-mid.row-59{height:6549px}
+.ui-paper-bg-mid.row-60{height:6660px}
+.ui-paper-bg-mid.row-61{height:6771px}
+.ui-paper-bg-mid.row-62{height:6882px}
+.ui-paper-bg-mid.row-63{height:6993px}
+.ui-paper-bg-mid.row-64{height:7104px}
+.ui-paper-bg-mid.row-65{height:7215px}
+.ui-paper-bg-mid.row-66{height:7326px}
+.ui-paper-bg-mid.row-67{height:7437px}
+.ui-paper-bg-mid.row-68{height:7548px}
+.ui-paper-bg-mid.row-69{height:7659px}
+.ui-paper-bg-mid.row-70{height:7770px}
+.ui-paper-bg-mid.row-71{height:7881px}
+.ui-paper-bg-mid.row-72{height:7992px}
+.ui-paper-bg-mid.row-73{height:8103px}
+.ui-paper-bg-mid.row-74{height:8214px}
+.ui-paper-bg-mid.row-75{height:8325px}
+.ui-paper-bg-mid.row-76{height:8436px}
+.ui-paper-bg-mid.row-77{height:8547px}
+.ui-paper-bg-mid.row-78{height:8658px}
+.ui-paper-bg-mid.row-79{height:8769px}
+.ui-paper-bg-mid.row-80{height:8880px}
+.ui-paper-bg-mid.row-81{height:8991px}
+.ui-paper-bg-mid.row-82{height:9102px}
+.ui-paper-bg-mid.row-83{height:9213px}
+.ui-paper-bg-mid.row-84{height:9324px}
+.ui-paper-bg-mid.row-85{height:9435px}
+.ui-paper-bg-mid.row-86{height:9546px}
+.ui-paper-bg-mid.row-87{height:9657px}
+.ui-paper-bg-mid.row-88{height:9768px}
+.ui-paper-bg-mid.row-89{height:9879px}
+.ui-paper-bg-mid.row-90{height:9990px}
+.ui-paper-bg-mid.row-91{height:10101px}
+.ui-paper-bg-mid.row-92{height:10212px}
+.ui-paper-bg-mid.row-93{height:10323px}
+.ui-paper-bg-mid.row-94{height:10434px}
+.ui-paper-bg-mid.row-95{height:10545px}
+.ui-paper-bg-mid.row-96{height:10656px}
+.ui-paper-bg-mid.row-97{height:10767px}
+.ui-paper-bg-mid.row-98{height:10878px}
+.ui-paper-bg-mid.row-99{height:10989px}
+.ui-paper-bg-mid.row-100{height:11100px}
+
+
+.ui-paper-title{
+	padding-top:86px;
+	text-align: center;
+}
+.ui-paper-title.left{
+	text-align: left;
+	padding-left:40px;
+}
+.ui-paper-title.fea{
+	padding-top:30px;
+}
+.ui-paper-title.msg{
+	padding-top:30px;
+	margin-right: 122px;
+}
+.ui-paper-title.msg img{
+	vertical-align: middle;
+}
+.ui-new-question{
+	font-size:1.8rem;
+	padding:10px 60px 10px 70px;
+	color:#6b1b1b;
+	line-height:36px;
+	font-weight:bold;
+	margin-top:15px;
+}
+.ui-new-question.q-1{
+	background: url(../../image/oneInsure/q-num-1.png) 20px 16px no-repeat;
+}
+.ui-new-question.q-2{
+	background: url(../../image/oneInsure/q-num-2.png) 20px 16px no-repeat;
+}
+.ui-new-question.q-3{
+	background: url(../../image/oneInsure/q-num-3.png) 20px 16px no-repeat;
+}
+.ui-new-question.q-4{
+	background: url(../../image/oneInsure/q-num-4.png) 20px 16px no-repeat;
+}
+.ui-new-answer{
+	font-size:1.6rem;
+	padding:0 60px 0 70px;
+	color:#6b1b1b;
+	line-height:36px;
+}
+
+.ui-role-list{
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.ui-role{
+	width:50%;
+	float:left;
+	text-align: center;
+}
+.ui-role-info{
+}
+.ui-role-instro{
+	z-index: 3;
+	position: relative;
+	text-align: center;
+	background: url(../../image/oneInsure/role-instro-bg.png) no-repeat center;
+	background-size:100% auto;
+	height:310px;
+	line-height: 310px;
+	width:100%; 
+	max-width:594px;
+	margin:0 auto;
+	clear:both;
+}
+.ui-roll{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.ui-roll-left{
+	height:100%;
+	width:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	background: url(../../image/oneInsure/roll-left.png) no-repeat center left;
+	background-size:auto 100%;
+}
+.ui-roll-right{
+	height:100%;
+	width:100%;
+	position:absolute;
+	right:0;
+	top:0;
+	background: url(../../image/oneInsure/roll-right.png) no-repeat center right;
+	background-size:auto 100%;
+}
+
+.ui-role-img a{
+	display: block;
+	position: absolute;
+	width:40%;
+	height:20%;
+	top:73%;
+	left:30%;
+}
+.ui-role-img img{
+	vertical-align: middle;
+}
+.ui-role-img.info-hide{
+	display: none;
+}
+
+.ui-mask{
+/* 	width:100%; */
+/* 	height:100%; */
+/* 	position: absolute; */
+/* 	top:0; */
+/* 	left:0; */
+/* 	background: rgba(62,46,36,.6); */
+/* 	z-index: 2; */
+	display: none;
+	
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background: rgba(0,0,0,.5);
+	text-align:center;
+}
+.ui-mask img{
+	width:90%;	
+	height:auto;
+}
+
+.ui-mask.mask-show{
+	display: block;
+}
+.mask-open {
+	overflow: hidden;
+}
+
+/*�������*/
+.ui-power{
+	position: relative;
+}
+.ui-power img{
+	vertical-align: top;
+	width:100%;
+}
+.ui-power-map{
+	width:300px;
+	height:300px;
+	margin:0 auto;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left:-150px;
+	margin-top:-150px;
+}
+.ui-power-tip{
+	color:#2f231d;
+	line-height:54px;
+	height:54px;
+	background: #f5cdac;
+}
+.ui-power-tip i{
+	width:20px;
+	height:20px;
+	margin-left:26px;
+	margin-right:12px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.ui-power-tip span{
+	display: inline-block;
+	vertical-align: middle;	
+	font-size:22px;
+}
+.ui-power-tip i.total{
+	background: #30241f;
+}
+.ui-power-tip i.has{
+	background: #d55d14;
+}
+.ui-power-tip .ui-power-diagram{
+	float:right;
+	margin-right:20px;
+	color:#d55d14;
+	font-size:24px;
+	padding-right:36px;
+	background:url(../../image/oneInsure/icon-todo.png) center right no-repeat;
+	background-size: auto 60%;
+}
+
+.ui-value-list{
+	
+}
+.ui-value-item{
+	background:url(../../image/oneInsure/value-split.png) bottom repeat-x;
+	padding:10px 0;
+}
+
+.ui-value-item:last-child{
+	background:none;
+}
+.ui-value-info{
+	padding-top:20px;
+}
+.ui-value-info p{
+	width: 120%;
+}
+.ui-value-info h2{
+	font-size:40px;
+	line-height:80px;
+	color:#2e221d;
+}
+.ui-value-info p{
+	font-size:30px;
+	line-height:46px;
+	color:#2e221d;
+}
+
+.ui-value-circle{
+	padding-top:20px;
+}
+.ui-value-detail{
+	z-index:-9999;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	text-align: center;
+}
+.ui-value-item canvas{
+	margin-top:-42px;
+}
+.ui-value-rate{
+	padding-top: 20%;
+	font-size:1.8em;
+	color:#ff9e3f;
+	text-align: center;
+}
+.ui-value-has{
+	font-size: 18px;
+	color:#ff9e3f;
+	text-align: center;
+	padding-bottom: 10px;
+/* 	color: black; */
+}
+.ui-value-choose{
+	text-align: center;
+	margin-bottom:40px;
+}
+
+.ui-choose-btn{
+	width:20%;
+	margin:0 2%;
+	display: inline-block;
+	height:110px;
+	font-weight:bold;
+	background: url(../../image/oneInsure/detail-btn-bg.png) no-repeat center;
+	background-size: 100% 100%;
+	color:#6b1b1b;
+	text-align: center;
+	padding-top:14px;
+}
+
+.ui-choose-name{
+	font-size:26px;
+	line-height:36px;
+	color:#2e221d;
+}
+.ui-choose-value{
+	font-size:30px;
+	line-height:45px;
+}
+
+.ui-msg-box{
+	width:96%;
+	margin:0 auto;
+	height:110px;
+	background: url(../../image/oneInsure/value-msg-btn.png) no-repeat center;
+	background-size:100% 100%; 
+	color:#eab485;
+	margin-bottom:100px;
+}
+.ui-msg-bird{
+	height: 145px;
+	margin-top: -45px;
+	background: url(../../image/oneInsure/fly-bird.png) no-repeat center right;
+	background-size:auto 100%; 
+}
+.ui-msg-title{
+	font-size:28px;
+/* 	line-height:36px; */
+	height:72px;
+	margin-top:19px;
+	text-align: center;
+	background: url(../../image/oneInsure/fly-msg.png) no-repeat center;
+	border-right:1px solid #340101;
+	background-size:auto 100%; 
+}
+.ui-msg-content{
+	font-size:23px;
+	line-height:36px;
+	margin-top:19px;
+	border-left:1px solid #ab2323;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+/*����*/
+.ui-info-body{
+	text-align: center;
+	margin:10px auto 0;
+	width:94%;
+	height:107px;
+/* 	modify hsz 2014.双12-抽红包.09 */
+/* 	line-height:107px; */
+	background: url(../../image/oneInsure/input-bg.png) no-repeat center;
+	background-size:100% 100%; 
+	
+}
+.ui-one-label{
+/* 	width:46%; */
+/* 	display:inline-block; */
+	font-size:40px;
+	text-align: center;
+	color:#2e221d;
+	line-height:100px;
+	vertical-align: middle;
+	float:left;
+	margin-left:4%;
+}
+.ui-one-label.totalAmountName{
+	width:30%;
+}
+.ui-one-label span{
+	font-size:60px;
+	font-weight:bold;
+	margin-right:6px;
+}
+
+.ui-one-label:last-child{
+	float:right;
+	margin-right:4%;
+	margin-left:0;
+}
+.ui-info-fill{
+	text-align: left;
+	padding-top:20px;
+	padding-bottom:40px;
+}
+
+.ui-info-tip{
+	text-align: right;
+	margin:10px auto 0;
+	width:94%;
+	line-height:60px;
+}
+
+.ui-one-tip{
+	color:#2e221d;
+	font-size:28px;
+}
+.ui-one-tip span{
+	font-weight:bold;
+	margin-right:6px;
+	margin-left:10px;
+}
+
+.ui-extra{
+	background: #6c4126;
+	text-align: center;
+	padding:16px 0;
+	line-height:54px;
+	font-size:30px;
+	color:#d7a46f;
+	margin-top:40px;
+}
+.ui-extra .ui-checkbox{
+	height:44px;
+	width:44px;
+	background: #eed6bc;
+	vertical-align: middle;
+}
+.ui-extra-fill{
+	background: #805134;
+	padding:10px 0 50px;
+	display: none;
+}
+.ui-info-fill .ui-input{
+	color:#371c0e;
+	font-size:40px;
+}
+.ui-buy-info{
+	margin-top:50px;
+}
+.ui-buy-info.pay-choose{
+	margin-top:20px;
+}
+.ui-buy-info > label,
+.ui-buy-info > input,
+.ui-date-info > label,
+.ui-date-info > input,
+.ui-date-info > div{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.ui-info-fill .ui-label{
+	font-size:30px;
+	color:#fff;
+	line-height:80px;
+	width:30%;
+	padding-left:20px;
+}
+.ui-info-fill .ui-label.long{
+	line-height:40px;
+	text-align: left;
+}
+.ui-info-fill .ui-label span{
+	display: block;
+}
+.ui-buy-info .ui-label{
+}
+.ui-buy-info .ui-input{
+	width:170px;
+	margin-right:18px;
+	height:80px;
+	background: #fff;
+}
+
+.ui-buy-calc{
+	width:80px;
+	height:80px;
+	line-height:80px;
+	margin-right:18px;
+	background-color: #d8a570;
+	border-radius:4px;
+	font-size:60px;
+	color:#fff;
+	font-family:'swis721bt';
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ui-buy-calc.minus{
+	background-image: url(../../image/oneInsure/icon-minus.png);
+}
+.ui-buy-calc.sum{
+	background-image: url(../../image/oneInsure/icon-sum.png);
+}
+
+.ui-date-info{
+	margin-top:50px;
+}
+.ui-date-info .ui-input{
+	width:360px;
+	height:80px;
+	background: #fff;
+}
+.ui-date-info .ui-label{
+}
+.ui-date-box{
+	height:80px;
+	line-height:80px;
+	width:90px;
+	margin-right:18px;
+	
+	color:#371c0e;
+	font-size:30px;
+	background: #d8a570;
+	border-radius:4px;
+	text-align: center;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+	opacity: 0; /*��ʼ״̬ ͸����Ϊ0*/
+	}
+	50% {
+	opacity: 0.5; /*�м�״̬ ͸����Ϊ0.5*/
+	}
+	100% {
+	opacity: 1; /*��β״̬ ͸����Ϊ1*/
+	}
+}
+@-webkit-keyframes fadeOut {
+	0% {
+	opacity: 1; /*��ʼ״̬ ͸����Ϊ1*/
+	}
+	50% {
+	opacity: 0.5; /*�м�״̬ ͸����Ϊ0.5*/
+	}
+	100% {
+	opacity: 0; /*��β״̬ ͸����Ϊ0*/
+	}
+}
+.ui-info-panel-title .ui-date-box{
+	height:65px;
+	line-height:65px;
+	vertical-align: middle;
+	display: none;
+	margin-right:0;
+	margin-left:18px;
+}
+.ui-info-fill.active .ui-info-panel-title .ui-date-box{
+	display: inline-block;
+	
+	-webkit-animation-name: fadeIn; /*��������*/
+	-webkit-animation-duration: .5s; /*��������ʱ��*/
+	-webkit-animation-iteration-count: 1; /*��������*/
+	-webkit-animation-delay: 0s;
+}
+.ui-travel-select{
+	display: none;
+}
+.ui-info-fill.active .ui-travel-select{
+	display: block;
+}
+
+.ui-info-fill.ui-travel{
+	padding-bottom: 0;
+}
+.ui-travel .ui-info-panel-title{
+	position:relative;
+}
+.ui-travel .ui-info-panel-title b{
+	width:29px;
+	height:29px;
+	background: url(../../image/oneInsure/travel-folder.png) no-repeat center;
+	-webkit-transition:all .5s ease-in-out;
+	display: block;
+	position: absolute;
+	right:20px;
+	top:24px;
+}
+.ui-travel.active .ui-info-panel-title b{
+	-webkit-transform: rotate(90deg)
+}
+.ui-date-box-health{
+	height:80px;
+	line-height:80px;
+	width:120px;
+	margin-right:18px;
+	
+	color:#371c0e;
+	font-size:30px;
+	background: #d8a570;
+	border-radius:4px;
+	text-align: center;
+}
+.ui-date-box-health.select{
+	color:#edb172;
+	background: #47220e;
+}
+
+.ui-date-box.select{
+	color:#edb172;
+	background: #47220e;
+}
+
+.ui-btn-buy{
+	display:block;
+	width:96%;
+	margin:0 auto;
+	height:110px;
+	border-radius:4px;
+	background:#4091FC;
+	margin-bottom:10px;
+	margin-top:10px;
+	border:0;
+	text-align: center;
+	line-height:110px;
+	color: #ffffff;
+	font-size: 3em;
+}
+.ui-btn-buy img{
+	vertical-align: middle;
+}
+
+.ui-base-info{
+	background:url(../../image/oneInsure/value-split.png) bottom repeat-x;
+	padding:20px 0;
+}
+.ui-base-info img{
+	float:left;
+}
+.ui-base-info p{
+	font-size:24px;
+	color:#6b1b1b;
+	line-height:36px;
+	margin-left:210px;
+	margin-top:10px;
+	margin-right:30px;
+}
+.ui-base-info p span{
+	background: #7d4724;
+	color:#eaceab;
+	margin-right:6px;
+	border-radius:3px;
+	padding:3px 5px;
+}
+
+.ui-product-select{
+	padding-bottom:40px;
+	padding-top:40px;
+	background: url(../../image/oneInsure/select-bg.png) bottom no-repeat;
+	box-shadow:0 10px 30px #4a200f;
+	background-size:100% auto;
+	text-align: center;
+	height:340px;
+	position:relative;
+	overflow: hidden;
+}
+/*.ui-product-item{*/
+	/*display: none;*/
+/*}*/
+#product_wrap_area{
+	-webkit-transition: -webkit-transform .3s linear, opacity .3s linear;
+}
+.product_list{
+	display: none;
+}
+.ui-product-item.show{
+	display: block;
+}
+.ui-select-item{
+	width:39%;
+	height:260px;
+	line-height:260px;
+	display: inline-block;
+	/*-webkit-transition: width .4s ease-out;
+	/*position:absolute;*/
+} 
+.ui-select-item img{
+	vertical-align: middle;
+}
+.ui-select-item.small{
+	width:30%;
+}
+.ui-select-item.big{
+	width:39%;
+}
+.ui-select-item.hide{
+	display: none;
+}
+
+.ui-detail-fea{
+	background:url(../../image/oneInsure/value-split.png) bottom repeat-x;
+	padding:10px 0 40px;
+}
+.ui-detail-fea p{
+/* 	color:#6b1b1b; */
+	color:#9d3d0e;
+	line-height:36px;
+	margin-left:40px;
+	margin-top:10px;
+	margin-right:30px;
+}
+.ui-detail-fea p.label{
+	font-size:26px;
+	font-weight:bold;
+}
+.ui-fea-only{
+	height:80px;
+	line-height:80px;
+	text-align: left;
+	margin: 14px auto;
+	width: 94%;
+	background: url(../../image/oneInsure/input-bg.png) no-repeat center;
+	background-size: 100% 100%;
+	font-size:30px;
+	font-weight:bold;
+	color:#47220e;
+	padding-left:10px;
+}
+.ui-detail-feature{
+	line-height: 36px;
+	margin-left: 40px;
+	margin-top: 10px;
+	margin-right: 30px;
+	font-size: 24px;
+	color: #6b1b1b;
+	background: url(../../image/oneInsure/value-split.png) bottom repeat-x;
+	padding-bottom:40px;
+	font-weight: 600;
+}
+.ui-detail-feature .feature{
+	padding-left: 0.6em;
+}
+.ui-detail-feature .car{
+	color:#a70311;
+	height:53px;
+	line-height:53px;
+	padding-left:0.4em;
+	background: url(../../image/oneInsure/car_bg.png) no-repeat left center;
+	margin-left: 1.8em;
+	margin-bottom: 1.2em;
+}
+.ui-detail-feature .indicator{
+	font-size:1.2em;
+	height:40px;
+	width:40px;
+	text-align:center;
+	line-height:40px;
+	color:white;
+	display:inline-block;
+	background: url(../../image/oneInsure/indicator_bg.png) no-repeat center;
+}
+.ui-detail- p.txt{
+	font-size:24px;
+}
+.ui-detail-fea p.txt{
+	font-size:24px;
+}
+.ui-detail-fea p.txt span{
+	margin:0 10px;
+}
+
+.ui-detail-fea p.gender{
+	padding-left:40px;
+}
+.ui-detail-fea p.gender.male{
+	background: url(../../image/oneInsure/icon-male.png) left center no-repeat;
+}
+.ui-detail-fea p.gender.female{
+	background: url(../../image/oneInsure/icon-female.png) left center no-repeat;
+}
+.ui-detail-fea p.gender b{
+	font-weight: normal;
+	font-size:26px;
+	padding:3px 10px;
+	border-radius:3px;
+	color:#eab583;
+}
+.ui-detail-fea em{
+	font-weight: normal;
+	font-size: 24px;
+	padding: 3px 10px;
+	border-radius: 3px;
+	color: #eab583;
+	background: #a41e11;
+}
+.ui-detail-fea span{
+	margin: 0 10px;
+	font-size: 24px;
+}
+#ui-detail-fea-accident{
+	text-align: center;
+}
+#ui-detail-fea-accident strong{
+	color: #a41e11;
+}
+.ui-detail-fea p.gender.male b{
+	background: #252726;
+}
+.ui-detail-fea p.gender.female b{
+	background: #a41e11;
+}
+
+.ui-detail-fea p.finance{
+	padding-left:40px;
+}
+.ui-detail-fea p.finance.f1{
+	background: url(../../image/oneInsure/icon-calc.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f2{
+	background: url(../../image/oneInsure/icon-txt.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f3{
+	background: url(../../image/oneInsure/icon-3.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f4{
+	background: url(../../image/oneInsure/icon-4.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f5{
+	background: url(../../image/oneInsure/icon-5.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f6{
+	background: url(../../image/oneInsure/icon-6.png) left center no-repeat;
+}
+.ui-detail-fea p.finance.f7{
+	background: url(../../image/oneInsure/icon-7.png) left center no-repeat;
+}
+
+.ui-detail-fea p.accident{
+	text-align: center;
+	padding:10px 0;
+}
+.ui-detail-fea p.accident.head{
+	background: #a41e11;
+	color:#dea073;
+}
+.ui-detail-fea p.accident.body{
+	background: #a57553;
+	color:#f9cb7c;
+}
+
+.ui-sales{
+	background: url(../../image/oneInsure/bar-map.png) bottom center no-repeat;
+	height:150px;
+	background-size:100% auto;
+	color:#a41e11;
+	font-size:34px;
+	font-weight:bold; 
+	line-height:64px;
+	padding-left:40px;
+	padding-top: 20px;
+}
+
+.ui-detail-info{
+	padding-top:20px;
+	padding-bottom:50px;
+}
+
+.ui-detail-info p{
+	color:#6b1b1b;
+	line-height:36px;
+	margin-left:40px;
+	margin-top:10px;
+	margin-right:30px;
+	font-size:24px;
+}
+.ui-detail-info p label{
+	margin-right:30px;
+}
+.ui-detail-action{
+	text-align: center;
+}
+.ui-detail-btn{
+	width:40%;
+	margin:0 2%;
+	display: inline-block;
+	height:94px;
+	line-height:90px;
+	font-weight:bold;
+	background: url(../../image/oneInsure/detail-btn-bg.png) no-repeat center;
+	background-size: 100% 100%;
+	color:#6b1b1b;
+	font-size:30px;
+	text-align: center;
+}
+
+
+/*�����¼*/
+.ui-record-tabs{
+/* 	margin-top:45px; */
+	text-align: center;
+	padding-bottom:60px;
+	border-bottom:2px dashed #4a1e18;
+}
+.ui-record-tabs.first{
+/* 	margin-top:45px; */
+	padding-bottom:0;
+	border-bottom:0;
+}
+.ui-record-tab{
+	display:inline-block;
+	padding:0 10px;
+	font-size:26px;
+	color:#371c0e;
+	line-height:80px;
+	height:80px;
+	border-radius:4px;
+	background: #d8a671;
+	float: none;
+}
+.ui-record-tab.active{
+	background: #48230f;
+	color:#edb172;
+}
+/* ���ʵ�CSS */
+/* .ui-record-pay{ */
+/* 	width:142px; */
+/* 	height:51px; */
+/* 	line-height:51px; */
+/* 	text-align:center; */
+/* 	display:block; */
+/* 	position:absolute; */
+	
+/* 	background: #48230f; */
+/* 	top:36px; */
+/* 	right:0; */
+/* 	color:#d8a671; */
+/* 	font-size:28px; */
+/* } */
+/* ����Ө�ĸ�ʽ */
+.ui-record-pay{
+    background: none repeat scroll 0 0 #48230f;
+    color: #d8a671;
+    display: block;
+    font-size: 18px;
+    height: 37px;
+    line-height: 39px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 25px;
+    width: 100px;
+}
+
+.ui-rebuy{
+	position: fixed;
+	bottom:0;
+	background: #d8a666;
+	padding:18px 0;
+	width: 100%;
+}
+.ui-rebuy-action{
+	text-align: center;
+}
+.ui-rebuy-txt{
+	line-height:55px;
+	font-size:32px;
+	font-weight:bold;
+	color:#6b1b1b;
+	padding-left:20px;
+}
+.ui-rebuy-txt span{
+	margin:0 4px;
+}
+.ui-btn-rebuy{
+	display: inline-block;
+	height:110px;
+	width:80%;
+	background: url(../../image/oneInsure/btn-val-bg.jpg) no-repeat center;
+	background-size: 100% 100%;
+	line-height:110px;
+	text-align: center;
+}
+.ui-btn-rebuy img{
+	vertical-align: middle;
+}
+
+.ui-record-list{
+	margin-bottom:200px;
+}
+.ui-record-bar{
+	text-align: center;
+	position: relative;
+	top: 30px;
+}
+.ui-bar-circle{
+	background: #48230f;
+	height:26px;
+	width:26px;
+	border-radius:13px;
+	display: inline-block;
+	margin:0 30%;
+}
+.ui-bar-line{
+	width:10px;
+	background: #48230f;
+	border-radius:3px;
+	display: inline-block;
+}
+.ui-record-info{
+	padding-left:8px;
+	border-bottom:2px dashed #4a1e18;
+	padding-top:15px;
+	padding-bottom:30px;
+	position: relative;
+}
+.ui-record-title{
+	color:#371c0e;
+	font-size:30px;
+	line-height:60px;
+}
+.ui-record-txt{
+	color:#562c2c;
+	font-size:25px;
+	line-height:42px;
+}
+
+
+/*Ͷ������*/
+.ui-rule-title{
+	font-size:30px;
+	color:#2e0202;
+	padding:5px 0;
+	line-height:110px;
+	text-align: center;
+}
+
+.ui-rule-txt{
+	font-size:24px;
+	color:#2e0202;
+	line-height:36px;
+	padding:0 32px;
+}
+
+/*Ͷ��¼��*/
+
+.ui-insure-action{
+	margin-top:50px;
+	margin-bottom:30px;
+}
+
+.ui-fill{
+	margin-left:35px;
+	margin-right:35px;
+	padding-bottom:20px;
+	border-bottom:2px dashed #481c17;
+}
+.ui-fill-title{
+	line-height:100px;
+	font-size: 30px;
+	color: #2e0202;
+}
+.ui-input,
+.ui-select{
+/* 	background: #5e311b; */
+/* 	color:#ffce94; */
+}
+
+.ui-input.ocp-input{
+	background:#5e311b url(../../image/oneInsure/select-arr.png) right center no-repeat;
+}
+.ui-form-group{
+	margin-bottom:36px;
+}
+
+#idtype{
+	width:41%;
+}
+#idnumber{
+	width:58%;
+}
+.ui-info {
+	font-size: 25px;
+	color: #562c2c;
+	line-height: 54px;
+	display: block;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#AD8658
+}
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#AD8658
+}
+/* input:focus::-webkit-input-placeholder, */
+/* textarea:focus::-webkit-input-placeholder{ */
+/* 	color:transparent; */
+/* }  */
+
+.ui-notice-panel{
+	background: #d8a671;
+	border-radius:8px;
+	padding:10px 30px;
+	display: none;
+}
+.ui-notice-panel p{
+	line-height:38px;
+	font-size:18px;
+	color:#562c2c;
+}
+
+.ui-notice-view{
+	float:right;
+	font-size:24px;
+}
+.ui-notice-view span{
+	margin-right:15px;
+}
+.ui-notice-view b{
+	width:34px;
+	height:34px;
+/* 	float:right; */
+/* 	margin-top:33px; */
+	display:inline-block;
+	vertical-align:middle;
+	background: url(../../image/oneInsure/icon-view-close.png) no-repeat center;
+	background-size:auto 100%;
+	-webkit-transition: all .3s ease;
+}
+.ui-notice-view.open b{
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+}
+.ui-notice-choose{
+	line-height:100px;
+	font-size: 24px;
+	color: #2e0202;
+}
+.ui-choose-main{
+	font-size: 24px;
+	color: #2e0202;
+	float:right;
+	text-align:right;
+}
+.ui-choose-item{
+	display:inline-block;
+	width:90px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	border-radius:5px;
+	vertical-align:middle;
+	background: #d8a671;
+	color:#371c0e;
+}
+.ui-choose-item.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.ui-travel .planeType .ui-date-box.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.ui-travel .trainType .ui-date-box.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.ui-travel .busType .ui-date-box.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.ui-travel .shipType .ui-date-box.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.ui-fill .ui-label,
+.ui-fill .ui-info-label{
+	float: left;
+	font-size: 28px;
+	color: #2e0202;
+}
+.ui-agree{
+	font-size: 24px;
+	color: #562c2c;
+	margin:20px 0;
+}
+.ui-agree-select{
+	font-size: 24px;
+	float:right;
+	display: inline-block;
+	width:90px;
+	height:40px;
+	background: #d8a671;
+	border-radius:4px;
+	line-height:40px;
+	text-align: center;
+	color:#371c0e;
+	margin-left:5px;
+}
+.ui-agree-select.active{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+.ui-checkbox{
+	width:34px;
+	height:34px;
+	vertical-align: middle;
+	margin-right:8px;
+}
+.ui-insure-action{
+	text-align: center;
+}
+.ui-btn-buy.confirm{
+	height:83px;
+	line-height:83px;
+	width:42%;
+	margin:0 2%;
+	background:url(../../image/oneInsure/btn-one.jpg) center no-repeat;
+	display: inline-block;
+}
+
+.err-mes {
+	color: #8e0404;
+	padding-left:50px;
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+/*��������-�������*/
+.ui-one-label.up-value{
+	text-align: left;
+}
+
+.ui-value-title{
+	margin:20px 2% 0;
+	text-align: center;
+	color:#2e221d;
+	font-size:38px;
+}
+
+.ui-inner-btn{
+	display: inline-block;
+	height:41px;
+	width:137px;
+	background: #48230f;
+	color:#d8a671;
+	font-size:24px;
+	text-align: center;
+	line-height:41px;
+}
+.ui-value-title{
+	position:relative; 
+}
+
+.ui-value-title .ui-inner-btn{
+	position:absolute;
+	right:0;
+	top:6px;
+}
+
+.ui-info-panel{
+	margin:20px 2% 0;
+}
+.ui-info-panel-title{
+	padding:0 28px;
+	background: #7d4d32;
+	line-height:77px;
+	height:77px;
+}
+.ui-info-panel-title img{
+	vertical-align: middle;
+}
+.ui-info-name{
+	font-size:30px;
+	color:#ffce94;
+	vertical-align: middle;
+}
+.ui-info-date{
+	font-size:24px;
+	color:#ffce94;
+	margin-left:20px;
+	vertical-align: middle;
+}
+.ui-info-tip{
+	font-size:24px;
+	color:#361e05;
+	margin-left:20px;
+	vertical-align: middle;
+}
+
+.ui-info-panel-title .ui-inner-btn{
+	float:right;
+	margin-top:18px;
+}
+
+.ui-info-panel-txt{
+	padding-left:28px;
+	background: #95664d;
+	color:#704126;
+	font-size:24px;
+	line-height:28px;
+	padding:14px 28px;
+}
+
+.ui-circle-info{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.ui-info-days,
+.ui-info-amount{
+	height:60%;
+	text-align: center;
+}
+
+.ui-info-days{
+	color:#f8c084;
+	font-size:60px;
+	padding-top:40%;
+	position:relative; 
+}
+
+.ui-info-days span{
+	font-size:28px;
+	position:absolute;
+	right:30%;
+}
+
+.ui-info-amount{
+	font-size:44px;
+	color:#f8c084;
+	padding-top:40%;
+}
+
+.ui-circle-info-label{
+	color:#532b0a;
+	font-size:24px;
+	text-align: center;
+}
+
+.ui-finance-info{
+	padding-bottom:50px;
+}
+
+.ui-fi-row{
+	padding:0 3%;
+}
+.ui-fi-row-m{
+	margin:0 3%;
+	border-bottom:2px dashed #481d17;
+}
+.ui-fi-head{
+	font-size:24px;
+	color:#2e221d;
+	padding-top:25px;
+	padding-bottom:20px;
+}
+
+.ui-fi-data{
+	font-size:36px;
+	color:#2e221d;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+.ui-fi-th{
+	background: #7d4d32;
+}
+.ui-fi-label{
+	font-size:30px;
+	color:#ffce94;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-indent: .5em;
+}
+.ui-fi-td{
+	font-size:30px;
+	color:#ffce94;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-indent: .5em;
+}
+
+.fi-red{
+	color:#a70909;
+}
+.fi-center{
+	text-align: center;	
+	text-indent: 0;
+}
+
+.ui-clause-main{
+	padding:20px 0;
+}
+.ui-clause-content{
+	display: none;
+	padding-top:20px;
+	padding-left:10px;
+	padding-right:10px;
+/* 	-webkit-transition:all .5s ease-in-out; */
+}
+.ui-clause-content.show{
+	display: block;
+}
+.ui-clause-txt{
+	padding:0 40px;
+	line-height:34px;
+	font-size:24px;
+	color:#6b1b1b;
+	text-indent: 2em;
+	text-align: left;
+}
+.ui-clause-content .ui-clause-txt-strong{
+	padding:0 40px;
+	line-height:34px;
+	font-size:24px;
+	color:#6b1b1b;
+	text-indent: 2em;
+	text-align: left;
+	font-weight: bold;
+}
+.ui-clause-dir{
+	margin:0 20px;
+	height:107px;
+	line-height:107px;
+	padding:0 20px;
+	/* background: url(../../image/oneInsure/clause-dir-bg.png) no-repeat center; */
+	background-size:100% 107px;
+	font-size:28px;
+	color:#6b1b1b; 
+	position: relative;
+	font-weight:bold;
+	border-radius: 4px;
+	background: #ffffff;
+}
+.ui-clause-dir b{
+	width:52px;
+	height:52px;
+	background: url(../../image/common/icon-todo-blue.png) no-repeat center;
+	-webkit-transition:all .5s ease-in-out;
+	display: block;
+	position: absolute;
+	right:20px;
+	top:27px;
+}
+.ui-clause-dir.folder b{
+	-webkit-transform: rotate(90deg)
+}
+
+.ui-info-body.pay{
+	margin-top:45px;
+}
+
+.ui-pay-result{
+	line-height:100px;
+	font-size:40px;
+	color:#2e221d;
+	vertical-align: baseline;
+}
+.ui-insure-result{
+	line-height:100px;
+	font-size:26px;
+	color:#2e221d;
+	vertical-align: baseline;
+}
+
+.ui-send-email{
+	font-size:24px;
+	color:#2e221d;
+/* 	modify by wcl��֧�����ҳ�� */
+/* 	line-height:36px; */
+	
+	/* line-height:32px; */
+	padding:0px 30px;
+	text-align: left;
+}
+.email-address{
+	color:#a70909;
+}
+
+.ui-info-panel.pay{
+	margin-left:4%;
+	margin-right:4%;
+}
+.ui-pay-label,
+.ui-pay-info{
+	font-size:28px;
+	color:#2e221d;
+	display: inline-block;
+}
+.ui-pay-label{
+	width:150px;
+}
+.ui-info-panel-title .ui-pay-label,
+.ui-info-panel-title .ui-pay-info{
+	color:#FFCE94;
+}
+.ui-pay-data{
+	padding: 20px 30px 0;
+}
+
+.pay {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.pay-type {
+  margin: 0 2%;
+  background: #BADFF6 url(../../image/product/one/pay-type.png) no-repeat 21px center;
+  border-radius: 4px;
+  height: 107px;
+  line-height: 107px;
+  font-size: 40px;
+  padding-left: 90px;
+}
+.pay-type.active {
+  background: #BADFF6 url(../../image/product/one/pay-type-select.png) no-repeat 21px center;
+}
+.pay-info {
+  margin: 0 4%;
+}
+.pay-info p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.pay-rest {
+  font-size: 26px;
+  color: #2e221d;
+  padding-top: 26px;
+}
+.pay-tip {
+  padding-top: 16px;
+  font-size: 22px;
+  color: #624935;
+}
+.pay-money {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
+  padding-bottom: 22px;
+  border-bottom: 2px dashed #4d211c;
+}
+.pay-price {
+  font-size: 36px;
+  color: #2e221d;
+}
+.pay-price .number {
+  font-size: 46px;
+  color: #a31313;
+  margin: 0 5px;
+}
+.pay-score {
+  padding-top: 20px;
+  font-size: 28px;
+  color: #2e221d;
+}
+.pay-charge {
+  float: right;
+  font-size: 28px;
+  color: #2e221d;
+  margin-top: 20px;
+}
+.pay-charge .number {
+  margin: 0 5px;
+}
+.pay .ui-form-group {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.pay-vali-btn {
+  vertical-align: middle;
+  width: 40% !important;
+  line-height: 74px;
+  margin-left: 2%;
+  background: #d8a671;
+  color: #371c0e;
+}
+.pay-vali-input {
+  vertical-align: middle;
+  width: 56% !important;
+}
+
+
+.ui-day-bar{
+	
+}
+
+
+.ui-day-panel{
+	float:right;
+	width:32%;
+	border-radius:4px;
+	text-align: center;
+	background: #f5bd87;
+}
+.ui-day-panel-title{
+	line-height:40px;
+	height:40px;
+	font-size:22px;
+	color:#d9a36e;
+	background:#7d4d32;
+}
+
+.ui-day-num{
+	padding:25px 0;
+	font-size:22px;
+	color:#48230f;
+}
+.ui-day-num .number{
+	font-size:60px;
+	color:#9f0808;
+	margin-right:5px;
+}
+
+.ui-day-bar{
+	width:64%;
+	float:left;
+	padding:0 20px;
+}
+
+.bar-line{
+	text-align: center;
+	color:#5e2303;
+	font-size:22px;
+}
+.bar-left{
+	border-bottom:8px solid #702d08;
+	float:left;
+	height:70px;
+	padding-top:20px;
+	white-space:nowrap; 
+}
+.bar-right{
+	border-bottom:8px solid #d9a36e;
+	float:left;
+	height:70px;
+	padding-top:20px;
+	white-space:nowrap; 
+}
+.bar-info{
+	position: relative;
+	margin-top:-12px;
+	height:150px;
+}
+
+.bar-info-left{
+	position: absolute;
+	top:0;
+	left:-8px;
+	padding-top:44px;
+	font-size:24px;
+	color:#ffce94;
+	background:url(../../image/oneInsure/day-bar-left.png) left top no-repeat;
+}
+.bar-info-left span{
+	margin-left:-15px;
+}
+.bar-info-right{
+	position: absolute;
+	top:0;
+	right:-8px;
+	padding-top:44px;
+	font-size:24px;
+	color:#ffce94;
+	background:url(../../image/oneInsure/day-bar-right.png) right top no-repeat;
+}
+.bar-info-right span{
+	margin-right:-15px;
+}
+
+.bar-info-mid{
+	position: absolute;
+	top:0;
+	padding-top:94px;
+	font-size:24px;
+	color:#ffce94;
+	background:url(../../image/oneInsure/day-bar-mid.png) center top no-repeat;
+}
+
+.transfer.ui-fill{
+	border-bottom:0;
+	margin-top:30px;
+}
+/* .transfer{ */
+/* 	display:none;  */
+/* } */
+/* .transfer.active{ */
+/* 	display: block; */
+/* } */
+.transfer .ui-form-group{
+	background: #EBEBEB;
+	color: #FFCE94;
+	
+	display: block;
+	border-radius: 4px;
+	height: 74px;
+	font-size: 28px;
+}
+.transfer .ui-label{
+	color: #000000;
+	text-align: left;
+	padding-left:12px;
+}
+.transfer .ui-input{
+	width:100%;
+	background:none;
+	font-size: 24px;
+	padding-right:20px;
+	border-radius:0;
+}
+.transfer .ui-action a{
+	width:100%;
+}
+
+.transfer .ui-input::-webkit-input-placeholder { /* WebKit browsers */
+    color:  #A9A9A9;
+}
+.transfer .ui-form-group.vali{
+	background: none;
+}
+.vali-input{
+	background: #5E311B;
+	border-radius: 4px;
+}
+.transfer .send-vali{
+	display: block;
+	margin-left:5px;
+	background: #D8A671;
+	color: #371C0E;
+	text-align: center;
+	border-radius: 4px;
+	height: 74px;
+	line-height:74px;
+}
+.ui-tab{
+	margin-left: 35px;
+	margin-right: 35px;
+	margin-top:20px;
+}
+.ui-tab-item{
+	background: none;
+	border:1px solid #5e311b;
+	color:#371f0b;
+	font-size:28px;
+	height:60px;
+	line-height:58px;
+	text-align: center;
+}
+.ui-tab-item.active{
+	background: #5e311b;
+	border-radius:3px;
+	color:#ffce94;
+}
+
+.value-detail{
+	margin-top:50px;
+}
+.value-detail .ui-info-panel{
+	margin-top:0;
+}
+
+.value-detail-title{
+	background: #7d4d32;
+	height:80px;
+	line-height:80px;
+	color:#ffce94;
+	font-size:30px;
+	text-align: center;
+}
+.value-detail-data{
+	border-bottom: 2px dashed #4A1E18;
+	border-top: 1px dashed #7D5142;
+	color:#ffce94;
+	font-size:30px;
+}
+.value-detail-data:first-child{
+	border-top:0;
+}
+.value-detail-data>div{
+	padding:30px 0;
+	text-align: center;
+}
+
+.value-detail-data .date{
+	color:#2e0202;
+	font-size:22px;
+	padding:20px 0;
+}
+.ocp{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;outline:0}
+.ocp.show{display:block}
+.ocp-open{overflow:hidden}
+.ocp-dialog{margin:0 auto;width:100%;background:#dfc6b0}
+.ocp-mask{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}
+.ocp-mask.fade{filter:alpha(opacity=0);opacity:0}
+.ocp-mask.fade.in{filter:alpha(opacity=50);opacity:.5}
+.ocp-head{position:relative;padding-top:32px;padding-bottom:32px;font-size:30px;color:#2e0202;text-align:center}
+.ocp-close{position:absolute;top:18px;right:20px;display:block;height:48px;width:48px;background:url(../../image/oneInsure/ocp-close.png)}
+.ocp-search{padding:0 35px 30px}
+.ocp-search-input{border-radius:4px;background:#fff;border:0;height:80px;line-height:50px;font-size:30px;display:inline-block;vertical-align:middle;width:65%;padding-left:10px}
+.ocp-search-btn{display:inline-block;border-radius:4px;background:#ff833e;color:#fff;font-size:30px;height:80px;line-height:80px;vertical-align:middle;width:32%;margin-left:2%;text-align:center}
+.ocp-result{background:#fff}
+.ocp-result-item{height:80px;line-height:79px;padding:0 50px}
+.ocp-result-item.select{background:#eeebe0}
+.ocp-result-item a{font-size:30px;color:#602b0d;border-bottom:#f8f8f8}
+.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}
+.fade.in{opacity:1}
+@media screen and (min-width: 1024px){
+	 .ui-value-rate{
+	 	padding-top: 34%;
+		font-size:4em;
+	}
+	.ui-value-has{
+		font-size: 30px;
+		padding-bottom: 10px;
+	}
+.ui-btn-val-search{
+		font-size: 2.4em;
+		height:75px;
+		width:180px;
+		line-height: 75px;
+	}
+}
+
+.ui-pay-choose{
+	font-size: 24px;
+	color: #2e0202;
+	text-align:left;
+	display:inline-block;
+}
+.ui-pay-item{
+	display:inline-block;
+	width:120px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	border-radius:5px;
+	vertical-align:middle;
+	background: #d8a671;
+	color:#371c0e;
+}
+.ui-pay-item.select{
+	background: #9d562e url(../../image/oneInsure/agree-select.png) no-repeat right top;
+	color:#edb172;
+}
+
+.msg-list{
+	padding-top:30px;
+	border-bottom:1px dashed #9c7857;
+}
+.msg-item{
+	border-top:1px dashed #9c7857;
+	border-bottom:1px dashed #d2b18e;
+	
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:74px;
+	padding-right:50px;
+	background: url(../../image/oneInsure/msg-list-icon_gray.png) 26px center no-repeat;
+}
+
+.msg-content{
+	font-size:28px;
+	line-height:36px;
+	color:#6a5454;
+}
+.msg-time{
+	font-size:28px;
+	line-height:36px;
+	color:#6a5454;
+	margin-top:20px;
+}
+.msg-item.active{
+	background: url(../../image/oneInsure/msg-list-icon.png) 26px center no-repeat;
+}
+.msg-item.active .msg-content{
+	color:#6b1b1b;
+}
+
+.msg-item.active .msg-time{
+	color:#693636;
+}
+
+.ui-trans-hint{
+	font-size: 30px;
+	color: #2e221d;
+	padding-bottom: 12px;
+}
+.add-ui-form-group{
+	margin-bottom: 40px;
+}
+.add-ui-form-group{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 4px;
+	background: #5e311b;
+}
+.add-ui-input,.add-ui-form-group label{
+  display: block;
+  height: 34px;
+  line-height:34px;
+  padding-left: 24px;
+  border: 0;
+  font-size: 28px;
+  background: #5e311b;
+  color: #ffce94;
+}
+.add-ui-form-group label{
+	padding-left:6px;
+	float:left;
+	width: 20%;
+}
+.add-ui-select{
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  height: 64px;
+  padding-left: 4px;
+  line-height:64px;
+  border: 0;
+  font-size: 28px;
+  background: #5e311b;
+  color: #ffce94;
+}
+.add-ui-input{
+	width: 80%;
+	outline: none;
+}
+.add-ui-button{
+  float:right;
+  border-radius: 4px;
+  height: 74px;
+  line-height:74px;
+  border: 0;
+  font-size: 28px;
+  background: #5e311b;
+  color: #ffce94;
+}
+.add-confirm{
+	background-color: #750002;
+	height: 74px;
+    line-height��74px;
+    width: 100%;
+    border-radius: 4px;
+    border:1px solid #750002;
+    color: #FDD59C;
+    font-size: 2.5em;
+    background:linear-gradient(top,#98000B,#7E0001,#630001,#570000);
+    background:-webkit-linear-gradient(top,#98000B,#7E0001,#630001,#570000);
+}
+body.policy-add{
+	background: #ffffff;
+} 
+body.policy-add .add-ui-form-group,body.policy-add .add-ui-input,body.policy-add .add-ui-form-group label{
+	background: #EBEBEB;
+}
+body.policy-add .add-ui-form-group label{
+	color: #595959;
+	padding-left: 18px;
+}
+body.policy-add .add-ui-button{
+	background:#03D29B;
+	color: #ffffff;
+}
+body.policy-add .add-confirm{
+	background: #2C85FB;
+	border: 1px solid #2C85FB;
+	color: #ffffff;
+}
+body.policy-add .add-ui-input{
+	color:#999999;
+}
+body.policy-add .add-ui-input::-webkit-input-placeholder {
+	color:#A9A9A9;
+}
+/**/
+.container{
+	
+}
+.renew-title{
+	color:#003399;	
+	height:70px;
+	line-height:70px;
+	padding-left:55px;
+	font-size:2.4em;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #6699ff /*{a-bar-background-start}*/), to( #3399ff /*{a-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #6699ff /*{a-bar-background-start}*/, #3399ff /*{a-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #6699ff /*{a-bar-background-start}*/, #3399ff /*{a-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #6699ff /*{a-bar-background-start}*/, #3399ff /*{a-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #6699ff /*{a-bar-background-start}*/, #3399ff /*{a-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #6699ff /*{a-bar-background-start}*/, #3399ff /*{a-bar-background-end}*/);
+}
+.main{
+	padding: 30px 17px 0 17px;
+}
+.policy-info-area{
+	border-bottom-right-radius:.6em;
+	border-bottom-left-radius:.6em;
+	-webkit-border-bottom-right-radius:.6em;
+	-webkit-border-bottom-left-radius:.6em;
+	-moz-box-shadow: 0px 1px 3px /*{global-box-shadow-size}*/ rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
+	-webkit-box-shadow: 0px 1px 3px /*{global-box-shadow-size}*/ rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
+	box-shadow: 0px 1px 3px /*{global-box-shadow-size}*/ rgba(0,0,0,.2) /*{global-box-shadow-color}*/;
+	padding-bottom: 34px;
+	margin-bottom: 40px;
+}
+.policy-info-area h4{
+	border-top-left-radius:.6em;
+	border-top-right-radius:.6em;
+	-webkit-border-top-left-radius:.6em;
+	-webkit-border-top-right-radius:.6em;
+	background: #96AFCB;
+	height: 70px;
+	line-height: 70px;
+	padding-left: 33px;
+	color: #ffffff;
+	margin-bottom: 24px;
+	font-size: 2em;
+}
+.policy-info-area p{
+	padding-left: 33px;
+	height: 67px;
+	line-height: 67px;
+	font-size: 2em;
+}
+.policy-info-area p.ins-amount{
+	color: #FF7A4A;
+	font-weight: 600;
+	font-size: 2.3em;
+}
+.policy-info-area p em{
+	float: right;
+	height: 67px;
+	line-height: 67px;
+	background: #00D9A5;
+	width: 150px;
+	text-align: center;
+	color: #ffffff;
+	font-style: normal;
+}
+.policy-info-area p span.circle{
+	height: 16px;
+	width:16px;
+	display:inline-block;
+	border-radius: 8px;
+	-webkit-border-radius:8px;
+	vertical-align:middle;
+	margin-right: 18px;
+}
+.circle1{
+	border: 2px solid #ff6666;
+}
+.circle2{
+	border: 2px solid #ff9966;
+}
+.circle3{
+	border: 2px solid #FAE54A;
+}
+.circle4{
+	border: 2px solid #96D262;
+}
+.circle5{
+	border: 2px solid #00CCB5;
+}
+.policy-info-area a{
+	display: block;
+	-webkit-border-radius: .4em;
+	border-radius: .4em;
+	text-align: center;
+	background: #2D85FB;
+	height: 84px;
+	line-height:84px;
+	width: 90%;
+	margin: 20px auto;
+	font-size: 2.8em;
+	color: #ffffff;
+	font-weight: 600;
+}
+.policy-info-area strong{
+	display: block;
+	font-size: 4em;
+	line-height:84px;
+	height:84px;
+	text-align: center;
+}
+.policy-info-area p.send-policy-tip{
+	text-align: center;
+	color: #737373;
+}

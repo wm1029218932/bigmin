@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <img src="images/top.jpg" alt=""/>
+        </div>
+        <div class="center">
+            <div class="input-group">
+                <input type="text" placeholder="电话" class="warning"/>
+                <a href="success.html" class="btn" id="receive">免费领 &gt;</a>
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="images/bottom.jpg" alt=""/>
+        </div>
+        <div class="desc">
+            <div class="p1">
+                <h2 class="title">使用规则</h2>
+                <ul>
+                    <li>兑换有效期为2016年11月1日至2016年11月10日；</li>
+                    <li>使用有效期为兑换后三个月内；</li>
+                    <li>此券不适用于春节、法定节假日；</li>
+                    <li>本代金券不与其他优惠同时使用；</li>
+                    <li>本代金券请在汽车超人APP中使用；</li>
+                    <li>本代金券全国300余个城市，20000家服务门店通用。具体商户以汽车超人平台中为准；</li>
+                    <li>使用过程中有任何问题，请联系汽车超人客服：400-699-0000</li>
+                </ul>
+            </div>
+            <div class="p2">
+                <h2 class="title">洗车券-兑换流程</h2>
+                <ul>
+                    <li><span>1</span>搜索【汽车超人】或者进入<a href="http://app.qccr.com">http://app.qccr.com</a>下载汽车超人APP；</li>
+                    <li><span>2</span>登录并注册，点击【我的】-【优惠券】；</li>
+                    <li class="red">同个微信号与同个手机号仅支持兑换一次</li>
+                    <li><span>3</span>汽车超人会在一个工作日内完成礼包兑换，届时会有短信通知</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--领取失败弹框-->
+    <div class="popup" id="popup1">
+        <div class="zhezhao"></div>
+        <div class="zhezhao_content">
+            <div class="close_btn close_popup"><img src="images/close-popup.png" alt="关闭"/></div>
+            <div class="content_img"><img src="images/fail.png" alt="领取失败"/></div>
+            <p class="describe">车牌信息有误，核对后重新领取</p>
+            <button class="pop_btn close_popup">确 定</button>
+        </div>
+    </div>
+    <!--已领取弹框-->
+    <div class="popup" id="popup2">
+        <div class="zhezhao"></div>
+        <div class="zhezhao_content">
+            <div class="content_img"><img src="images/fail.png" alt="领取失败"/></div>
+            <p class="describe">您已经领取过了</p>
+        </div>
+    </div>
+<script>
+    $(function(){
+        /*已领取*/
+        /*$('#popup2').show();*/
+
+        $('.close_popup').on('click',function(){
+            $('.popup').hide();
+        });
+
+        /*领取失败*/
+        $('#receive').on('click',function(){
+            $('#popup1').show();
+            return false
+        });
+    });
+</script>
+</body>
+</html>

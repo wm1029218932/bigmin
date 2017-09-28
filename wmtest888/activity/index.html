@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>打虎新形态</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!--<link rel="stylesheet" href="/dist/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/animate.min.css">
+<script src="/dist/js/swiper.min.js"></script>
+<script src="/dist/js/swiper.animate.min.js"></script>-->
+
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+body{
+	font-family:"microsoft yahei";
+}
+.swiper-container {
+	width: 100%;
+    height: 100%;
+	background:#000;
+
+  
+}  
+
+.swiper-slide{
+	width:100%;
+	height:100%;
+
+}
+img{
+	display:block;
+}
+.swiper-pagination-bullet {
+width: 6px;
+height: 6px;
+background: #fff;
+opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+opacity: 1;
+}
+@-webkit-keyframes start {
+	0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes start {
+	0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+	60% {opacity: 1;-moz-transform: translate(0,0);}
+	100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes start {
+	0%,30% {opacity: 0;transform: translate(0,10px);}
+	60% {opacity: 1;transform: translate(0,0);}
+	100% {opacity: 0;transform: translate(0,-8px);}
+}
+.ani{
+	position:absolute;
+	}
+.txt{
+	position:absolute;
+}
+#array{
+	position:absolute;z-index:10;-webkit-animation: start 1.5s infinite ease-in-out;
+}
+#tp_music{
+	position:absolute;
+	z-index:1;	
+}
+.tp_music{
+	 -webkit-animation: btnRotate 1.5s linear infinite;
+}
+@-webkit-keyframes btnRotate {
+0% {
+    -webkit-transform: rotateZ(0deg);
+    }
+100% {
+    -webkit-transform: rotateZ(360deg);
+    }
+}
+@keyframes btnRotate {
+0% {
+    transform: rotateZ(0deg);
+    }
+100% {
+    transform: rotateZ(360deg);
+    }
+}
+#tp_hd{
+	position:absolute;
+	z-index:10;	
+	-webkit-animation: hdRotate 1.5s linear infinite;
+}
+@-webkit-keyframes hdRotate {
+0% { -webkit-transform: rotate(0); }
+	5% { -webkit-transform: rotate(10deg); }
+	10% { -webkit-transform: rotate(-9deg); }
+	15% { -webkit-transform: rotate(8deg); }
+	20% { -webkit-transform: rotate(-7deg); }
+	25% { -webkit-transform: rotate(6deg); }
+	30% { -webkit-transform: rotate(-5deg); }
+	35% { -webkit-transform: rotate(4deg); }
+	40% { -webkit-transform: rotate(-3deg); }
+	45% { -webkit-transform: rotate(2deg); }
+	50% { -webkit-transform: rotate(0); } /* Come to rest at 50%. The rest is just stillness */
+	100% { -webkit-transform: rotate(0); }
+}
+@keyframes hdRotate {
+    0% { transform: rotate(0); }
+	5% { transform: rotate(10deg); }
+	10% { transform: rotate(-9deg); }
+	15% { transform: rotate(8deg); }
+	20% { transform: rotate(-7deg); }
+	25% { transform: rotate(6deg); }
+	30% { transform: rotate(-5deg); }
+	35% { transform: rotate(4deg); }
+	40% { transform: rotate(-3deg); }
+	45% { transform: rotate(2deg); }
+	50% { transform: rotate(0); } /* Come to rest at 50%. The rest is just stillness */
+	100% { transform: rotate(0); }
+}
+.swiper-slide1{
+	background-color: #ff8b7e;
+}
+.swiper-slide2{
+	background-color: #f3aa37;
+}
+.swiper-slide3{
+	background-color: #5fd090;
+}
+.swiper-slide4{
+	background-color: #76b7fb;
+}
+.swiper-slide5{
+	background-color: #98ca85;
+}
+.swiper-slide6{
+	background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    	<!---------------slide2-------------->   
+        <section class="swiper-slide swiper-slide2">
+	        <img src="upload/tp_wz2.png" class="ani resize" style="width:320px;height:106px;left:0px;top:28px;z-index:1; " > 
+	        	<div class="ani resize" style="background-color: #f3aa37;width: 320px;height: 47px;left: 0px;top: 28px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="0s"  ></div>	
+	            <div class="ani resize" style="background-color: #f3aa37;width: 320px;height: 30px;left: 0px;top: 80px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="3s" swiper-animate-delay="1.5s"  ></div>	
+	            <div class="ani resize" style="background-color: #f3aa37;width: 320px;height: 30px;left: 0px;top: 108px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2.5s" swiper-animate-delay="2.5s"  ></div>
+	            <img src="upload/tp_pen.gif" class="ani resize" style="width:105px;height:105px;left:0px;top:%;z-index:999;" swiper-animate-effect="penMove2" swiper-animate-duration="4.5s" swiper-animate-delay="0s"/> 
+	        <img src="upload/tp_pen2.png" class="ani resize" style="width:38px;height:46px;left:28px;top:190px;z-index:4;"  swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="4s"> 
+	        <img src="upload/tp_phone2.png" class="ani resize" style="width:135px;height:270px;left:92px;top:173px;z-index:3;" swiper-animate-effect="bounceInUp" swiper-animate-duration="3s" swiper-animate-delay="0s"  >        
+        </section>
+    	
+    	
+    	 <!----------------slide3-------------->
+        <section class="swiper-slide swiper-slide3">
+            <img src="upload/tp_wz3.png" class="ani resize" style="width:320px;height:114px;left:0px;top:28px;z-index:1; " > 
+        	<div class="ani resize" style="background-color: #5fd090;width: 320px;height: 47px;left: 0px;top: 28px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="0s"  ></div>	
+            <div class="ani resize" style="background-color: #5fd090;width: 320px;height: 30px;left: 0px;top: 83px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="3s" swiper-animate-delay="1.5s"  ></div>	
+            <div class="ani resize" style="background-color: #5fd090;width: 320px;height: 30px;left: 0px;top: 118px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2.5s" swiper-animate-delay="2.5s"  ></div>
+            <img src="upload/tp_pen.gif" class="ani resize" style="width:105px;height:105px;left:0px;top:%;z-index:999;" swiper-animate-effect="penMove3" swiper-animate-duration="4.5s" swiper-animate-delay="0s"/> 
+         	<img src="upload/tp_three1.png" class="ani resize" style="width:67px;height:72px;left:12px;top:181px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="3s"> 
+            <img src="upload/tp_three2.png" class="ani resize" style="width:53px;height:60px;left:250px;top:280px;z-index:2;" swiper-animate-effect="chatLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s"> 
+            <img src="upload/tp_three3.png" class="ani resize" style="width:55px;height:64px;left:20px;top:350px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="5s";> 
+        	<img src="upload/tp_phone3.png" class="ani resize" style="width:135px;height:270px;left:94px;top:163px;z-index:3;" swiper-animate-effect="bounceInUp" swiper-animate-duration="3s" swiper-animate-delay="0s"  > 
+        </section>
+    	
+    	
+    	 <!-------------slide4----------------->
+        <section class="swiper-slide swiper-slide4">
+            <img src="upload/tp_wz4.png" class="ani resize" style="width:320px;height:116px;left:0px;top:32px;z-index:1;"  > 
+            <div class="ani resize" style="background-color: #76b7fb;width: 320px;height: 47px;left: 0px;top: 29px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="0s"  ></div>	
+            <div class="ani resize" style="background-color: #76b7fb;width: 320px;height: 30px;left: 0px;top: 93px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="3s" swiper-animate-delay="1.5s"  ></div>	
+            <div class="ani resize" style="background-color: #76b7fb;width: 320px;height: 30px;left: 0px;top: 120px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="2.5s"  ></div>
+            <img src="upload/tp_pen.gif" class="ani resize" style="width:105px;height:105px;left:0px;top:%;z-index:999;" swiper-animate-effect="penMove1" swiper-animate-duration="4.5s" swiper-animate-delay="0s"/> 
+<!--            <img src="upload/tp_pen.png" class="ani resize" css="width:53px;height:53px;left:40px;top:57px;z-index:3; visibility: hidden;" swiper-animate-effect="penMove2" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+            <img src="upload/tp_pen.png" class="ani resize" css="width:53px;height:53px;left:40px;top:85px;z-index:3; visibility: hidden;" swiper-animate-effect="penMove3" swiper-animate-duration="1s" swiper-animate-delay="2.3s"/> -->
+            <img src="upload/tp_phone4.png" class="ani resize" style="width:135px;height:270px;left:94px;top:164px;z-index:1;" swiper-animate-effect="bounceInUp" swiper-animate-duration="3s" swiper-animate-delay="0s"> 
+            <img src="upload/tp_four1.png" class="ani resize" style="width:66px;height:74px;left:12px;top:181px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="3s"> 
+            <img src="upload/tp_four2.png" class="ani resize" style="width:52px;height:60px;left:250px;top:280px;z-index:2;" swiper-animate-effect="chatLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s"> 
+            <img src="upload/tp_four3.png" class="ani resize" style="width:52px;height:58px;left:20px;top:350px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="5s";>  
+        </section>
+    	
+    <!-------------slide1----------------->
+        <section class="swiper-slide swiper-slide1">
+            <img src="upload/tp_wz.png" class="ani resize" style="width:320px;height:121px;left:0px;top:28px;z-index:1;"  > 
+            <div class="ani resize" style="background-color: #ff8b7e;width: 320px;height: 47px;left: 0px;top: 28px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="0s"  ></div>	
+            <div class="ani resize" style="background-color: #ff8b7e;width: 320px;height: 30px;left: 0px;top: 93px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="3s" swiper-animate-delay="1.5s"  ></div>	
+            <div class="ani resize" style="background-color: #ff8b7e;width: 320px;height: 30px;left: 0px;top: 123px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="2.5s"  ></div>
+            <img src="upload/tp_pen.gif" class="ani resize" style="width:105px;height:105px;left:0px;top:%;z-index:999;" swiper-animate-effect="penMove1" swiper-animate-duration="4.5s" swiper-animate-delay="0s"/> 
+<!--            <img src="upload/tp_pen.png" class="ani resize" css="width:53px;height:53px;left:40px;top:57px;z-index:3; visibility: hidden;" swiper-animate-effect="penMove2" swiper-animate-duration="1s" swiper-animate-delay="1s"/>
+            <img src="upload/tp_pen.png" class="ani resize" css="width:53px;height:53px;left:40px;top:85px;z-index:3; visibility: hidden;" swiper-animate-effect="penMove3" swiper-animate-duration="1s" swiper-animate-delay="2.3s"/> -->
+            <img src="upload/tp_phone.png" class="ani resize" style="width:320px;height:269px;left:0px;top:164px;z-index:1;" swiper-animate-effect="bounceInUp" swiper-animate-duration="3s" swiper-animate-delay="0s"> 
+            <img src="upload/tp_chat1.png" class="ani resize" style="width:320px;height:74px;left:0px;top:181px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="3s"> 
+            <img src="upload/tp_chat2.png" class="ani resize" style="width:320px;height:59px;left:0px;top:280px;z-index:2;" swiper-animate-effect="chatLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s"> 
+            <img src="upload/tp_chat3.png" class="ani resize" style="width:320px;height:59px;left:0px;top:350px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="5s";> 
+        </section>
+
+        <section class="swiper-slide swiper-slide5">
+            <img src="upload/tp_wz5.png" class="ani resize" style="width:320px;height:122px;left:0px;top:28px;z-index:1; " > 
+        	<div class="ani resize" style="background-color: #98ca85;width: 320px;height: 47px;left: 0px;top: 28px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2s" swiper-animate-delay="0s"  ></div>	
+            <div class="ani resize" style="background-color: #98ca85;width: 320px;height: 30px;left: 0px;top: 92px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="3s" swiper-animate-delay="1.5s"  ></div>	
+            <div class="ani resize" style="background-color: #98ca85;width: 320px;height: 30px;left: 0px;top: 120px;z-index: 2;" swiper-animate-effect="cutDown" swiper-animate-duration="2.5s" swiper-animate-delay="2.5s"  ></div>
+            <img src="upload/tp_pen.gif" class="ani resize" style="width:105px;height:105px;left:0px;top:%;z-index:999;" swiper-animate-effect="penMove3" swiper-animate-duration="4.5s" swiper-animate-delay="0s"/> 
+            <img src="upload/tp_five1.png" class="ani resize" style="width:67px;height:75px;left:12px;top:181px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="3s"> 
+            <img src="upload/tp_five2.png" class="ani resize" style="width:54px;height:60px;left:250px;top:280px;z-index:2;" swiper-animate-effect="chatLeft" swiper-animate-duration="1.5s" swiper-animate-delay="4s"> 
+            <img src="upload/tp_five3.png" class="ani resize" style="width:54px;height:60px;left:20px;top:350px;z-index:2;" swiper-animate-effect="chatRight" swiper-animate-duration="1.5s" swiper-animate-delay="5s";> 
+        	<img src="upload/tp_phone5.png" class="ani resize" style="width:135px;height:270px;left:94px;top:163px;z-index:3;" swiper-animate-effect="bounceInUp" swiper-animate-duration="3s" swiper-animate-delay="0s"  > 
+        </section>
+        
+        <section class="swiper-slide swiper-slide6">
+	        <img src="upload/touxiang.jpg" class="ani resize" style="width:43px;height:42px;left:15px;top:33px;z-index:1;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0s"  > 
+	        <img src="upload/touxiang.jpg" class="ani resize" style="width:43px;height:42px;left:15px;top:103px;z-index:1;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="2s"  > 
+	        <img src="upload/touxiang.jpg" class="ani resize" style="width:43px;height:42px;left:15px;top:222px;z-index:1;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="4s"  > 
+	        <img src="upload/touxiang.jpg" class="ani resize" style="width:43px;height:42px;left:15px;top:340px;z-index:1;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="6s"  > 
+	        
+	        <img src="upload/ly1.jpg" class="ani resize" style="width:53px;height:43px;left:60px;top: 33px;z-index:2;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="1s"  > 
+	        <img src="upload/ly2.jpg" class="ani resize" style="width:252px;height:101px;left:60px;top: 103px;z-index:2;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="3s"  > 
+	        <img src="upload/ly3.jpg" class="ani resize" style="width:252px;height:101px;left:60px;top: 222px;z-index:2;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="5s"  > 
+	        <img src="upload/ly4.jpg" class="ani resize" style="width:252px;height:79px;left:60px;top: 340px;z-index:2;" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="7s"  >
+	        	
+	        <img src="upload/jp.jpg" class="ani resize" style="width:320px;height:38px;left:0px;top: 443px;z-index:2;" swiper-animate-effect="slideInUp" swiper-animate-duration="2s" swiper-animate-delay="1s"  >
+        </section>
+    </div>
+    <audio src="upload/bg_music.mp3" autoplay="autoplay" loop="loop" style="opacity: 0;" id="music"></audio>
+    <img src="upload/play.png" style="width: 30px;height: 30px;top: 1%;right: 2%;" id="tp_music" class="tp_music"/>
+    <img src="upload/tp_hd.png" style="width: 62px;height: 61px;top:410px;right: 15px;z-index: 10;" class="resize" id="tp_hd" />
+    <img src="images/tp_arrow2.png" style="width:30px;height:33px;left: 50%;margin-left: -15px;bottom: 10px;" id="array"> 
+    <div class="swiper-pagination"></div>  
+</div>
+
+
+<script>  
+$(function(){
+	$("#tp_music").click(function(){ 
+	    var music = document.getElementById("music"); 
+	    if(music.paused){ 
+	        music.play(); 
+	        $("#tp_music").addClass("tp_music");
+	        $("#tp_music").attr("src","upload/play.png"); 
+	    }else{ 
+	        music.pause(); 
+	        $("#tp_music").removeClass("tp_music");
+	        $("#tp_music").attr("src","upload/pause.png"); 
+	    } 
+	}); 
+});
+
+scaleW=window.innerWidth/320;
+scaleH=window.innerHeight/480;
+var resizes = document.querySelectorAll('.resize');
+    for (var j=0; j<resizes.length; j++) {
+       resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
+	   resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
+	   resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
+	   resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
+    }
+		  
+var mySwiper = new Swiper ('.swiper-container', {
+  	//loop : true,
+    direction : 'vertical',
+  	// pagination: '.swiper-pagination',
+  	//virtualTranslate : true,
+ 
+    mousewheelControl : true,
+    onInit: function(swiper){
+    swiperAnimateCache(swiper);
+    swiperAnimate(swiper);
+	},
+    onSlideChangeEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+	onTransitionEnd: function(swiper){
+	swiperAnimate(swiper);
+    },	
+	watchSlidesProgress: true,
+    onProgress: function(swiper){
+        for (var i = 0; i < swiper.slides.length; i++){
+        	var slide = swiper.slides[i];
+          	var progress = slide.progress;
+          	var translate = progress*swiper.height/4;  
+		  	scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+          	var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+          	slide.style.opacity = opacity;
+		  	es = slide.style;
+		  	es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+        }
+  	},
+	
+	onSetTransition: function(swiper, speed) {
+        for (var i = 0; i < swiper.slides.length; i++){
+          	es = swiper.slides[i].style;
+		  	es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+        }
+    },
+})         
+	</script>
+</body>
+</html>

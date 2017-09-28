@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul,ol {
+            list-style-type: none;
+        }
+        * {margin:0;padding:0;}
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        #ul {
+            width: 100%;
+            height: 100%;
+        }
+        ul li{
+            width: 100%;
+            height: 100%;
+        }
+        #ol {
+            position: fixed;
+            top:0;
+            left:50px;
+        }
+        #ol li {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul">
+    <li>首页</li>
+    <li>关注</li>
+    <li>动态</li>
+    <li>风格</li>
+    <li>作品</li>
+</ul>
+<ol id="ol">
+    <li>首页</li>
+    <li>关注</li>
+    <li>动态</li>
+    <li>风格</li>
+    <li>作品</li>
+</ol>
+<script src="js/myjs.js"></script>
+<script>
+    window.onload = function(){
+        var ullist = $('ul').children;
+        var ollist = $('ol').children;
+        var colors = ["pink","purple","orange","blue","green"];
+        var leader = 0, target = 0;
+        var timer = null;
+        for (var i=0;i<ullist.length;i++){
+            ullist[i].style.backgroundColor = colors[i];
+            ollist[i].style.backgroundColor = colors[i];
+            ollist[i].index = i;
+            ollist[i].onclick = function(){
+                clearInterval(timer);
+                //1 -- 0
+                //2 -- 1的高度
+                target = ullist[this.index].offsetTop;
+                timer = setInterval(function(){
+                    leader = leader + (target-leader)/10;
+                    window.scrollTo(0,leader);
+                },20)
+            };
+        }
+
+
+
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        现在距离元旦还有
+        <span id="day"></span>天
+        <span id="hours"></span>时
+        <span id="minute"></span>分
+        <span id="second"></span>秒
+    </div>
+<script type="text/javascript">
+    var targetTime = new Date(2018,0,1);
+    setInterval(function(){
+        var now = new Date();
+
+        var targetms = targetTime.getTime();
+
+        var nowms = now.getTime();
+
+        var t = targetms - nowms;
+
+        var ms = parseInt(t /1000);
+
+        var DD = parseInt(ms/60/60/24);
+
+        var HH = parseInt(ms/60/60%24);
+
+        var MM = parseInt(ms/60%60);
+
+        var ss = parseInt(ms%60);
+
+        //如果时分秒为1位数前面加上0
+        HH = HH<10?'0'+HH:HH;
+        MM = MM<10?'0'+MM:MM;
+        ss = ss<10?'0'+ss:ss;
+
+        $('day').innerHTML = DD;
+        $('hours').innerHTML = HH;
+        $('minute').innerHTML = MM;
+        $('second').innerHTML = ss;
+
+    },100);
+
+
+    function $(id){
+        return document.getElementById(id);
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    max-width: 414px;
+    max-height: 736px;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+}
+#slide1{
+    background:url(../images/slider1_bg.png);
+    background-size: 100% 100%;
+}
+#slide2{
+    background:url(../images/slider2_bg.png);
+    background-size: 100% 100%;
+}
+#slide3{
+    background:url(../images/slider3_bg.png);
+    background-size: 100% 100%;
+}
+#slide4{
+    background:url(../images/slider4_bg.png);
+    background-size: 100% 100%;
+}
+#slide5{
+    background:url(../images/slider5_bg.png);
+    background-size: 100% 100%;
+}
+#slide6{
+    background:url(../images/slider6_bg.png);
+    background-size: 100% 100%;
+}
+#slide7{
+    background:url(../images/slider7_bg.png);
+    background-size: 100% 100%;
+}
+#slide1_img1,#slide1_img2,#slide1_img3,#slide2_img1,.contant2,#slide3_img1,.contant3,#slide4_img1,.contant4,#slide5_img1,.contant5,#slide6_img1,.contant6,#slide7_img5,#word,#telphone,#name,#submit{
+   position: absolute; 
+}
+#slide1_img1{
+    top: 14.4%;
+    left: 34.4%;
+}
+#slide1_img2{
+    top: 30%;
+    left: 37.6%;
+}
+#slide1_img3{
+    top: 18.5%;
+    left: 56.3%;
+}
+#slide2_img1{
+    top: 57.5%;
+    left: 17%;
+}
+.contant2{
+    position: absolute;
+    width: 170px;
+    top: 74%;
+    left: 47.5%;
+}
+#slide2_img3{
+    margin-bottom: 10%;
+}
+#slide3_img1{
+    top: 6%;
+    left: 57%;
+}
+.contant3{
+    width: 170px;
+    top: 32.7%;
+    left: 19.5%;
+}
+#slide4_img1{
+    top: 7%;
+    left: 13%;
+}
+.contant4{
+    width: 170px;
+    top: 36.9%;
+    left: 26.4%;
+}
+#slide5_img1{
+    top: 57.7%;
+    left: 64.8%;
+}
+.contant5{
+    width: 170px;
+    top: 75.1%;
+    left: 17.6%;
+}
+#slide6_img1{
+    top: 3.9%;
+    left: 4.5%;
+}
+.contant6{
+    width: 170px;
+    top: 13.8%;
+    left: 34%;
+}
+#slide7_img1,#slide7_img2,#slide7_img3,#slide7_img4,#slide7_img5{
+    margin-left: auto;
+    margin-right: auto;
+}
+#slide7_img1{
+    margin-top: 10.7%;
+    margin-bottom: 2.5%;
+}
+#slide7_img2{
+    margin-bottom: 9%;     
+}
+#slide7_img3{
+    margin-bottom: 5%;  
+}
+#slide7_img4{
+
+}
+#slide7_img5{
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 5%;    
+}
+#word,#telphone,#name{
+    line-height: 27px; 
+    border:0;
+    background-color: transparent;
+    overflow: hidden;    
+}
+#word{
+    top: 42%;
+    left: 8%;
+    width: 82%;
+    text-indent: 27px;    
+}
+#telphone{
+    top: 69%;
+    left: 38%;
+    width: 53.2%;
+}
+#name{
+    top: 75%;
+    left: 67%;
+    width: 22.2%; 
+}
+#arrow{
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9999;
+}
+#arrow{ 
+-webkit-animation: twinkling 2s infinite ease-in-out; 
+} 
+#arrow{ 
+-webkit-animation-duration: 2s; 
+animation-duration: 2s; 
+-webkit-animation-fill-mode: both; 
+animation-fill-mode: both 
+} 
+@-webkit-keyframes twinkling{ 
+0%{ 
+opacity: 0.2; 
+} 
+25%{ 
+opacity: 0.4; 
+} 
+50%{ 
+opacity: 0.6; 
+} 
+75%{ 
+opacity: 0.8; 
+} 
+100%{ 
+opacity: 1; 
+} 
+} 
+
+#music{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    background: url(../images/music.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation: musictwinkling 2s infinite ease-in-out; 
+    -webkit-transition: all 0;   
+}
+@-webkit-keyframes musictwinkling{ 
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+} 
+
+#submit{
+    top: 86%;
+    left: 55%;
+    width: 37%;
+    height: 8%;
+    border:0;
+    background-color: transparent;
+    text-indent: -9999px;
+}
+
+@media (max-width: 320px) {
+#slide1_img3{
+    width: 35px;
+}
+#slide3_img1{
+    width: 85px;
+}
+#slide5_img1 {
+    top: 56.5%;
+    left: 64.8%;
+    width: 85px;
+}
+.contant5 img{
+    width: 145px;
+}
+#slide6_img1{
+    width:90px;
+}
+.contant6 img{
+    width: 180px;
+}
+#word{
+    line-height: 24px;
+}
+}
+

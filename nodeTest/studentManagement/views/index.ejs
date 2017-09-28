@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>学生管理系统</h1>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>籍贯</td>
+            </tr>
+            <% for(var i=0; i<students.length;i++){ %>
+            <tr>
+                <td><%= students[i].name %></td>
+                <td><%= students[i].age %></td>
+                <td><%= students[i].sex %></td>
+                <td><%= students[i].province %></td>
+            </tr>
+
+            <% } %>
+        </table>
+    </section>
+
+    <div>
+        <a href="/add">添加数据</a>
+    </div>
+</body>
+</html>

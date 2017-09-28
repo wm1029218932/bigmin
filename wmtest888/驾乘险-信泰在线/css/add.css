@@ -1,0 +1,151 @@
+.add{
+    background: #fff;
+    width: 96%;
+    padding:0 2%;
+    margin: 2rem auto;
+    border-radius: .4rem;
+}
+.block{
+    padding:1rem 0;
+}
+.block h3{
+    font-size: 1.6rem;
+    color: #f96d2f;
+    border-left: 4px solid #3366CC;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+}
+
+.block1 .detail{
+    padding:1rem;
+    border-bottom: 1px dashed #ccc;
+}
+.block .detail{
+    padding:1rem;
+    font-size: 1.2rem;
+    line-height: 180%;
+}
+.block1 img{
+    width: 100%;
+}
+.block1 .detail .desc{
+    overflow: hidden;
+}
+.block1 .detail .desc li{
+    width: 22%;
+    float: left;
+    margin-left:4%;
+    text-align: center;
+    font-size: 1rem;
+}
+.block1 .detail .desc li:first-child{
+    margin-left:0;
+}
+.block1 dl dt{
+    float: left;
+    width: 10rem;
+    height: 10rem;
+}
+.block1 dl dt img{
+    width: 100%;
+}
+.block1 dl dd{
+    float: left;
+}
+.flex-wrap{
+    display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box; /* Firefox 17- */
+    display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex; /* Firefox 18+ */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 双12-抽红包.1/17/18, Android 4.4+ */
+    padding:0 1rem;
+    margin: 2rem 0;
+    /* 09版 */
+    -webkit-box-align: center;
+    /* 12版 */
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+.flex-wrap>div:first-child{
+    flex:0 0 6rem;
+    -webkit-flex:0 0 6rem;
+    -ms-flex:0 0 6rem;
+}
+.flex-wrap img{
+    width: 6rem;
+}
+.flex-wrap .text {
+    flex: 1;
+    padding:0 0 0 1rem;
+    font-size: 1.2rem;
+}
+.flex-wrap .text p{
+    margin-top: .5rem;
+}
+.flex-wrap .text p:first-child{
+    margin-top: 0;
+}
+.word-wrap{
+    word-break:break-all; /*支持IE，chrome，FF不支持*/
+    word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+.block a{
+    color: inherit;
+}
+.question{
+    margin: 0 0 2rem;
+}
+.question .flex-wrap{
+    /* 09版 */
+    -webkit-box-align: start;
+    /* 12版 */
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+.question .flex-wrap span{
+    display: inline-block;
+}
+.add-title {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding:0 1rem;
+    font-size: 1.4rem;
+    height: 4.6rem;
+    position: relative;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.add-title .text{
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 1.6rem;
+}
+.add-title .arrow-bg{
+    width: 10px;
+    transition: 400ms;
+}
+.add-title .arrow-bg img{
+    width: 100%;
+}
+.add-title.rotate .arrow-bg {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.add-content{
+    display: none;
+}

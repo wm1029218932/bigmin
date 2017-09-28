@@ -1,0 +1,318 @@
+@font-face{
+	font-family: 'swis721bt';
+   	src: url('../../font/swis721bt.ttf') format('truetype');
+   	font-style: Roman;
+}
+
+/*reset*/
+html,body,address,blockquote,div,dl,form,h1,h2,h3,h4,h5,h6,ol,p,pre,table,ul,dd,dt,li,tbody,td,tfoot,th,thead,tr,button,del,ins,map,object,a,abbr,acronym,b,bdo,big,br,cite,code,dfn,em,i,img,kbd,q,samp,small,span,strong,sub,sup,tt,var,legend,fieldset,textarea
+{
+	margin: 0;
+	padding: 0;
+}
+
+img,fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+	display: block;
+}
+
+ul,li,p,h3,h2,h1,samp,label,dl,dt,dd,sup,sub{ 
+	list-style:none outside none;
+}
+
+body {
+	font-family:"Microsoft Yahei",sans-serif;
+	font-size:12px;
+	background-color:#f6f6f6; 
+}
+
+a{
+	text-decoration: none;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*header*/
+.ui-head {
+	height:100px;
+	
+	position: relative;
+}
+
+.ui-head-back{
+	height:100px;
+	float:left;
+	width:20%;
+	max-width:123px;
+	background-color: #0348a6;
+}
+
+.ui-head-back div{
+	height:100px;
+	float:left;
+	width:100%;
+	border-right:1px solid #0059b4;
+	cursor: pointer;
+	background: url(../../image/common/head-back.png) no-repeat center;
+}
+
+.ui-head p{
+	position: absolute;
+	left:0;
+	top:0;
+	
+	width:100%;
+	height:100%;
+	
+	text-align: center;
+	font-size:40px;
+	line-height:100px;
+	color:#fff;
+	z-index: -1;
+	background: #155fc3;
+}
+
+/*统一的面板定义*/
+.ui-panel{
+	margin-left:14px;
+	margin-right:14px;
+	border-radius: 3px;
+	
+	box-shadow:0 0 4px rgba(0,0,0,.1);
+}
+
+.ui-panel:before,.ui-panel:after{content:" ";display:table}
+.ui-panel:after{clear:both}
+
+.ui-panel.white{
+	background-color:#fff;
+}
+
+.ui-panel.blue{
+	background-color:#36c;
+}
+
+.ui-label{
+	font-size:30px;
+	color:#333333;
+	line-height:74px;
+	display:block; 
+}
+
+.ui-info-label{
+	font-size:30px;
+	color:#333333;
+	line-height:74px;
+	display:block; 
+}
+
+.ui-panel-title{
+	font-size:30px;
+	color:#666;
+	padding-right: 30px;
+}
+.ui-input{
+	display:block; 
+	width:100%;
+	
+	border-radius:4px;
+	height:74px;
+	padding-left:24px;
+	border:0;
+	
+	background-color:#ebebeb;
+	font-size:28px;
+}
+.ui-select{
+	display:block; 
+	width:100%;
+	border-radius:4px;
+	height:74px;
+	padding-left:24px;
+	padding-top: 20px;
+	border:0;
+	background-color:#ebebeb;
+	font-size:28px;
+}
+
+.ui-form-inline{
+	text-align: justify;
+}
+
+.ui-form-inline .ui-input,
+.ui-form-inline .ui-select
+{
+	display: inline-block;
+	width:49.5%;
+	float: left;
+}
+
+.ui-circle{
+	width:13px;
+	height:13px;
+	border-width: 3px;
+	border-style: solid;
+	border-radius:7px;
+}
+
+.ui-circle.red{
+	border-color:#ff6666;
+}
+.ui-circle.orange{
+	border-color:#ff9865;
+}
+.ui-circle.yellow{
+	border-color:#f9e037;
+}
+.ui-circle.gary-green{
+	border-color:#abcd5b;
+}
+.ui-circle.dark-green{
+	border-color:#0cc9b5;
+}
+.ui-circle.gray{
+	border-color:#ccc;
+}
+
+.ui-badge{
+	
+}
+.ui-badge-arr{
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-right-style: solid;
+	border-right-width: 6px;
+	
+	display: inline-block;
+	width: 0;
+	height: 0;
+	
+	vertical-align: middle;
+}
+
+.ui-badge-label{
+	padding:10px 17px;
+	border-radius:4px;
+	color:#fff;
+	font-size:24px;
+	vertical-align: middle;
+}
+
+.ui-badge.red .ui-badge-arr{
+	border-right-color:#ff6666;
+}
+.ui-badge.orange .ui-badge-arr{
+	border-right-color:#ff9865;
+}
+.ui-badge.yellow .ui-badge-arr{
+	border-right-color:#f9e037;
+}
+.ui-badge.gary-green .ui-badge-arr{
+	border-right-color:#abcd5b;
+}
+.ui-badge.dark-green .ui-badge-arr{
+	border-right-color:#0cc9b5;
+}
+.ui-badge.gray .ui-badge-arr{
+	border-right-color:#ccc;
+}
+
+.ui-badge.red .ui-badge-label{
+	background-color:#ff6666;
+}
+.ui-badge.orange .ui-badge-label{
+	background-color:#ff9865;
+}
+.ui-badge.yellow .ui-badge-label{
+	background-color:#f9e037;
+}
+.ui-badge.gary-green .ui-badge-label{
+	background-color:#abcd5b;
+}
+.ui-badge.dark-green .ui-badge-label{
+	background-color:#0cc9b5;
+}
+.ui-badge.gray .ui-badge-label{
+	background-color:#ccc;
+}
+
+/*错误提示框*/
+.ui-form-msg{
+	height:74px;
+}
+
+.ui-btn{
+	display: block;
+	border:0;
+}
+
+.ui-btn:active,
+.ui-btn:focus{
+	outline: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/*渐变背景*/
+
+.ui-bg-gradient{
+	background-image: -webkit-linear-gradient(top, #569dfd, #2d7eec 100%);
+	background-image: linear-gradient(top , #569dfd, #2d7eec 100%);
+}
+
+.ui-num{
+	font-family:'swis721bt';
+}
+
+/*清除浮动*/
+.clearfix:before,.clearfix:after{content:" ";display:table}
+.clearfix:after{clear:both}
+#insure .ui-input{
+	width: 65%;
+	float: left;
+	border-radius:0px;
+	background: none;
+	border: none;
+	outline: none;
+	padding-left: 0px;
+}
+#insure label{
+	float: left;
+	width: 35%;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 25px;
+	font-size: 28px;
+	color: #9A9A9A;
+	border-right:1px solid #cccccc;
+	margin-top:15px; 
+}
+#insure .ui-form-group{
+	background: #EBEBEB;
+	height: 74px;
+	line-height: 74px;
+	border-radius:4px;
+}
+#checkbox2_simu{
+	width: 44px;
+	height: 45px;
+	display: inline-block;
+	background: url(../../image/common/gz-check.png) no-repeat center;
+}

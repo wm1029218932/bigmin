@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="../51/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+<div class="popup popup3" id="popup3">
+    <div class="zhezhao"></div>
+    <div class="zhezhao_content">
+        <div class="title">
+            <p>不能领取</p>
+        </div>
+        <span class="close_btn2 close">×</span>
+        <div class="content">
+            <p class="desc">职业工种为宠物医疗机构、宠物美容机构、宠物救助机构或宠物寄存机构从业人员及常住地址不在我司机构所在地的人员不能领取请选择领取其他红包。</p>
+        </div>
+
+    </div>
+</div>
+<script>
+    /*弹窗*/
+    $.fn.popup=function(title,desc){
+        $(this).find('.title').html(title);
+        if(desc){
+            $(this).find('.desc').html(desc);
+        }
+        $(this).show();
+        $('.close').click(function(){
+            $(this).parents('.popup').hide();
+        });
+    };
+    $(function(){
+        var title3='不能领取';
+        var desc3='职业工种为宠物医疗机构、宠物美容机构、宠物救助机构或宠物寄存机构从业人员及常住地址不在我司机构所在地的人员不能领取请选择领取其他红包。';
+        var desc4='职业类别为0、5、6类人员及常住地址不在我司机构所在地的人员不能领取，请选择领取其他红包。';
+        /*不能领取弹框1*/
+        $('#popup3').popup(title3,desc3);
+        /*不能领取弹框2*/
+        /*$('#popup3').popup(title3,desc4);*/
+    });
+</script>
+</body>
+</html>

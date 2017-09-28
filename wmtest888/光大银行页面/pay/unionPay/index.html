@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)http://localhost:8081/光大银行页面/toUnionPay.do?orderNo=8ab0b09d58e219130158e23173410002 -->
+<html lang="zh_cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>银联代扣</title>
+
+
+ 
+
+
+
+
+
+
+<!-- disable iPhone inital scale -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0" id="viewport"> -->
+	
+<!-- 禁止手机格式化电话号码 -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- 缩放屏幕分辨率 -->
+<script>
+// 	var useragent = navigator.userAgent.toLowerCase(),
+// 		meta = '<meta name="viewport" content="width=device-width,target-densitydpi=340,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0">';
+	
+// 	if(useragent.match(/ucbrowser/i)){
+// 		meta = '<meta name="viewport" content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0">';
+// 	}
+	
+// 	document.write(meta);
+
+/*
+	var useragent = navigator.userAgent.toLowerCase();
+	
+	//不需要使用target-densitydpi属性的ua关键字，需要手动维护
+	var dpiMathList = [/ucbrowser/i,/ios/i];
+	
+	var scale,dpi,usedpi=true;
+	
+	var pw = 640,//页面设计宽度
+		sw = window.screen.width;//屏幕宽度
+	
+	//计算缩放比例
+	if(sw < pw){
+	  	scale = sw/pw;
+	}else{
+	  	scale = 1;
+	}
+		
+	for(var i = 0 ; i < dpiMathList.length ; i++){
+	  if(useragent.match(dpiMathList[i])){
+	    usedpi = false;
+	  }
+	}
+	
+	var meta = '<meta name="viewport" content="width=device-width,';
+	
+	if(usedpi){
+// 	  dpi = pw / sw * window.devicePixelRatio * 160;
+		dpi = 340;
+	  	meta += ('target-densitydpi=' + dpi);
+	}
+	
+	meta += ',initial-scale='+scale+', minimum-scale='+scale+', maximum-scale='+scale+', user-scalable=0">';
+	
+	document.write(meta);
+	*/
+</script>
+
+<script>
+	var phoneWidth =  parseInt(window.screen.width);
+	var phoneScale = phoneWidth/640;
+	var ua = navigator.userAgent;
+	if (/Android (\d+\.\d+)/.test(ua)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	} else {
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+</script><meta name="viewport" content="width=640, minimum-scale = 0.5, maximum-scale = 0.5, target-densitydpi=device-dpi">
+
+<script>
++function eventAdapt(){
+
+	var touchAble = 'ontouchstart' in window;
+		window.tap = 'click';
+	
+	if(touchAble){
+		window.tap = 'tap';
+	}
+}();
+</script>
+<script src="./index_files/jquery-2.1.0.min.js"></script>
+<script src="./index_files/jweixin-1.0.0.js"></script>
+<script src="./index_files/jquery.mobile.event.js"></script>
+<link href="./index_files/main.css" rel="stylesheet">
+		<script type="text/javascript">
+			function browserRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+				if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc
+						|| bIsAndroid || bIsCE || bIsWM || bIsWX)) {
+					window.location.href = "/index.jsp";
+				}
+			}
+			
+// 			browserRedirect();
+// 			var sua = navigator.userAgent.toLowerCase();
+// 			var bIsWX = sua.match(/MicroMessenger/i) == "micromessenger";
+// 			if (!bIsWX) {
+// 				window.location.href = "/index.jsp";
+// 			}
+		</script>
+
+<link href="./index_files/main(1).css" rel="stylesheet">
+
+<script src="./index_files/main.js" type="text/javascript"></script>
+<link href="./index_files/jSelect.css" rel="stylesheet" type="text/css">
+<link href="./index_files/insure.css" rel="stylesheet" type="text/css">
+<script src="./index_files/jquery.sinosoft.select.js" type="text/javascript"></script>
+<script src="./index_files/citySelect-unionPay.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#checkbox2_simu').click(function(){
+	        if($("#checkbox2").is(':checked')){
+	            $("#checkbox2").prop("checked",false);
+	        	$(this).css("background","url(index_files/confirm-select1.png) no-repeat center");
+	        }else{
+	            $("#checkbox2").prop("checked",true);
+	            $(this).css("background","url(index_files/confirm-select.png) no-repeat center");
+	        }
+	    });
+	})
+</script>
+
+</head>
+
+<body id="pay">
+<form action="http://localhost:8081/sale/confirmUnionPay.do" method="post" id="unionPay_frm">
+<input type="hidden" name="province" id="province" value="">
+<input type="hidden" name="provinceName" id="provinceName" value="">
+<input type="hidden" name="city" id="city" value="">
+<input type="hidden" name="cityName" id="cityName" value="">
+<input type="hidden" name="userId" id="userId" value="0">
+<input type="hidden" name="idNumber" id="idNumber" value="110101199012018098">
+<input type="hidden" name="userName" id="userName" value="哈哈">
+<input type="hidden" name="orderNo" id="orderNo" value="8ab0b09d58e219130158e23173410002">
+<div class="ui-middle">
+	<div class="ui-fill transfer" id="bank">
+		<div class="ui-form-group row">
+			<label class="ui-label">支付金额</label>
+			<div class="ui-form-control">
+				<input class="ui-input" type="text" value="3130 元" readonly="readonly" style="color: #444444;">
+			</div>
+		</div>
+		<div class="ui-form-group row">
+			<label class="ui-label">真实姓名</label>
+			<div class="ui-form-control">
+				<input class="ui-input" type="text" value="哈哈" readonly="readonly" style="color: #444444;">
+			</div>
+		</div>
+		<div class="ui-form-group row">
+			<label class="ui-label">身份证号</label>
+			<div class="ui-form-control">
+				<input class="ui-input" type="text" value="110101199012018098" readonly="readonly" style="color: #444444;">
+			</div>
+		</div>
+		<div class="ui-form-group row">
+			<label class="ui-label">开户银行</label>
+			<div class="ui-form-control">
+				<input type="hidden" id="bankType" value="">
+				<select class="ui-select" name="bankCode2" id="bankCode2">
+						<option value="0" selected="selected" style="color:#A9A9A9;">请选择银行</option>
+						<option value="104" text="中国银行">中国银行</option>
+						<option value="103" text="中国农业银行">中国农业银行</option>
+						<option value="102" text="中国工商银行">中国工商银行</option>
+						<option value="105" text="中国建设银行">中国建设银行</option>
+						<option value="308" text="招商银行">招商银行</option>
+						<option value="301" text="交通银行">交通银行</option>
+						<option value="302" text="中信银行">中信银行</option>
+						<option value="303" text="中国光大银行">中国光大银行</option>
+						<option value="304" text="华夏银行">华夏银行</option>
+						<option value="305" text="中国民生银行">中国民生银行</option>
+						<option value="306" text="广东发展银行">广东发展银行</option>
+						<option value="307" text="平安银行">平安银行</option>
+						<option value="309" text="兴业银行">兴业银行</option>
+						<option value="310" text="上海浦东发展银行">上海浦东发展银行</option>
+						<option value="403" text="中国邮政储蓄银行">中国邮政储蓄银行</option>
+				</select>
+				<input type="hidden" name="bankName" id="bankName" value="">
+			</div>
+		</div>
+		<div class="ui-form-group row ">
+			<label class="ui-label col-6">账户号码</label>
+			<div class="ui-form-control col-17">
+				<input class="ui-input" type="text" name="accountNo" id="accountNo" value="" placeholder="输入本人名下的银行卡号" maxlength="19">
+			</div>
+		</div>
+		<div class="ui-form-group row ">
+			<label class="ui-label " style="width: 25%;">开户地址</label>
+			<div class="ui-form-group ui-form-inline clearfix bge0">
+		 	<select id="appProvince2" name="province2" class="ui-select province2" style="width: 50%;"><option value="110000">北京市</option><option value="120000">天津市</option><option value="130000">河北省</option><option value="140000">山西省</option><option value="150000">内蒙古自治区</option><option value="210000">辽宁省</option><option value="220000">吉林省</option><option value="230000">黑龙江省</option><option value="310000">上海市</option><option value="320000">江苏省</option><option value="330000">浙江省</option><option value="340000">安徽省</option><option value="350000">福建省</option><option value="360000">江西省</option><option value="370000">山东省</option><option value="410000">河南省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="460000">海南省</option><option value="500000">重庆市</option><option value="510000">四川省</option><option value="520000">贵州省</option><option value="530000">云南省</option><option value="540000">西藏自治区</option><option value="610000">陕西省</option><option value="620000">甘肃省</option><option value="630000">青海省</option><option value="640000">宁夏回族自治区</option><option value="650000">新疆维吾尔自治区</option></select>
+			<select id="appCity2" name="city2" class="ui-select city2" style="display: none;"><option value="110100">市辖区</option><option value="110200">县</option></select>
+		</div>
+		<div class="ui-panel notice white">
+			<div class="ui-panel-title">
+				<input class="ui-checkbox" type="checkbox" id="checkbox2" style="vertical-align: middle;display: none;">
+				<span class="ui-checkbox" id="checkbox2_simu"></span>
+				银联转账授权声明
+				<div class="ui-notice-view" style="padding-top: 2px;">
+					<span>查看内容</span>
+					<b style="margin-right: 20px;"></b>
+				</div>
+			</div>
+			<div class="authorisation">
+				<p>1. 投保人同意授权您公司通过<span id="alipay_bank_deposit1">**********</span>开户银行从投保人提供的帐户<span id="alipayPaymentAccount1">**********</span>中转账支付支与您公司约定的首期保险费</p>
+				<p>2. 投保人保证此账号有足够的金额支付应交保险费，若因帐户存款余额不足造成转账不成功，致合同不能成立或不能持续有效，因此引起的责任概由投保人承担（为避免清户，账户中余额要始终保持＞10元）。</p>
+				<p>3. 投保人同意您公司将多收取的保险费及因延期承保、撤销投保申请、撤单、退保等引起的退费通过投保人提供的该账户返回给投保人。</p>
+				<p>4. 投保人因故结清该账户，应该重新开立账户，并及时通知您公司进行变更。</p>
+				<p>5. 如因系统原因保费划转不成功，造成合同未成立，保险公司不承担责任。</p>
+			</div>
+		</div>
+		<p class="err-mes error-Mes err-mes2"></p>
+		<div class="ui-action-travel">
+			<a href="javascript:confirmUnionPay();" id="submitButton" class="ui-btn-buy intoBank">
+				立即支付
+			</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		url : "/share/wechatShare.do",
+		type : "POST",
+		async : true,
+		dataType : "json",
+		data : {
+			'url' : window.location.href
+		},
+		success : function(data) {
+			wx.config({
+				debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				appId : data.appId, // 必填，公众号的唯一标识
+				timestamp : data.timestamp, // 必填，生成签名的时间戳
+				nonceStr : data.nonceStr, // 必填，生成签名的随机串
+				signature : data.signature,// 必填，签名，见附录1
+				jsApiList : [ 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo' ]
+			});
+			
+			var title = null;
+			if ('' == "0") {
+				title = "信泰8.8理财节，理财爽翻天，呼朋唤友拿返利，有钱就是任性";
+			} else {
+				title = "信泰8.8理财节，我已赚到"+''+"元，你也快来试试吧";
+			}
+			var bbjs = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="+data.appId+"&redirect_uri=url&response_type=code&scope=snsapi_base#wechat_redirect";
+			var requestUrl = bbjs.replace("url", data.uri + "/sale/lhShare.do?shareOpenId=");
+			var imgUrl = data.uri + "/resources/image/oneInsure/lh_share.jpg";
+			wx.ready(function() {
+				wx.onMenuShareTimeline({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareAppMessage({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareQQ({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+				wx.onMenuShareWeibo({title : title, link : requestUrl, imgUrl : imgUrl, success : function() {}, cancel : function() {}});
+			});
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+		}
+	});
+	Sinosoft.initCitySelector($('#appProvince2'),$('#appCity2'),null,$("#province").val(), $("#city").val(), -1);
+	
+	var bankType = $("#bankType").val();
+	if (bankType != null && bankType != "") {
+		$("#bankCode2").val(bankType);
+		if (bankType == '302' || bankType == '304') {
+			var provinceCode = $("#province").val();
+			var cityCode = $("#city").val();
+			
+			if (provinceCode == "")
+				provinceCode = "440000";
+			if (cityCode == "")
+				cityCode = "440100";
+			
+			$("#appCity2").empty();
+			
+			$("#appProvince2").attr("disabled", "disabled");
+			
+			var appCitys = null;
+			if (bankType == '302') {
+				appCitys = "<option value='440100'>广州市</option>"
+						+ "<option value='440600'>佛山市</option>"
+						+ "<option value='441900'>东莞市</option>"
+						+ "<option value='442000'>中山市</option>"
+						+ "<option value='440400'>珠海市</option>"
+						+ "<option value='441300'>惠州市</option>"
+						+ "<option value='440700'>江门市</option>"
+						+ "<option value='441200'>肇庆市</option>";
+			} else {
+				appCitys = "<option value='440100'>广州市</option>"
+					+ "<option value='440600'>佛山市</option>"
+					+ "<option value='441900'>东莞市</option>";
+			}
+			var temp_code = "'" + cityCode + "'";
+			if (appCitys.indexOf(temp_code)) {
+				appCitys = appCitys.replace(temp_code, temp_code + " selected");
+			}
+			
+			$("#appCity2").append(appCitys);
+		} else {
+			$("#appProvince2").removeAttr("disabled");
+		}
+	}
+			
+	//给授权声明赋值
+	var bankName = '';
+	var accountNo = '';
+	if (bankName != "") {
+		$("#alipay_bank_deposit1").text(bankName);
+	}
+	if (accountNo != "") {
+		$("#alipayPaymentAccount1").text(accountNo);
+	}
+	
+	//银行类型赋值
+	$("#bankCode2").change(function(){
+		$("#alipay_bank_deposit1").text($("#bankCode2").find("option:selected").text());
+		var bankCode = $(this).val();
+		if (bankCode == '302' || bankCode == '304') {
+			Sinosoft.initCitySelector($('#appProvince2'),$('#appCity2'),null,"440000", "440100", -1);
+			$("#province").val("440000");
+			$("#city").val("440100");
+
+			$("#provinceName").val("广东省");
+			$("#cityName").val("广州市");
+			$("#appProvince2").attr("disabled", "disabled");
+			$("#appCity2").empty();
+			
+			var citys = "";
+			if (bankCode == "302") {
+				citys = "<option value='440100'>广州市</option>"
+					+ "<option value='440600'>佛山市</option>"
+					+ "<option value='441900'>东莞市</option>"
+					+ "<option value='442000'>中山市</option>"
+					+ "<option value='440400'>珠海市</option>"
+					+ "<option value='441300'>惠州市</option>"
+					+ "<option value='440700'>江门市</option>"
+					+ "<option value='441200'>肇庆市</option>";
+			} else {
+				citys = "<option value='440100'>广州市</option>"
+					+ "<option value='440600'>佛山市</option>"
+					+ "<option value='441900'>东莞市</option>";
+			}
+			$("#appCity2").append(citys);
+		} else {
+			$("#appProvince2").removeAttr("disabled");
+
+			Sinosoft.initCitySelector($('#appProvince2'),$('#appCity2'),null,$("#province").val(), $("#city").val(), -1);
+		}
+		
+	});
+	
+	//银行帐号赋值
+	$("#accountNo").change(function(){
+		$("#alipayPaymentAccount1").text($(this).val());
+	});
+	
+	$('.ui-notice-view').on('tap',function(){
+		var self = $(this);
+		if(self.hasClass('open')){
+			self.removeClass('open');
+			$('.authorisation').slideUp(30);
+		}else{
+			self.addClass('open');
+			$('.authorisation').slideDown(30);
+		}
+	});
+});
+//校验订单状态
+function paymentCheck() {
+	var orderNo = $("#orderNo").val();
+	var result = null;
+	$.ajax({
+		type : "POST",
+		async : false,
+		url : "/sale/checkOrder.do",
+		dataType : "json",
+		data : {
+			'orderNo' : orderNo
+		},
+		success : function(data) {
+			result = data;
+		},
+		error:function(XMLHttpRequest, textStatus, errorThrown) {
+			
+		}
+	});
+	if (result.flag == "0") {
+		$(".err-mes").text("非法请求 ，请退出");
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		return false;
+	} else if (result.flag == "-1") {//已支付成功
+		window.location.href= "/sale/paymentFinished.do?orderNo=" + $("#orderNo").val();
+		return false;
+	} else if (result.flag == "2") {
+		$(".err-mes").text("系统正在确认您的个人信息,请稍后...");
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		return false;
+	} else if (result.flag == "3") {
+		$(".err-mes").text("已成功出单，请勿支付");
+		return false;
+	}
+	return true;
+}
+function confirmUnionPay() {
+	$("#submitButton").attr("href", "javascript:void(0);");
+	var flag = paymentCheck();
+	if (!flag) {
+		return;
+	}
+	var bankCode = $("#bankCode2 option:selected").val();  //获取选中的项
+	if (bankCode == "0") {
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		$(".err-mes").text("请选择银行类型");
+		return;
+	}
+	$("#bankName").val($("#bankCode2 option:selected").text());
+	
+	var accountNo = $("#accountNo").val();
+	if (accountNo == "") {
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		$(".err-mes").text("银行帐号不能为空");
+		return;
+	}
+	if (accountNo.length < 16 || accountNo.length > 19) {
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		$(".err-mes").text("银行帐号不合法");
+		return;
+	}
+	
+	var provinceCode = $("#appProvince2 option:selected").val();
+	var cityCode = $("#appCity2 option:selected").val();
+	if (provinceCode == "" || cityCode == "") {
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		$(".err-mes").text("请选择开发省市");
+		return;
+	}
+	if (!$("#checkbox2").is(':checked')) {
+		$("#submitButton").attr("href", "javascript:confirmUnionPay();");
+		$(".err-mes").text("请确认自动转账授权声明");
+		return;
+	}
+	var provinceName = $("#appProvince2 option:selected").text();
+	var cityName = $("#appCity2 option:selected").text();
+	
+	$("#province").val(provinceCode);
+	$("#city").val(cityCode);
+
+	$("#provinceName").val(provinceName);
+	$("#cityName").val(cityName);
+	
+	$("#unionPay_frm").submit();
+}
+</script>
+</form>
+
+
+</body></html>

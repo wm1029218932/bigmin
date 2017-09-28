@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/mobiscroll.custom-2.17.0.min.js" ></script>
+</head>
+<body>
+<div class="container">
+    <div class="top">
+        <img src="images/wll-2.png" alt="稳利来2号"/>
+    </div>
+    <div class="center">
+        <div class="form-group">
+            <label>出生日期
+            <input  value="" readonly=""  id="birthday" type="text" class="choose-bg" placeholder="请选择出生日期" onfocus="tab1()"/>
+                30天-65周岁
+            </label>
+        </div>
+        <div class="form-group">
+            <label>购买份数
+                <input  value=""  type="text" class="small-input" placeholder="" />
+                份（每份1000元，10份起售）
+            </label>
+        </div>
+        <div class="price">
+            <p>
+                <b>价格:</b>
+                <em><strong class="ft14">￥</strong>65.<strong class="ft14">00</strong>-159.<strong class="ft14">00</strong></em>
+            </p>
+            <a>立即投保</a>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="title">购买须知</div>
+        <p>投保方式：网络投保</p>
+        <p>投保年龄：出生30天-65周岁</p>
+        <p>投保范围：本人/父母/子女</p>
+        <p>保险期间：至88周岁</p>
+        <p>指定领取年龄：68周岁</p>
+        <p>生效日期：投保次日零时生效，具体以保单载明时间为准</p>
+        <p>产品名称：信泰稳利来2号养老年金保险</p>
+        <p>可购买地区：浙江、江苏、北京、河北、福建、河南、山东、黑龙江、辽宁、上海、湖北、江西、广东</p>
+        <p>备案编号：【2015】602号</p>
+        <p>如实告知：被保险人告知，指被保险人故意隐瞒事实，不履行如实告知义务的，或因过失未履行如实告知义务，我们可以依法解除合同。</p>
+        <div class="link">
+            <a href="###" class="pull-left">产品条款</a>
+            <a href="###" class="pull-right">产品费率</a>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    function tab1(){
+        var currentTime = new Date(),
+                maxDiff = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate()-30);
+        var now = new Date();
+        var currYear = now.getFullYear();
+        var startYear = currYear-65;
+        var headerText ='';
+        $("#birthday").mobiscroll().date({
+            theme: 'mobiscroll',
+            lang: 'zh',
+            display:'bottom',
+            mode: 'scroller',
+            dateFormat: 'yy-mm-dd', //返回结果格式化为年月格式
+            dateOrder : 'yymmdd',
+            yearText: '年',
+            monthText: '月',
+            dayText: '日',
+            endYear: currYear,//结束年份
+            maxDate:maxDiff,
+            startYear:startYear,
+            headerText:"请选择出生日期 " //自定义弹出框头部格式
+        });
+
+    }
+</script>
+</body>
+</html>

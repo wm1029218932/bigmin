@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li{list-style-type: none}
+        #box{margin: 0 auto;}
+        #menu span{display: inline-block;width: 100px;height:40px;line-height: 40px;background: #f0f0f0;text-align: center;border:1px solid #ccc;cursor: pointer}
+        #content{width:400px;height:300px;background: #f0f0f0;border:1px solid #ccc;position: relative}
+        #content li{width:400px;height:300px;display: none;position: absolute;top:0;left:0;}
+        #menu span.current{background: pink;}
+        #content li.show{display: block;}
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="menu">
+        <span class="current">新闻</span>
+        <span>体育</span>
+        <span>娱乐</span>
+    </div>
+    <ul id="content">
+        <li class="show">新闻版块内容</li>
+        <li>体育版块内容</li>
+        <li>娱乐版块内容</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var menu = document.getElementById('menu');
+    var spans = menu.children;
+    var content = document.getElementById('content');
+    var lists = content.children;
+    /*方法一*/
+    for (var i=0; i<spans.length; i++){
+        spans[i].onclick = function(){
+            for(var j=0; j<spans.length; j++){
+                spans[j].removeAttribute('class');
+                spans[j].setAttribute('index',j);
+                lists[j].removeAttribute('class');
+            }
+            this.setAttribute('class','current');
+            var index = this.getAttribute('index');
+            lists[index].setAttribute('class','show');
+
+        };
+
+    };
+    /*方法二*/
+/*
+    for (var i=0; i<spans.length; i++){
+        spans[i].index = i;
+        spans[i].onclick = function(){
+
+            for(var j=0; j<spans.length; j++){
+                spans[j].removeAttribute('class');
+                /!*spans[j].setAttribute('index',j);*!/
+
+                lists[j].removeAttribute('class');
+            }
+            this.setAttribute('class','current');
+            var index = this.getAttribute('index');
+            lists[this.index].setAttribute('class','show');
+
+        };
+
+    };
+*/
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>quickSort</title>
+    <script src="../plugins/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+
+    var a=[23,12,56,34,11,10,59,11];
+
+
+    //快速排序
+    function quickSort(arr){
+        //数组元素个数小于等于1的时候，返回
+        if (arr.length<=1){
+            return arr;
+        };
+        //取数组中间的数字为基准数
+        var pivotIndex = Math.floor(arr.length/2);
+        //将基准数从原数组中分离出来
+        var pivot = arr.splice(pivotIndex,1)[0];
+        //创建左右两边数组
+        var left = [];
+        var right = [];
+        //以此将原数组中的数字与基准数做比较，大于基准数的放在右边数组，小与基准数的放在左边数组
+        for (var i=0;i<arr.length;i++){
+            if (arr[i]<pivot){
+                left.push(arr[i]);
+            }else{
+                right.push(arr[i])
+            };
+        };
+        //使用递归不断重复这个过程，就可以得到排序后的数组
+        return quickSort(left).concat([pivot],quickSort(right));
+    };
+
+    //冒泡排序法
+    function mpsort(arr){
+        //比较的次数是length-1，如3个数只需比较2次
+        for (var i=0;i<arr.length-1;i++){
+            //每轮比较出一个最大数，放置最后一位
+            for (var j=0;j<arr.length-i;j++){
+                var temp;
+                if (arr[j] > arr[j+1]){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                };
+            };
+        };
+        return arr;
+    };
+
+
+    //alert(quickSort(a));
+    alert(mpsort(a));
+
+</script>
+</html>

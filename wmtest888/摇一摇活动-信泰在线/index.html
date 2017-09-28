@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>微信出行</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+
+</head>
+<body>
+    <!-- 红包音乐 -->
+    <audio id="shakemusic" src="music/audio-01.mp3" style="display: none;"></audio>
+    <audio id="openmusic" src="music/audio-02.mp3" style="display: none;"></audio>
+    <div class="container">
+        <div class="top">
+            <img class="top-img" src="images/top-img.png"/>
+            <img class="shake-img animated wobble"  src="images/shake-img.png"/>
+        </div>
+        <div class="center">
+            <div class="title">
+                <h1>长假出游，hold住意外</h1>
+                <p>心灵和脚步，总要有一个在路上，你的出游计划定好了吗？</p>
+            </div>
+            <!--旅游意外伤害医疗保险-->
+            <div class="innerbox innerbox-01">
+                <div class="title title-01">
+                    <div class="sidebg sideleft"><img src="images/side-left-01.png"/></div>
+                    <div class="sidebg sideright"><img src="images/side-right-01.png"/></div>
+                    <h2>旅游意外伤害医疗保险</h2>
+                </div>
+                <div class="inner-content">
+                    <div class="left">
+                        <table class="list" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="title">保障高：</td>
+                                <td class="describe">高达22万高额保障附加2万医疗费用</td>
+                            </tr>
+                            <tr>
+                                <td class="title">范围广：</td>
+                                <td class="describe">意外伤残、意外身故医疗保险金</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保费低：</td>
+                                <td class="describe">低至0.03元/天</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="right">
+                        <table class="list">
+                            <tr>
+                                <td class="title">投保年龄：</td>
+                                <td class="describe">3-50周岁</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保险期间：</td>
+                                <td class="describe">1年</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="hr"></div>
+                    <div class="bottom">
+                        <div class="price">
+                            网销特价：<span>1</span>元起购
+                        </div>
+                        <div class="btn-box">
+                            <a href="###" class="btn">立即抢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--交通工具意外险-->
+            <div class="innerbox innerbox-02">
+                <div class="title title-02">
+                    <div class="sidebg sideleft"><img src="images/side-left-02.png"/></div>
+                    <div class="sidebg sideright"><img src="images/side-right-02.png"/></div>
+                    <h2>交通工具意外险</h2>
+                </div>
+                <div class="inner-content">
+                    <div class="left" border="0" cellpadding="0" cellspacing="0">
+                        <table class="list">
+                            <tr>
+                                <td class="title"><img src="images/icon-01.png"/>飞机：</td>
+                                <td class="describe">最高200万</td>
+                            </tr>
+                            <tr>
+                                <td class="title"><img src="images/icon-02.png"/>轨道：</td>
+                                <td class="describe">最高50万</td>
+                            </tr>
+                            <tr>
+                                <td class="title"><img src="images/icon-03.png"/>客运：</td>
+                                <td class="describe">最高50万</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="right">
+                        <table class="list">
+                            <tr>
+                                <td class="title">投保年龄：</td>
+                                <td class="describe">18-75周岁</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保险期间：</td>
+                                <td class="describe">7天（一年内任意使用）</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="hr"></div>
+                    <div class="bottom">
+                        <div class="price">
+                            网销特价：<span>0.1</span>元起购
+                        </div>
+                        <div class="btn-box">
+                            <a href="###" class="btn">立即抢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--出行保意外伤害保险-->
+            <div class="innerbox innerbox-03">
+                <div class="title title-03">
+                    <div class="sidebg sideleft"><img src="images/side-left-03.png"/></div>
+                    <div class="sidebg sideright"><img src="images/side-right-03.png"/></div>
+                    <h2>出行保意外伤害保险</h2>
+                </div>
+                <div class="inner-content">
+                    <div class="left">
+                        <table class="list" border="0" cellpadding="0" cellspacing="1">
+                            <thead>
+                            <tr>
+                                <th>保什么</th>
+                                <th>最多赔多少</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>一般意外保障</td>
+                                <td>10万</td>
+                            </tr>
+                            <tr>
+                                <td>乘驾私家车保障</td>
+                                <td>50万</td>
+                            </tr>
+                            <tr>
+                                <td>公共交通意外保障</td>
+                                <td>100万</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="right">
+                        <table class="list" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="title">保障全面：</td>
+                                <td class="describe">私家车/航空 多种水陆交通 一般人身意外</td>
+                            </tr>
+                            <tr>
+                                <td class="title">高性价比：</td>
+                                <td class="describe">低至0.17元/天</td>
+                            </tr>
+                            <tr>
+                                <td class="title">关爱女性：</td>
+                                <td class="describe">一样保障额度、女性价格为男性的41%</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="hr"></div>
+                    <div class="bottom">
+                        <div class="price">
+                            网销特价：<span>63</span>元起购
+                        </div>
+                        <div class="btn-box">
+                            <a href="###" class="btn">立即抢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--百万身驾保障计划-->
+            <div class="innerbox innerbox-04">
+                <div class="title title-04">
+                    <div class="sidebg sideleft"><img src="images/side-left-04.png"/></div>
+                    <div class="sidebg sideright"><img src="images/side-right-04.png"/></div>
+                    <h2>百万身驾保障计划</h2>
+                </div>
+                <div class="inner-content">
+                    <div class="left">
+                        <table class="list" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="title">涵盖范围：</td>
+                                <td class="describe">残疾、自驾车意外、 公共交通意外疾病和意外身故</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保障高：</td>
+                                <td class="describe">最高保障高达200万</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保费低：</td>
+                                <td class="describe">每天不到2毛钱</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="right">
+                        <table class="list">
+                            <tr>
+                                <td class="title">投保年龄：</td>
+                                <td class="describe">18-50周岁</td>
+                            </tr>
+                            <tr>
+                                <td class="title">保障期间：</td>
+                                <td class="describe">30年</td>
+                            </tr>
+                            <tr>
+                                <td class="title">适宜人群：</td>
+                                <td class="describe">私家车车主</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="hr"></div>
+                    <div class="bottom">
+                        <div class="price">
+                            网销特价：<span>1100</span>元起
+                        </div>
+                        <div class="btn-box">
+                            <a href="###" class="btn">立即抢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="title">活动规则</div>
+            <div class="footer-desc">
+                <div class="desc-top-box">
+                    <div class="desc-top">
+                        <p>1、活动时间：2016年10月18日-10月31日</p>
+                        <p>2、关注公众号后即可免费参与抽奖。</p>
+                        <p>3、本次活动设奖品类别如下：</p>
+                    </div>
+                    <div class="QR_code" >
+                        <img src="images/QR_code.png"/>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="desc-bottom-box">
+                    <p>5元话费充值卡、10M流量包、交通工具意外险、莫非尔丽专属抗癌险、运动手环、100元加油卡、空气净化器</p>
+                    <p><span class="red">双重大礼包等着您：</span></p>
+                    <p>4、活动一：<br/>
+                        邀请有好礼<br/>
+                        邀请最多新用户来参加抽奖活动并领取奖品<br/>
+                        第一名可获得ipad一台（邀请人数100名以上）<br/>
+                        第二名可获得iwatch一块（邀请人数80名以上）<br/>
+                        第三名可获得1000元京东购物卡一张（邀请人数50名以上）<br/>
+                        （新用户指未关注“信泰在线”公众号的用户）</p>
+                    <p>活动二：<br/>
+                        活动期间，凡是购买产品保费满150元，就可获得信泰官网4000积分；满1000元，获得信泰官网40000积分；满2000元，获得信泰官网90000积分。<br/>（积分可兑换话费、京东购物卡、支付宝礼金等礼品）</p>
+                    <p>5、点击[我的排名]，即可看见您的邀请排名等信息。</p>
+                </div>
+            </div>
+            <div class="links">
+                <div class="btn-box">
+                    <a href="###" class="btn" id="myInvitation">我的排行</a>
+                </div>
+                <div class="btn-box">
+                    <a href="myAwards.html" class="btn">我的奖品</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩弹窗-->
+    <div class="zhezhao"></div>
+
+    <div class="zhezhao_content"  id="zhezhao_content_01">
+        <span class="close_btn"><img src="images/close-btn.png"/></span>
+        <h2 class="content-txt">心塞，机会用完了<br/></h2>
+        <!--<input type="text" name="truename" placeholder="姓名"/>
+        <input type="text" name="truename" placeholder="手机号码"/>-->
+        <p class="describe">赶紧邀请给好友来补补人品吧！</p>
+        <button class="pop_btn">召唤基友，赢抽奖机会</button>
+    </div>
+    <div class="zhezhao_content" id="zhezhao_content_02">
+        <span class="close_btn"><img src="images/close-btn.png"/></span>
+        <h2 class="title">我的邀请<br/></h2>
+        <h2 class="content-txt red">哇，人品好棒！<br/></h2>
+        <!--<input type="text" name="truename" placeholder="姓名"/>
+        <input type="text" name="truename" placeholder="手机号码"/>-->
+        <p class="describe">已有 3 名好友为您助力。 </p>
+        <p class="describe">还差 2 名可再获得1次抽奖机会哦！ </p>
+        <button class="pop_btn">召唤基友，赢抽奖机会</button>
+    </div>
+    <div class="zhezhao_content"  id="zhezhao_content_03">
+        <span class="close_btn"><img src="images/close-btn.png"/></span>
+        <h2 class="content-txt red">恭喜您，获得了<br/></h2>
+        <p class="describe">奖品名字</p>
+        <button class="pop_btn btn-middle">领取</button>
+        <button class="pop_btn btn-middle">分享</button>
+    </div>
+    <div class="zhezhao_content" id="zhezhao_content_04">
+        <span class="close_btn"><img src="images/close-btn.png"/></span>
+        <h2 class="title">我的邀请<br/></h2>
+        <h2 class="content-txt red">获得一次抽奖机会！<br/></h2>
+        <!--<input type="text" name="truename" placeholder="姓名"/>
+        <input type="text" name="truename" placeholder="手机号码"/>-->
+        <p class="describe">朋友多了机会多多！ </p>
+        <p class="describe">已有5名好友为您助力。 </p>
+        <button class="pop_btn">快放肆摇一摇</button>
+    </div>
+
+    <!--活动结束-->
+    <div class="zhezhao_content"  id="zhezhao_content_05">
+        <span class="close_btn"><img src="images/close-btn.png"/></span>
+        <h2 class="content-txt red">活动已结束<br/></h2>
+        <button class="pop_btn btn-middle">确定</button>
+    </div>
+    <script>
+
+        var SHAKE_THRESHOLD = 3000;
+        var last_update = 0;
+        var x = y = z = last_x = last_y = last_z = 0;
+        var audio = $('#shakemusic')[0];
+        var openAudio = $('#openmusic')[0];
+        if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion', deviceMotionHandler, false);
+        } else {
+            alert('您的手机不支持摇一摇');
+        };
+        function deviceMotionHandler(eventData) {
+
+            var acceleration = eventData.accelerationIncludingGravity;
+            var curTime = new Date().getTime();
+            if ((curTime - last_update) > 100) {
+                var diffTime = curTime - last_update;
+                last_update = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+
+                if (speed > SHAKE_THRESHOLD) {
+                    $(".zhezhao").hide();
+                    $('#zhezhao_content_01').hide();
+                    //$('.shake-img').addClass('animated wobble');
+                    audio.play();
+                    setTimeout(function(){
+                        //$('.shake-img').removeClass('animated wobble');
+                        popup($('#zhezhao_content_01'));
+                        audio.pause();
+                        openAudio.play();
+                    },1000);
+                };
+                last_x = x;
+                last_y = y;
+                last_z = z;
+            }
+        };
+
+
+        $('#myInvitation').click(function(){
+            popup($('#zhezhao_content_02'));
+            return false;
+        });
+
+
+
+        //弹出框位置调整
+        function popup(popupName){
+            var _scrollHeight = $(document).scrollTop(),//获取当前窗口距离页面顶部高度
+                    _windowHeight = $(window).height(),//获取当前窗口高度
+
+                    _windowWidth = $(window).width(),//获取当前窗口宽度
+                    _popupHeight = popupName.height(),//获取弹出层高度
+                    _popupWeight = popupName.width();//获取弹出层宽度
+            _posiTop = (_windowHeight - _popupHeight)/2 ;
+            _posiLeft = (_windowWidth - _popupWeight)/2;
+            $(".zhezhao").show();
+            popupName.show().css({"left": _posiLeft + "px","top":_posiTop + "px"});//设置position
+            $(".close_btn").click(function(){
+                $(".zhezhao").hide();
+                popupName.hide();
+            });
+        };
+
+        /*$(".zhezhao").show();
+
+        popup($('#zhezhao_content_02'));*/
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, hr, dl, dd, ul, ol, form, input, textarea, th, td, select { margin: 0; padding: 0;}
+body { font: 16px/1.5 "Microsoft Yahei", "Simsun" ,"sans-serif"; -webkit-text-size-adjust: none; background: #fff; color: #555;}
+i, em, b { font-style: normal; vertical-align: top; color: #333;}
+li { list-style: none;}
+a { text-decoration: none;}
+img, fieldset { border: none; vertical-align: top;}
+/*table { border-collapse: collapse;}*/
+input, textarea, select ,button { outline: none; color: #333;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+textarea { resize: none; overflow: auto;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+input,select,a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {  -webkit-appearance: none;  margin: 0;}
+
+
+/*弹框*/
+.popup{
+	display: none;
+}
+.zhezhao{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background:#000;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	z-index:100;
+}
+.zhezhao_content{
+	background: #fff;
+	position:fixed;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius:8px;
+	z-index:101;
+	width: 80%;
+	max-width:300px;
+}
+.zhezhao_content .content{
+	margin: 0 auto;
+	padding:20px;
+}
+.zhezhao_content .content .text{
+	font-size: 16px;
+}
+.btn-groups{
+	display:-webkit-flex;
+	display:-ms-flex;
+	display: flex;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.btn-groups .btn{
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #666;
+	font-size: 16px;
+	width: 100%;
+}
+.btn-groups .btn:first-child{
+	border-left: none;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/myjs.js"></script>
+    <style>
+        img{
+            position: absolute;
+            left:0;
+            top:50px;
+        }
+        #box{
+            width:1000px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<img src="images/aside.jpg" alt="" id="pic"/>
+<div id="box">
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+</div>
+<script>
+    window.onload = function(){
+        var leader = 0, target = 0;
+        var timer = null;
+        var pictop = $('pic').offsetTop;
+        window.onscroll = function(){
+            clearInterval(timer);
+
+            target = scroll().top + pictop;
+
+            timer = setInterval(function(){
+                leader = leader + (target - leader)/10;
+                $('pic').style.top = leader + 'px';
+            },20)
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>恒泰A尊享版</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet"href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slide.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+</head>
+<body>
+<!-- Swiper -->
+<audio src="upload/lostLove.mp3" preload="auto" autoplay="autoplay" loop="loop" style="opacity: 0;" id="music"></audio>
+<img src="img/music.png" style="" id="tp_music" class="tp_music"/>
+<div class="swiper-container">
+
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+            <div class="p1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p1-font.png" class="ani font1" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide" >
+            <div class="ani p2"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p2-font.png" class="ani font1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani p3"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p3-font.png" class="ani font3" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani p4"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p4-font.png" class="ani font4" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani p5"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p5-font1.png" class="ani font5-1" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/p5-font.png" class="ani font5" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.9s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="1s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani p6"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="img/p6-font1.png" class="ani font6-1" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <img src="img/p6-font2.png" class="ani font6-2" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.9s">
+                <img src="img/p6-font3.png" class="ani font6-3" swiper-animate-effect="fadeInRight" swiper-animate-duration="2s" swiper-animate-delay="1.2s">
+                <a>
+                    <img src="img/p6-font.png" class="ani font6"  swiper-animate-effect="fadeInRight" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s">
+                </a>
+                <img src="img/p6-font4.png" class="ani font6-5" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s">
+                <img src="img/music.gif" class="ani font6-4" swiper-animate-effect="fadeInUp" swiper-animate-duration="2.5s" swiper-animate-delay="1.5s">
+                <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="1.6s"/>
+            	<audio src="upload/bg_music.mp3" loop="0" style="opacity: 0;" id="music1"></audio>
+            
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani p7"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            </div>
+    </div>
+    <input type="hidden" value="yes" id="sharePlan">
+    </div>
+</div>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+	var music = document.getElementById("music");
+	$('html').one('touchstart',function(){
+		music.play();
+	});
+    var swiper = new Swiper('.swiper-container', {
+        onInit: function(swiper){
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        },
+        effect : 'cube',
+        cube:{
+            shadow:false,
+        },
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });	
+</script>
+
+<script>
+
+	$(function(){
+		var music = document.getElementById("music"); 
+		var music1 = document.getElementById("music1");
+		$("#tp_music").click(function(){
+		    if(music.paused){
+				music1.pause();
+		        music.play(); 
+		       $("#tp_music").addClass("tp_music");
+		    }else{ 
+		        music.pause(); 
+		        $("#tp_music").removeClass("tp_music");
+		    } 
+		});
+	
+		$(".font6-5").click(function(){ 		     
+		    if(music1.paused){ 
+		        music1.play();
+		        music.pause();
+		        $("#tp_music").removeClass("tp_music");
+		    }else{
+		    	music.play();
+		        music1.pause();
+		        $("#tp_music").addClass("tp_music");
+		    } 
+		});
+	});
+</script>
+<!--<script>
+var sharePlan = $("#sharePlan").val();	
+//产品分享
+var interestDemo = {
+	init:function(){
+		if(sharePlan=='yes'){
+			function connectWebViewJavascriptBridge(callback) {
+	            if (window.WebViewJavascriptBridge) {
+	                callback(WebViewJavascriptBridge)
+	            }else {
+	                document.addEventListener(
+	                    'WebViewJavascriptBridgeReady'
+	                    , function() {
+	                        callback(WebViewJavascriptBridge)
+	                    },
+	                    false
+	                );
+	            }
+	        }
+		//注册回调函数，初始化函数
+			connectWebViewJavascriptBridge(function(bridge) {
+	            bridge.init(function(message, responseCallback) {
+	                console.log('JS got a message', message);
+	                var data = {
+	                    'Javascript Responds': 'Wee!'
+	                };
+	                console.log('JS responding with', data);
+	                responseCallback(data);
+	        	});
+	            bridge.registerHandler("sharePlan",function(data,responseCallback) {
+	            	responseCallback(para);
+	            });
+		    })
+		}
+	}
+}
+
+$(window).load(function(){
+	interestDemo.init();
+	//处理代理人的信息
+	try {		
+	setTimeout(function(){	
+  	window.WebViewJavascriptBridge.callHandler( 'agentInfor',"",function(agentInfor){ 			
+  		var content="保险————让生活更美好!"; 			
+	  	var shareUrl = url;
+      	var imageUrl = url+productIconUrl;	           
+       		content=content.trim();
+       	var title =productProductName +"演示"
+       para = {'title':title,
+   		    'content':content,
+   		    'shareUrl':shareUrl,
+   		    'imageUrl':imageUrl
+   		   }
+  			if(sharePlan=='yes'){ 		 		
+  				try{
+					var  paraShare = { title:"", hiddenBack:"0",shareBut:"0"};
+				       window.WebViewJavascriptBridge.callHandler( 'navigationInfo',paraShare,function(agentInfor){
+				       })
+  				}catch (e) {  					
+  			} 
+  		}
+	})
+	},1000);
+}
+catch (e) {
+	
+}});
+</script>-->
+</body>
+</html>

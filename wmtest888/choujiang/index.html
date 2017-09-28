@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection"/>
+    <title>幸运大转盘</title>
+    <script>!function (e, i) {
+        var t = e.documentElement, n = navigator.userAgent.match(/iphone|ipod|ipad/gi), a = n ? Math.min(i.devicePixelRatio, 3) : 1, m = "orientationchange"in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++)l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c)d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"; else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function () {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);</script>
+    <link rel="stylesheet" href="zpSrc/index.css"/>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?688389a51b376b5af4166ae16bfe0382";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<div id="db-content">
+    <div class="banner">
+        <img src="zpSrc/image/banner.png" alt="">
+    </div>
+    <div class="needCredits">
+        <span>今日剩余3次抽奖机会</span>
+    </div>
+    <div class="core">
+        <div id="circle">
+            <div class="circle-box">
+                <div class="prize" data-index="1" data-id="5" data-appitemid="100" data-itemid="100" data-type="again">
+                    <div class="prize-dialog">
+                        <p>再来一次</p>
+                        <img src="zpSrc/image/again.png" alt=""></div>
+                </div>
+                <div class="prize" data-index="2" data-id="1" data-appitemid="101" data-itemid="101"
+                     data-type="phonebill">
+                    <div class="prize-dialog">
+                        <p>幸运礼包</p>
+                        <img src="zpSrc/image/s-libao.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="3" data-id="3" data-appitemid="102" data-itemid="102" data-type="alipay">
+                    <div class="prize-dialog" style="margin-left: -.12rem;">
+                        <p>iPhone7 Plus</p>
+                        <img src="zpSrc/image/s-iphone.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="4" data-id="8" data-appitemid="103" data-itemid="103" data-type="qb">
+                    <div class="prize-dialog" style="margin-left: -.08rem;">
+                        <p>劳力士手表</p>
+                        <img src="zpSrc/image/s-laolishi.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="5" data-id="4" data-appitemid="104" data-itemid="104" data-type="object">
+                    <div class="prize-dialog" style="margin-left: -.15rem;">
+                        <p>500元现金红包</p>
+                        <img src="zpSrc/image/s-500.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="6" data-id="2" data-appitemid="105" data-itemid="105" data-type="coupon">
+                    <div class="prize-dialog">
+                        <p>茅台酒</p>
+                        <img src="zpSrc/image/s-maotai.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="7" data-id="6" data-appitemid="106" data-itemid="106" data-type="thanks">
+                    <div class="prize-dialog">
+                        <p>谢谢参与</p>
+                        <img src="zpSrc/image/noPrize1.png" alt="">
+                    </div>
+                </div>
+                <div class="prize" data-index="8" data-id="7" data-appitemid="107" data-itemid="107"
+                     data-type="virtual">
+                    <div class="prize-dialog" style="margin-top: .02rem;margin-left: -.15rem;">
+                        <p>200元现金红包</p>
+                        <img src="zpSrc/image/s-200.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="start"><span>点击抽奖</span></div>
+    </div>
+    <div class="rules">
+        <header></header>
+        <section>
+            <!--<h4>标题</h4>-->
+            <ul>
+                <li>点击大转盘抽奖，每天送3次免费机会，随后转发微信可继续抽奖！</li>
+                <li>
+                    中奖网友可直接领奖，逾期或领奖时信息填写错误或不完整均视为放弃获奖资格，限中奖者本人领奖。作弊用户直接取消获奖资格，我们保留追究其责任的权利；
+                </li>
+                <li>实物奖品将在填写完领奖信息后3个工作日内统一寄出，请中奖网友耐心等候；</li>
+            </ul>
+            <!--      <a href="">链接样式</a>-->
+        </section>
+    </div>
+</div>
+<div class="prize-modal">
+    <div class="prize-modal-dialog">
+        <header>
+            <i class="win"></i>
+            <i class="close"></i>
+        </header>
+        <section>
+            <h2></h2>
+
+            <p class="tip"></p>
+            <img src="">
+
+            <p class="block-help">也可到右上角“我的奖品”或首页“兑换记录”领奖，24小时内有效</p>
+        </section>
+        <footer>
+            <!--<button type="button" class="prize-continue">继续抽奖</button>-->
+            <button type="button" class="getPrize">马上领奖</button>
+            <button type="button" class="know">知道了</button>
+            <button type="button" class="continue">继续抽奖</button>
+            <button type="button" class="again">再来一次</button>
+            <button type="button" class="login">请先登录</button>
+            <button type="button" class="getCredits">赚取更多积分<i></i></button>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript" src="zpSrc/index.js?v=20170421v2"></script>
+</body>
+</html>

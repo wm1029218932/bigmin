@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size:12px;
+    font-family:"Microsoft YaHei","Arial",sans-serif;
+}
+body{
+    max-width:640px;
+    margin:0 auto;
+}
+
+.black{
+    color:#000000!important;
+}
+.red{
+    color:#BA251D!important;
+}
+.width80{
+    width:80%;
+}
+.indent15{
+    text-indent: 1.5rem;
+}
+.block{
+    display:block;
+}
+.productWll-bg{
+    background: url("../images/productWll_bg.jpg") no-repeat top center;
+    background-size: cover;
+    padding-bottom: 4rem;
+}
+.productJmf-bg{
+    background: url("../images/productJmf_bg.jpg") no-repeat top center;
+    background-size: cover;
+    padding-bottom: 4rem;
+}
+.top-img img{
+    width: 100%;
+}
+.box{
+    width:93%;
+    height:auto;
+    border-radius: 8px;
+    border:5px solid #9B231C;
+    margin:0 auto 20px;
+    background: #FFFEE9;
+    box-shadow:-1px 0 2px #A17D19,
+                1px 0 2px #A17D19,
+                0 -1px 2px #A17D19,
+                0 1px 2px #A17D19;
+    padding-bottom: 10px;
+}
+.box .title{
+    text-align: center;
+    padding:10px 0;
+}
+.box .title img{
+    width:10rem;
+}
+.box .content1{
+    margin: 0 6% 5px 6%;
+}
+.box .titleRight{
+    width: 7.5rem;
+    float: right;
+    margin-top: -27px;
+}
+.content1 b{
+    font-size:1.2rem;
+}
+.content1 p:first-of-type{
+    border-bottom: 1px dotted #333;
+    padding: 6px 0;
+    margin-bottom: 5px;
+}
+.content1 p img{
+    display:block;
+    width:1.5rem;
+    height:1.6rem;
+    float:left;
+    margin-right:5px;
+}
+.box1{
+    background:#fffcc8;
+}
+
+.box .content{
+    padding:0 0.5rem 0;
+    margin:0 auto;
+}
+.box .content img{
+    width:100%;
+}
+.box .content .col{
+    position: relative;
+    min-height: 8.5rem;
+}
+.box .content .col img{
+    width:7.5rem;
+    height:7.5rem;
+    position: absolute;
+    z-index: 2;
+}
+.box .content .col .text{
+    display: inline-block;
+    background: #BD9E64;
+    width: auto;
+    color: #ffffff;
+    padding:5px 10px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 1rem;
+}
+.box .content .col-right img{
+    right:0;
+}
+.box .content .col-right .text{
+    padding-right:3rem;
+    right:4.5rem;
+    top:0.6rem;
+}
+.box .content .col-left .text{
+    padding-left:3rem;
+    left:4.5rem;
+    top:1rem;
+}
+.box .content .col-left img{
+    left:0;
+}
+.content3 .top{
+    margin-bottom: 5px;
+}
+.content3 .top img{
+    width:5.5rem;
+    height:5.5rem;
+    float: left;
+    margin-right: 10px;
+}
+.content3 .top .text{
+    font-size: 1.2rem;
+    color: #CF000E;
+}
+.content3 .center{
+    margin:10px 0;
+}
+.content3 .bottom{
+    background: #8F5444;
+    margin:10px 0;
+    color: #ffffff;
+    padding:10px;
+    font-size: 1.1rem;
+    line-height: 140%;
+}
+.content3 .bottom img{
+    width: 100%;
+    margin:10px 0;
+}
+.content6 .row{
+    overflow: hidden;
+    padding:2px 5px;
+}
+.content6 .red{
+    width:8rem;
+    float: left;
+}
+.content6 .text{
+    width:70%;
+    float: left;
+}
+/*媒体查询*/
+html{font-size: 62.5%}
+@media screen and (min-width:320px){
+    html{font-size:60%}
+}
+@media screen and (min-width:375px){
+    html{font-size:68%}
+}
+@media screen and (min-width:414px){
+    html{font-size:73.24%}
+}
+@media screen and (min-width:481px){
+    html{font-size:94%}
+}
+@media screen and (min-width:561px){
+    html{font-size:109%}
+}
+@media screen and (min-width:641px){
+    html{font-size:115%}
+}

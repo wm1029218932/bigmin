@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+body, h1, h2, h3, h4, h5, h6, p, hr, dl, dd, ul, ol, form, input, textarea, th, td, select { margin: 0; padding: 0;}
+body { font: 16px/1.5 "Microsoft Yahei", "Simsun" ,"sans-serif"; -webkit-text-size-adjust: none; background: #fff; color: #555;}
+i, em, b { font-style: normal; vertical-align: top; color: #333;}
+li { list-style: none;}
+a { text-decoration: none;}
+img, fieldset { border: none; vertical-align: top;}
+/*table { border-collapse: collapse;}*/
+input, textarea, select ,button { outline: none; color: #333;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+textarea { resize: none; overflow: auto;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+input,select,a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+body{
+    max-width:640px;
+    margin:0 auto;
+}
+.container{
+    max-width:640px;
+    background: #fff;
+}
+.block{
+    text-align: center;
+    position: relative;
+}
+.block img{
+    width: 100%;
+    height: auto;
+}
+.link-btn{
+    display: inline-block;
+    background: #FC7B54;
+    border-radius: 5px;
+    color: #FFEDA7;
+    height:3.5rem;
+    line-height: 3.5rem;
+    width: 14rem;
+    font-size: 1.5rem;
+    position: absolute;
+    left:50%;
+    bottom:10%;
+    margin-left:-7rem;
+    border-bottom: 2px solid #FDDA60;
+}
+.link-btn:after{
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 8px solid #FFEDA7;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    right:20%;
+    top:50%;
+    margin-top:-4px;
+}
+/*font reset*/
+html{font-size: 62.5%}
+@media screen and (min-width:320px){
+    html{font-size:60%}
+}
+@media screen and (min-width:375px){
+    html{font-size:68%}
+}
+@media screen and (min-width:414px){
+    html{font-size:73.24%}
+}
+@media screen and (min-width:481px){
+    html{font-size:94%}
+}
+@media screen and (min-width:561px){
+    html{font-size:109%}
+}
+@media screen and (min-width:641px){
+    html{font-size:115%}
+}

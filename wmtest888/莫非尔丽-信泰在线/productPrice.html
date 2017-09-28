@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" href="css/productPrice.css" />
+    <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="js/mobiscroll.custom-2.17.0.min.js" ></script>
+ 
+</head>
+<body>
+    <div class="productPrice">
+    	<div class="header">
+			<a class="arrow-left"><i></i></a>
+    		<h2 class="price">产品报价</h2>
+    	</div>
+    	<div class="contents">
+    		<p class="annout">选择保障计划与被保险人信息，算出保费 </p>
+    		<div class="chooseProduct" id="chooseProduct">
+				<b class="lh6">选择产品</b>
+				<div class="chooseSex">
+					<p class="productA active"><span>70种疾病保障</span></p>
+					<!--<p class="productB"><span>尊贵款</span></p>-->
+				</div>
+			</div>
+
+
+			<div class="chooseProduct mt10" id="chooseSex">
+				<b>被保险人性别</b>
+				<div class="chooseSex">
+					<p class="sex active">男</p>
+					<p class="sex right">女</p>	
+				</div>
+			</div>
+			
+			<div class="chooseProduct">
+				<b>被保险人生日</b>
+				<input  value="" readonly=""  id="birthday" type="text" class="choose-bg" placeholder="请输入生日" onfocus="tab1()"/>
+				<i></i>
+			</div>
+			
+			<div class="chooseProduct">
+				<b>交费方式</b>
+				<input  value="" readonly=""  type="text" class="choose-bg" id="style" placeholder="请选择缴费方式" onfocus="tab2()"/>
+				<i></i>
+			</div>
+			
+			<div class="chooseProduct">
+				<b>基本保额</b>
+				<input  value="" type="text" class="choose-bg" placeholder="请输入1-30的整数"/>
+			</div>
+			<div class="chooseProduct">
+				<b>保费</b>
+				<div class="chooseSex rate">
+					<em></em>元/年
+				</div>
+			</div>
+			<div class="chooseProduct mt3">
+				<a class="next">下一步</a>
+			</div>
+    	</div>
+    </div>
+</body>
+<script>
+	var time = [];
+	function tab1(){
+		var currentTime = new Date(),
+				maxDiff = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate()-30);
+		var now = new Date();
+		var currYear = now.getFullYear();
+		var startYear = currYear-55;
+		var headerText ='';
+		$("#birthday").mobiscroll().date({
+			theme: 'mobiscroll',
+			lang: 'zh',
+			display:'bottom',
+			mode: 'scroller',
+			dateFormat: 'yy-mm-dd', //返回结果格式化为年月格式
+			dateOrder : 'yymmdd',
+			yearText: '年',
+			monthText: '月',
+			dayText: '日',
+			endYear: currYear,//结束年份
+			maxDate:maxDiff,
+			startYear:startYear,
+			onSelect:mobiscroll_select,
+			headerText:"请选择出生日期 " //自定义弹出框头部格式
+		});
+
+		function mobiscroll_select(valueText,inst){
+			var val = valueText.substring(0,4);
+			var diff = currYear - val;
+			if(diff<10){
+				time = '5年,10年';
+				$("#style").val("5年");
+			}else if(diff>10){
+				time='趸交';
+				$("#style").val("趸交");
+			}
+			time = time.substring(0,time.length).split(",");
+		}
+		tab2();
+	}
+
+	function tab2(){
+		if(time.length==0){
+			time='趸交,3年,5年,10年';
+			time = time.substring(0,time.length).split(",");
+		}
+		wheel = [[
+			{
+				label: '交费期间',
+				values: time
+			}
+		]];
+
+		$('#style').mobiscroll().scroller({
+			theme: 'mobiscroll',
+			lang: 'zh',
+			display: 'bottom',
+			showLabel:true,
+			wheels: wheel,
+			formatValue: function (data) {
+				return data[0];
+			},
+			headerText: "请选择交费方式："
+		});
+	}
+</script>
+
+<script>
+	$(document).ready(function(){
+		/*选择产品*/
+		$("#chooseProduct p").click(function(){
+			$(this).addClass("active");
+			$(this).siblings().removeClass("active");
+		})
+		/*选择性别*/
+		$("#chooseSex p").click(function(){
+			$(this).addClass("active");
+			$(this).siblings().removeClass("active");
+		})
+	})
+</script>
+</html>

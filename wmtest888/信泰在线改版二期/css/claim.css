@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.block-wrp{
+    background: #fff;
+    margin-bottom:1rem;
+    padding:1rem 5%;
+    font-size: 1.2rem;
+    color: #666;
+}
+.point{
+    background: #fff;
+    margin-bottom:1rem;
+    color:#5bad3b;
+    font-size: 1.3rem;
+    padding:1rem 5%;
+}
+.point ul{
+    margin:0 auto;
+    padding-left:5%;
+}
+.point li{
+    list-style-type: disc;
+}
+.block-wrp .title{
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+/*推荐记录*/
+.record{
+    width:98%;
+    margin: 15px 1%;
+    font-size:1.2rem;
+    color:#979797;
+}
+
+.record table{
+    border-collapse: collapse;
+    width:100%;
+    table-layout: fixed;
+}
+
+.record table tbody{
+    width:100%;
+}
+.record tr{
+    height:3.5rem;
+    width:100%;
+    border-bottom: 1px solid #eee;
+}
+
+.record tr:first-of-type{
+    font-weight: bold;
+    font-size:1.3rem;
+    color:#333;
+
+}
+.record tr:first-child{
+    background:#eeeeee;
+}
+.record tr:nth-child(odd){
+    background:#eeeeee;
+}
+.record tr td:first-of-type{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right:5px;
+    padding-left:5px;
+}
+.td1{
+    width: 75%;
+}
+.td40{
+    width:8em;
+}
+.record tr td:last-of-type{
+    text-align:center;
+}
+
+.share{
+    width:94%;
+    margin:3rem 3%;
+    background: #3a8eff;
+    color:#fff;
+    font-size:1.8rem;
+    height:4rem;
+    line-height:4rem;
+    text-align: center;
+    border-radius:5px;
+}
+
+.btn_share{
+    overflow: hidden;
+}
+
+.btn_share p{
+    width:48%;
+    margin:3rem 1%;
+    background: #3a8eff;
+    color:#fff;
+    font-size:1.6rem;
+    height:3.5rem;
+    line-height:3.5rem;
+    text-align: center;
+    border-radius:5px;
+    float:left;
+}
+/*积分记录--钱江晚报*/
+span,ul,li,tr{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.toggle-list{
+    width: 98%;
+    margin:0 auto;
+    font-size: 1.2rem;
+    color: #979797;
+}
+.select-box{
+    position:relative;
+    width: 48%;
+    height:3.2rem;
+    line-height: 3.2rem;
+    font-size: 1.3rem;
+    color: #3A8EFF;
+    margin:15px 0 20px;
+}
+
+.select-box .select-btn{
+    background:url("../images/select-arrow.png") 95% no-repeat;
+    background-size: 15px;
+    padding-right:30px;
+    width:100%;
+    display:inline-block;
+    text-indent:10px;
+    border:1px solid #3A8EFF;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.select-box .select-list{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display:none;
+    width:100%;
+    position: absolute;
+    background:#FFF;
+    padding-top:8px;
+    margin-top:-8px;
+    z-index:100;
+    border:1px solid #3A8EFF;
+    border-top:none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-indent: 10px
+}
+.select-box .select-list.list-show{
+    display:block;
+}
+
+.toggle-list table{
+    width: 100%;
+    table-layout: fixed;
+    margin:15px 0 0;
+}
+.toggle-list table tr{
+    width: 100%;
+    height: 3.5rem;
+}
+.toggle-list table tbody tr:nth-child(even),.toggle-list table thead tr{
+    background: #EDEDEE;
+}
+.toggle-list table tr th{
+    text-align: left;
+}
+.toggle-list table tr td{
+    padding-right: 4px;
+}
+.toggle-list table tr th:first-child{
+    width: 4em;
+    text-indent: 5px;
+}
+.toggle-list table tr th:nth-child(2){
+    width: 6em;
+}
+.toggle-list table tr th:last-child{
+    width: 4em;
+}
+.toggle-list table tr .text-ellipsis{
+
+    padding-right: 5px;
+}
+.text-show{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.toggle-list table tr td:first-child{
+    text-indent: 5px;
+}
+
+.count{
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-top:1px solid #F8F8F8;
+    color: #3D3D3D;
+    padding:10px 5px;
+}

@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+    font-family: "Microsoft YaHei", "Arial", sans-serif;
+    background: #fff;
+}
+.header{
+    width:100%;
+    height:97px;
+}
+.container{
+    width: 1140px;
+    margin:0 auto;
+
+}
+.logo{
+    width: 167px;
+    height:39px;
+    padding-top:29px;
+}
+.center{
+    width: 100%;
+    height: 590px;
+    background:#14212A url("../images/login-bg.png") no-repeat 35% center;
+}
+.fixed .center{
+    position: absolute;
+    top:97px;
+    left:0;
+    bottom:195px;
+    right:0;
+    height: auto;
+}
+.center .container{
+    position: relative;
+    height: 100%;
+}
+.login-box{
+    position: absolute;
+    top:32px;
+    bottom:32px;
+    right:0;
+    width: 400px;
+    background: #fff;
+    float: right;
+}
+
+.login-box .title{
+    color: #00A1E9;
+    text-align: center;
+    font-size: 24px;
+    margin:35px 0;
+
+
+}
+.login-box .form{
+    text-align: center;
+}
+.login-box .form input {
+    border: none;
+    background: #fff;
+    width: 328px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border: 1px solid #e0e0e0;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.link{
+    font-size: 12px;
+    color: #9D9D9D;
+}
+.link a{
+    color: #00A1E9;
+}
+.btn{
+    border:none;
+    background: #00A1E9;
+    width: 338px;
+    height: 50px;
+    margin:10px auto;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.btn:hover{
+    background: rgba(0,161,233,.8);
+}
+.btn:active,.btn:focus{
+    background: rgba(0,161,233,.8);
+}
+
+.footer{
+    height: 195px;
+}
+.fixed .footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.footer .column{
+    overflow: hidden;
+}
+
+.footer .column .col{
+    width: 33%;
+    float: left;
+    text-align: center;
+    height:62px;
+    padding:31px 0;
+}
+.footer .column .col img{
+    width: auto;
+    height:62px;
+    vertical-align: middle;
+    margin-right:10px;
+}
+.footer .column .col .txt{
+    vertical-align: middle;
+    font-size:24px;
+}
+.copyright{
+    height: 70px;
+    line-height: 70px;
+    border-top:1px solid #1E1B29;
+}
+
+#reg .center{
+    background: url("../images/reg-bg.jpg") no-repeat top center;
+    background-size: 100% 100%;
+}
+#reg .form-box{
+    top:200px;
+    padding-top:30px;
+}
+.reg-box{
+    position: absolute;
+    left: 50%;
+    margin-left:-200px;
+    top:32px;
+    bottom:32px;
+    right:0;
+    width: 400px;
+}
+.reg-box .title{
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+.errMsg{
+    width: 305px;
+    margin: 0 auto;
+    padding:10px 0 10px 35px;
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    background:#F8C2CF url("../images/error.png") no-repeat 10px center;
+}

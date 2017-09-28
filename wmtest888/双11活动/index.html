@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>微信出行</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/awardRotate.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <img src="images/top1.jpg" alt="双十一，免单来啦！"/>
+        </div>
+        <div class="award-box">
+            <div class="content">
+                <div class="layout">
+                    <div class="marqueen-box">
+                        <div class="title">中奖名单</div>
+                        <div id="marqueen">
+                            <div id="award-list"><span>名单1</span><span>名单2</span><span>名单3</span><span>名单1</span><span>名单2</span><span>名单3</span></div>
+                        </div>
+                    </div>
+                    <div class="turntable-bg">
+                        <!--<div class="mask"><img src="images/award_01.png"/></div>-->
+                        <div class="pointer"><div id="pointer"></div><!--<img src="images/pointer.png" alt="指针"/>--></div>
+                        <div class="rotate" ><img id="rotate" src="images/rotate.png" alt="抽奖"/></div>
+                    </div>
+                </div>
+                <div class="link">
+                    <a href="###" class="btn margin-bottom-30" id="myAwards">我的奖品</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="activeInfo">
+        <div class="active1">
+            <p class="title">惊喜不断，三重好礼相送</p>
+            <div class="active-content">
+                <div class="active-02">
+                    <span class="rule-01">送</span>
+                    <div>
+                        <span class="rule-02">赠送20000积分</span>
+                        <p class="rule-03">11.11当天单笔</p>
+                        <p class="rule-03">订单金额最高</p>
+                    </div>
+                </div>
+                <div class="active-03">
+                    <p class="rule-04">11.11当天<span>3个</span>整点 </p>
+                    <p class="rule-05">
+                        <span class="time-01">10:00</span>
+                        <span class="time-02">16:00</span>
+                        <span class="time-02">20:00</span>
+                    </p>
+                    <p class="rule-06">每个最靠近整点的(前后5分钟内)订单送10000积分</p>
+                </div>
+            </div>
+        </div>
+        <div class="active2">
+            <p class="title2">超值返积分</p>
+            <p class="plan">百万身驾保障计划</p>
+            <p class="activeTime">活动时间11.15-11.18</p>
+            <span class="jifen"></span>
+            <div class="active2-content">
+                <div class="active2-left">
+                    <table>
+                        <tr>
+                            <td class="list1">投保年龄:</td>
+                            <td class="list2">18-50周岁</td>
+                        </tr>
+                        <tr>
+                            <td class="list1">投保期间:</td>
+                            <td class="list2">5年、10年</td>
+                        </tr>
+                        <tr>
+                            <td class="list1">适宜人群:</td>
+                            <td class="list2">私家车车主</td>
+                        </tr>
+                    </table>
+                    <span  class="active2-bg"></span>
+                </div>
+
+                <div class="active2-right">
+                    <table>
+                        <tr>
+                            <td class="list3">保什么</td>
+                            <td class="list4">最多赔多少</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">自驾车意外</td>
+                            <td class="list4">200万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">公共交通意外</td>
+                            <td class="list4">115万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">普通伤残/意外身故</td>
+                            <td class="list4">15万</td>
+                        </tr>
+                    </table>
+                    <a class="buy"></a>
+                </div>
+            </div>
+        </div>
+        <p class="line1"></p>
+
+        <div class="active2 pd25 mt0 product-cxb">
+            <p class="plan plan-01 line-height">出行保意外伤害保险</p>
+            <span class="jifen top35 jifen1"></span>
+            <div class="active2-content">
+                <div class="active2-left active3-height">
+                    <table>
+                        <tr>
+                            <td class="list1 list5">保障全面:</td>
+                            <td class="list2 list6">私家车/航空<br/>多种水陆交通<br/>一般人身意外 </td>
+                        </tr>
+                        <tr>
+                            <td class="list1 list5">高性价比:</td>
+                            <td class="list2 list6">低至0.17元/天</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 list5">关爱女性:</td>
+                            <td class="list2 list6">一样保障额度<br/>女性价格为男性的41%</td>
+                        </tr>
+                    </table>
+                    <span  class="active2-bg1"></span>
+                </div>
+
+                <div class="active2-right">
+                    <table>
+                        <tr>
+                            <td class="list3">保什么</td>
+                            <td class="list4">最多赔多少</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">一般意外保障</td>
+                            <td class="list4">10万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">乘驾私家车保障</td>
+                            <td class="list4">50万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3">公共交通意外保障</td>
+                            <td class="list4">100万</td>
+                        </tr>
+                    </table>
+                    <a class="buy"></a>
+                </div>
+            </div>
+        </div>
+        <div class="active4">
+            <div class="box pull-left product-secz">
+                <div class="title">少儿成长无忧保险计划</div>
+                <div class="txt text-center">
+                    <p>连续7年领取<b class="highlight">教育金</b></p>
+                    <p>高达30万白血病保障</p>
+                    <p>28周岁领取婚嫁创业金</p>
+                    <p>满期返还120%主险保费</p>
+                </div>
+                <div class="jifen-bg">
+                    <p class="txt">返积分30%-50%</p>
+                </div>
+                <div class="link">
+                    <a href="###" class="btn">立即购买</a>
+                </div>
+            </div>
+            <div class="box pull-right product-hxzj">
+                <div class="title">恒祥重大疾病保险计划</div>
+                <div class="txt text-left">
+
+                    <p>价格低：100元起投</p>
+                    <p>保额高：高达50万保障</p>
+                    <p>保障全：涵盖疾病32种意外</p>
+                    <p class="text-indent">疾病身故均赔付</p>
+                    <p>保障广：保障至终身</p>
+                </div>
+                <div class="jifen-bg">
+                    <p class="txt">返积分50%</p>
+                </div>
+                <div class="link">
+                    <a href="###" class="btn">立即购买</a>
+                </div>
+            </div>
+        </div>
+        <div class="active2 active3 product-jfl">
+            <p class="title3">信泰金福来终身年金保险（分红型）</p>
+            <span class="jifen jifen2"></span>
+            <div class="active2-content">
+                <div class="active2-left mt90 height500">
+                    <div class="txt">一代投资 两代养老</div>
+                    <span  class="active3-bg"></span>
+                </div>
+
+                <div class="active2-right mt150">
+                    <p class="txt"><span>享福利</span>一份退休后的生活补贴</p>
+                    <p class="txt"><span>高收益</span>每年领取年交保费的110%</p>
+                    <p class="txt"><span>可传承</span>一份可以传承的养老金</p>
+                    <p class="txt"><span>有保障</span>收益期意外身故，保证领取20年</p>
+                    <a class="buy margin21"></a>
+                </div>
+            </div>
+        </div>
+        <div class="active2 active3">
+            <p class="title3">莫非尔丽重大疾病保险D款</p>
+            <span class="jifen jifen2"></span>
+            <div class="active2-content">
+                <div class="active2-left mt90 height500">
+                    <table>
+                        <tr>
+                            <td class="list1 ft22"> 无需体检，</td>
+                            <td class="list2 ft22">投保0门槛！</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">确诊癌症，</td>
+                            <td class="list2 ft22">即可获赔！</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">投保年龄:</td>
+                            <td class="list2 ft22">出生30天-50周岁</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">保障期间:</td>
+                            <td class="list2 ft22">保障至80周岁 </td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">适应人群：</td>
+                            <td class="list2 ft22">儿童、白领、家庭支柱</td>
+                        </tr>
+                    </table>
+                    <span  class="active3-bg"></span>
+                </div>
+
+                <div class="active2-right mt150">
+                    <table>
+                        <tr>
+                            <td class="list3 yellow">保什么</td>
+                            <td class="list4 yellow">最多赔多少</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">甲状腺癌</td>
+                            <td class="list4 ft22 pd7">6万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22"><span class="yellow ft22">15</span>种特定轻症</td>
+                            <td class="list4 ft22 pd7">6万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22"><span class="yellow ft22">55</span>种疾病</td>
+                            <td class="list4 ft22 pd7">30万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">癌症</td>
+                            <td class="list4 ft22 pd7">30万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">特定癌症<br/>(骨癌、脑癌、白血病)</td>
+                            <td class="list4 ft22 pd7 yellow">45万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">身故保障</td>
+                            <td class="list4 ft22 pd7">≥已交保费</td>
+                        </tr>
+                    </table>
+                    <a class="buy margin21"></a>
+                </div>
+            </div>
+        </div>
+        <p class="line1 line2"></p>
+        <div class="active2 active3 mt0">
+            <p class="plan plan-02">莫非尔丽重大疾病保险A款</p>
+            <span class="jifen top40 jifen3"></span>
+            <div class="active2-content">
+                <div class="active2-left height500">
+                    <table>
+                        <tr>
+                            <td class="list1 ft22"> 0门槛，</td>
+                            <td class="list2 ft22">无体检</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">确诊癌症，</td>
+                            <td class="list2 ft22">即可获赔！</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">投保年龄:</td>
+                            <td class="list2 ft22">出生30天-50周岁</td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">保障期间:</td>
+                            <td class="list2 ft22">保障至80周岁 </td>
+                        </tr>
+                        <tr>
+                            <td class="list1 ft22">适应人群：</td>
+                            <td class="list2 ft22">儿童、白领、家庭支柱</td>
+                        </tr>
+                    </table>
+                    <span  class="active3-bg"></span>
+                </div>
+
+                <div class="active2-right">
+                    <table>
+                        <tr>
+                            <td class="list3 yellow">保什么</td>
+                            <td class="list4 yellow">最多赔多少</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">癌症</td>
+                            <td class="list4 ft22">30万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">癌症轻症</td>
+                            <td class="list4 ft22">6万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">甲状腺癌</td>
+                            <td class="list4 ft22">6万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">特定癌症<br/>(骨癌、脑癌、白血病)</td>
+                            <td class="list4 ft22 yellow">45万</td>
+                        </tr>
+                        <tr>
+                            <td class="list3 ft22">身故保障</td>
+                            <td class="list4 ft22">≥已交保费</td>
+                        </tr>
+                    </table>
+                    <a class="buy mt50"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="desc">
+        <div class="title">活动详情</div>
+        <div class="time">活动时间：2016年11月11日-2016年11月18日</div>
+        <div class="table-box">
+            <div class="box pull-left">
+                <table border="0" cellspacing="1" cellpadding="0" class="text-center">
+                    <thead>
+                    <tr>
+                        <th colspan="2">产品名称</th>
+                        <th>返积分</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">百万身驾</td>
+                        <td>5年期</td>
+                        <td>45%</td>
+                    </tr>
+                    <tr>
+                        <td>10年期</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">少儿成长无忧</td>
+                        <td>5年期</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>10年期</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>恒祥重疾A</td>
+                        <td>10/20年</td>
+                        <td>50%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box pull-right">
+                <table border="0" cellspacing="1" cellpadding="0" class="text-center">
+                    <thead>
+                    <tr>
+                        <th colspan="2">产品名称</th>
+                        <th>返积分</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">莫非尔丽ABCD</td>
+                        <td>10年期</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>20年期</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">养老无忧</td>
+                        <td>10年期</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>20年期</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">出行保意外伤害保险</td>
+                        <td>25%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="txt">
+            <p>1元等于100积分</p>
+            <p>积分可兑换支付宝礼金、京东购物卡、话费充值卡等礼品。<a href="###">点此查看积分规则 >></a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>温馨提示：<span class="highlight">本活动最终解释权归信泰人寿所有</span></p>
+    </div>
+
+
+    <!--提交信息弹框-->
+    <div class="popup popup1" id="popup1">
+        <div class="zhezhao"></div>
+        <div class="zhezhao_content">
+            <div class="layout-box">
+                <div class="title">恭喜您，获得了</div>
+                <div class="txt">京东购物券10000元</div>
+                <button class="pop_btn close_popup">立即领取</button>
+                <p class="describe">活动结束后10个工作日后发放，犹豫期内退保不予发放。</p>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup2" id="popup2">
+        <div class="zhezhao"></div>
+        <div class="zhezhao_content">
+            <div class="layout-box">
+                <div class="input-group">
+                    <label>姓名</label>
+                    <input type="text" placeholder=""/>
+                </div>
+                <div class="input-group">
+                    <label>电话</label>
+                    <input type="text" placeholder=""/>
+                </div>
+                <div class="input-group">
+                    <label>地址</label>
+                    <input type="text" placeholder=""/>
+                </div>
+                <p class="describe">活动结束后10个工作日后发放，犹豫期内退保不予发放。</p>
+                <button class="pop_btn close_popup">提交订单</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup3">
+        <div class="zhezhao"></div>
+        <div class="zhezhao_content">
+            <div class="main">
+                <div class="title">
+                    <img src="images/myawords_title.png" />
+                    <div class="close-btn"><img src="images/close-btn.png" alt=""/></div>
+                </div>
+
+                <div class="aword_content">
+                    <div class="lists">
+                        <div class="aword_list">
+                            <p class="aword_text">10元话费充值卡</p>
+                            <span class="amount">X 2</span>
+                            <a href="###" class="btn btn_yellow">信息填写</a>
+                        </div>
+                        <div class="aword_list">
+                            <p class="aword_text">5元充值卡</p>
+                            <span class="amount">X 2</span>
+                            <a href="###" class="btn btn_green">信息已填</a>
+                        </div>
+                        <div class="aword_list">
+                            <span class="amount">X 2</span>
+                            <p class="aword_text">小米手环</p>
+                            <a href="###" class="btn btn_yellow">立即领取</a>
+                        </div>
+                        <div class="aword_list">
+                            <span class="amount">X 2</span>
+                            <p class="aword_text">京东购物卡100元</p>
+                            <a href="###" class="btn btn_green">已领取</a>
+                        </div>
+                        <div class="aword_list">
+                            <span class="amount">X 2</span>
+                            <p class="aword_text">国学大礼包</p>
+                            <a href="###" class="btn btn_yellow">立即使用</a>
+                        </div>
+                    </div>
+
+                    <div class="back_btn"><button href="index.html" class="btn back close-btn">确 定</button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        /*中奖名单滚动*/
+        $.fn.textScroll=function(){
+            var speed=60,tt,that=$(this),child=that.children();
+            var p_w=that.width(), w=child.width();
+            child.css({left:p_w});
+            var t=(w+p_w)/speed * 1000;
+            function play(m){
+                var tm= m==undefined ? t : m;
+                child.animate({left:-w},tm,"linear",function(){
+                    $(this).css("left",p_w);
+                    play();
+                });
+            }
+            child.on({
+                mouseenter:function(){
+                    var l=$(this).position().left;
+                    $(this).stop();
+                    tt=(-(-w-l)/speed)*1000;
+                },
+                mouseleave:function(){
+                    play(tt);
+                    tt=undefined;
+                }
+            });
+            play();
+        };
+        $("#marqueen").textScroll();
+
+
+        /*抽奖转盘*/
+        /*var rotateTimeOut = function (){    //超时函数
+            $('#rotate').rotate({
+                angle:0,
+                animateTo:2160,
+                duration:2000,
+                callback:function (){
+                    alert('网络超时，请检查您的网络设置！');
+                }
+            });
+        };*/
+        var bRotate = false;    //转盘转动状态
+        var rotateFn = function (awards, angles, txt){
+            bRotate = !bRotate;
+            $('#rotate').stopRotate();
+            $('#rotate').rotate({
+                angle:0,
+                duration:3000,
+                animateTo:angles+1800,//图片上各奖项对应的角度+转的圈数
+                callback:function (){
+                    popup($('#popup1'),txt);
+                    bRotate = !bRotate;
+                }
+            })
+        };
+
+        $('#pointer').click(function (){
+            if(bRotate) return;
+            var item = rnd(0,6);
+            switch (item) {
+                case 0:
+                    //var angle = [60, 120, 180, 240, 300, 360];
+                    rotateFn(0, 360, '美的空气净化器');
+                    break;
+                case 1:
+                    //var angle = [30, 90, 150, 210, 270, 330];
+                    rotateFn(1, 60, '5元充值卡');
+                    break;
+                case 2:
+                    //var angle = [30, 90, 150, 210, 270, 330];
+                    rotateFn(2, 120, '小米手环');
+                    break;
+                case 3:
+                    //var angle = [30, 90, 150, 210, 270, 330];
+                    rotateFn(3, 180, '京东购物卡100元');
+                    break;
+                case 4:
+                    //var angle = [30, 90, 150, 210, 270, 330];
+                    rotateFn(4, 240, '国学大礼包');
+                    break;
+                case 5:
+                    //var angle = [30, 90, 150, 210, 270, 330];
+                    rotateFn(5, 300, '10元话费充值卡');
+                    break;
+            }
+        });
+        function rnd(n, m){
+            return Math.floor(Math.random()*(m-n+1)+n)
+        };
+
+
+        /*弹框*/
+        function popup(ele,txt){
+            /*点击遮罩关闭*/
+            $('.zhezhao').on('click',function(){
+                $('.popup').hide();
+            });
+            /*弹框*/
+            if(ele.hasClass('popup1')){
+                var $txt=$('#popup1').find('.txt').html(txt).show();
+                $txt.html(txt);
+                $('#popup1').show();
+            }else if(ele.hasClass('popup2')){
+                $('#popup2').show();
+            };
+            /*立即领取按钮*/
+            $('#popup1').find('.pop_btn').click(function(){
+                $('#popup1').hide();
+                $('#popup2').show();
+
+            });
+        };
+
+
+        /*关闭按钮*/
+        $('.close-btn').click(function(){
+            $(this).parents('.popup').hide();
+        });
+
+        /*我的奖品弹框*/
+        $('#myAwards').click(function(){
+            $('#popup3').show();
+            return false;
+        });
+
+    </script>
+</body>
+</html>

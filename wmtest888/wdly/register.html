@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/form.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body id="reg">
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="###"><img src="images/logo.png" alt="我的旅营"/></a>
+        </div>
+    </div>
+</div>
+<div class="center">
+    <div class="container">
+        <div class="reg-box">
+            <div class="title">
+                账号登录
+            </div>
+            <div class="login-box">
+                <div class="reg-bg">
+                    <div class="form">
+                        <form action="">
+                            <input type="text" placeholder="邮箱/手机号码/我的旅营账号" id="username"/>
+                            <input type="password" placeholder="密码" id="password"/>
+                            <button class="btn">立即登录</button>
+                        </form>
+                        <p class="link">还没有我的旅营账号？<a href="">立即注册</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container column">
+        <div class="col col1">
+            <img src="images/icon01.png" alt=""/>
+            <span class="txt">我的旅营，轻松赚大钱</span>
+        </div>
+        <div class="col col2">
+            <img src="images/icon02.png" alt=""/>
+            <span class="txt">会员保障，安心赚钱</span>
+        </div>
+        <div class="col col3">
+            <img src="images/icon03.png" alt=""/>
+            <span class="txt">军粮补仓，应有尽有</span>
+        </div>
+    </div>
+    <div class="copyright clearfix text-center">
+        Copyright 2014-2024 我的旅营 沪ICP备16004681号 站长邮箱：admin@233p.com
+    </div>
+</div>
+<script>
+    $(function(){
+
+        if($('html').height()<$(window).height()){
+            $('body').addClass('fixed');
+        }
+    })
+</script>
+</body>
+</html>

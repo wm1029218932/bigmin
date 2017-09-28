@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>产品推广</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet"href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+</head>
+<body>
+	<!--弹出层-->
+	<div class="maskInfo">
+		<!--遮罩-->
+		<div class="mask"></div>
+		<!--弹框-->
+		<div class="annoute">
+			<p class="annouteTop">
+				<span class="close">
+					<img src="images/close.png">
+				</span>
+			</p>
+			<p class="desc">您尚未登录会员，请先登录<br/>开始推广赚取佣金</p>
+			<span class="sure">确定</span>
+		</div>	
+		<!--分享成功弹框-->
+		<div class="annoute none">
+			<p class="annouteTop">
+				<span class="close">
+					<img src="images/close.png">
+				</span>
+			</p>
+			<p class="success">分享成功</p>
+			<p class="successDesc">被推荐人购买成功后，对应55555积分将于15日内到达您的会员账户中</p>
+			<span class="sure">确定</span>
+		</div>	
+	</div>
+	
+	<!--轮播-->
+	<div class="swiper-container">
+	  	<div class="swiper-wrapper">
+		    <div class="swiper-slide active"><a href="http://www.baidu.com"><img src="images/product.jpg"></a></div>
+		    <div class="swiper-slide active"><a href="http://www.baidu.com"><img src="images/product.jpg"></a></div>
+		    <div class="swiper-slide active"><a href="http://www.baidu.com"><img src="images/product.jpg"></a></div>
+	  	</div>
+	  	<div class="swiper-pagination"></div>
+	</div>
+	
+	<div class="activeChoose">
+		<a href="#">推荐记录</a>
+		<a href="#">教程专区</a>
+	</div>
+	
+	<div class="promote">
+		
+		<div class="promoteInfo">
+			<img src="images/product.jpg">
+			<p>
+				<span>推广费：元</span>
+				<a href="#" class="promoteBtn">立即推广 >></a>
+			</p>
+		</div>
+		
+		<div class="promoteInfo">
+			<img src="images/product.jpg">
+			<p>
+				<span>推广费：元</span>
+				<a href="#" class="promoteBtn">立即推广 >></a>
+			</p>
+		</div>
+		
+	</div>
+		
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script> 
+		
+		/*设置弹框居中*/
+		function setWidth(){
+			var clientWidth=$(window).width();			
+			if(clientWidth>=640){
+				clientWidth = 640;
+			}				
+			var divWidth = clientWidth*0.9;
+			var ml=(clientWidth-divWidth)/2;
+			$(".annoute").css({'width':divWidth,'margin-left':ml+"px"});
+		}
+		
+		
+		/*轮播*/
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 2000,//可选选项，自动滑动
+			pagination : '.swiper-pagination',//设置分页器 
+			paginationType : 'bullets',//'bullets'样式为圆点‘fraction’分式 ,‘progress’进度条,‘custom’自定义
+		})
+		
+		$(".promoteBtn").click(function(){
+			setWidth();
+			$(".maskInfo").show();
+		})
+		
+		$(".close").click(function(){
+			$(".maskInfo").hide();
+		})
+	</script>
+</body>
+</html>

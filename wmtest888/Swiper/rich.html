@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>富贵满堂Ａ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet"href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slide.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+</head>
+<body>
+<!-- Swiper -->
+<!--<audio src="upload/lostLove.mp3" preload="auto" autoplay="autoplay" loop="loop" css="opacity: 0;" id="music"></audio>
+<img src="img/music.png" css="" id="tp_music" class="tp_music"/>-->
+<div class="swiper-container">
+
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+            <div class="rich1 ani" >
+             <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide" >
+            <div class="ani rich2"  >
+            <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani rich3"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="ani rich4"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            <img src="img/arrow.png" class="ani gotop"  swiper-animate-duration="2s" swiper-animate-delay="0.7s"/>
+            </div>
+        </div>       
+    <input type="hidden" value="yes" id="sharePlan">
+    </div>
+</div>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+	var music = document.getElementById("music");
+	$('html').one('touchstart',function(){
+		music.play();
+	});
+    var swiper = new Swiper('.swiper-container', {
+
+        effect : 'cube',
+        cube:{
+            shadow:false,
+        },
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });	
+</script>
+<!--<script>
+	var music = document.getElementById("music"); 
+	var music1 = document.getElementById("music1");
+	
+	function offMusic(){
+		music.pause();
+		music1.pause();
+	}
+
+	$(function(){
+		$("#tp_music").click(function(){
+		    if(music.paused){
+				music1.pause();
+		        music.play(); 
+		       $("#tp_music").addClass("tp_music");
+		    }else{ 
+		        music.pause(); 
+		        $("#tp_music").removeClass("tp_music");
+		    } 
+		});
+	
+		$(".font6-5").click(function(){ 		     
+		    if(music1.paused){ 
+		        music1.play();
+		        music.pause();
+		        $("#tp_music").removeClass("tp_music");
+		    }else{
+		    	music.play();
+		        music1.pause();
+		        $("#tp_music").addClass("tp_music");
+		    } 
+		});
+				
+		$("#product").click(function(){
+			music.pause();
+			music1.pause();
+		})
+	});
+</script>-->
+<script>
+var sharePlan = $("#sharePlan").val();	
+//产品分享
+var interestDemo = {
+	init:function(){
+		if(sharePlan=='yes'){
+			function connectWebViewJavascriptBridge(callback) {
+	            if (window.WebViewJavascriptBridge) {
+	                callback(WebViewJavascriptBridge)
+	            }else {
+	                document.addEventListener(
+	                    'WebViewJavascriptBridgeReady'
+	                    , function() {
+	                        callback(WebViewJavascriptBridge)
+	                    },
+	                    false
+	                );
+	            }
+	        }
+		//注册回调函数，初始化函数
+			connectWebViewJavascriptBridge(function(bridge) {
+	            bridge.init(function(message, responseCallback) {
+	                console.log('JS got a message', message);
+	                var data = {
+	                    'Javascript Responds': 'Wee!'
+	                };
+	                console.log('JS responding with', data);
+	                responseCallback(data);
+	        	});
+	            bridge.registerHandler("sharePlan",function(data,responseCallback) {
+	            	responseCallback(para);
+	            });
+		    })
+		}
+	}
+}
+
+$(window).load(function(){
+	interestDemo.init();
+	//处理代理人的信息
+	try {		
+	setTimeout(function(){	
+  	window.WebViewJavascriptBridge.callHandler( 'agentInfor',"",function(agentInfor){ 			
+  		var content="————在不确定的未来，给您稳稳的收益"; 			
+	  	var shareUrl = "http://plan-dat.sinatay.com/webpage/api/product/Swiper/xt.html";
+      	var imageUrl = "http://plan-dat.sinatay.com/webpage/api/product/Swiper/img/ht.jpg";	           
+       		content=content.trim();
+       	var title ="信泰富贵满堂年金理财保险计划A款"
+	        para = {'title':title,
+		   		    'content':content,
+		   		    'shareUrl':shareUrl,
+		   		    'imageUrl':imageUrl
+	   		   		}
+  			if(sharePlan=='yes'){ 		 		
+  				try{
+					var  paraShare = { title:"", hiddenBack:"0",shareBut:"0"};
+				       window.WebViewJavascriptBridge.callHandler( 'navigationInfo',paraShare,function(agentInfor){
+				    	})
+  					}catch (e) {  					
+  				} 
+  			}
+		})
+	},1000);
+}
+catch (e) {
+	
+}});
+</script>
+</body>
+</html>

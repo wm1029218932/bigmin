@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#box{
+			margin:0 auto;
+			width: 500px;
+			height:500px;
+			border:1px solid #ccc;
+			padding:20px;
+		}
+		#box textarea{
+			width: 340px;
+		}
+		#content{
+			margin-top:10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<label>weibo发布</label>
+		<textarea rows="5" name="textarea"></textarea>
+		<input type="button" value="发布" id="fabu"/>
+		<div id="content">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var fabu = document.getElementById('fabu');
+		var content = document.getElementById('content');
+		var txtbox = document.getElementsByTagName('textarea')[0];
+		fabu.onclick = function(){
+			var txt = txtbox.value;
+			if(txt){
+				var row = document.createElement('p');
+				var remove = document.createElement('span');
+				remove.innerText = '删除';
+				remove.style = 'color:red;float:right;cursor:pinter'
+				remove.setAttribute('onclick','fun(this)');
+				row.innerText = txt;
+				row.appendChild(remove)
+				row.style = 'border-bottom:1px solid #ccc;padding:15px 0;'
+				content.appendChild(row);
+				txtbox.value = '';
+			}else{
+				alert('您还未输入输入内容！')
+			}
+		};
+		var lists = content.getElementsByTagName('p');
+		function fun(obj){
+			var par = obj.parentNode;
+			content.removeChild(par);
+		}
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width: 350px;
+            height:350px;
+            margin:100px;
+            border:1px solid #ccc;
+            position: relative;
+        }
+        .big{
+            width: 450px;
+            height:450px;
+            position: absolute;
+            top:0;
+            left: 360px;
+            border:1px solid #ccc;
+            overflow: hidden;
+            display: none;
+        }
+        .mask{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top:0;
+            left:0;
+            background: rgba(255,255,0,0.4);
+            cursor: move;
+            display: none;
+        }
+        .small{
+            position: relative;
+        }
+        .big img{
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="fdj">
+        <div class="small">
+            <img src="images/001.jpg" alt=""/>
+            <div class="mask"></div>
+        </div>
+        <div class="big">
+            <img src="images/0001.jpg" alt=""/>
+        </div>
+
+    </div>
+<script>
+    var box = document.getElementById('fdj');
+
+    var small = box.children[0]; //小盒子
+
+    var big = box.children[1];   //大盒子
+
+    var bigImg = big.children[0];  //大图片
+
+    var mask = small.children[1];  //遮罩层
+
+    small.onmouseover = function(){
+        mask.style.display = 'block';
+        big.style.display = 'block';
+    };
+    small.onmouseout = function(){
+        mask.style.display = 'none';
+        big.style.display = 'none';
+    };
+    var x = 0, y = 0;
+    small.onmousemove = function(event){
+        var event = event || window.event;
+        //offsetLeft是当前元素针对定位的父元素的偏移量，如果没有定位的父元素，则以body来计算偏移量
+        //offsetParent是当前元素的上级定位元素，返回一个对象
+        //以鼠标的位置来计算mask在小盒子里的坐标 左上角顶点为(0,0)
+        x = event.clientX - this.offsetParent.offsetLeft - mask.offsetWidth/2;
+        y = event.clientY - this.offsetParent.offsetTop - mask.offsetHeight/2;
+
+        if(x < 0){
+            x = 0;
+        }else if(x > this.offsetWidth - mask.offsetWidth){
+            x = this.offsetWidth - mask.offsetWidth;
+        }
+
+        if(y < 0){
+            y = 0;
+        }else if(y > this.offsetHeight - mask.offsetHeight){
+            y = this.offsetHeight - mask.offsetHeight;
+        }
+        mask.style.left = x + 'px';
+        mask.style.top = y + 'px';
+
+
+        //计算移动的比例  x/small.offsetWidth-mask.offsetWidth
+        //大图需要移动对的位置  x/small.offsetWidth-mask.offsetWidth * (bigImg.offsetWidth - big.offsetWidth)
+
+        bigImg.style.left = - x/(small.offsetWidth - mask.offsetWidth) * (bigImg.offsetWidth - big.offsetWidth) + 'px';
+        bigImg.style.top = - y/(small.offsetHeight - mask.offsetHeight) * (bigImg.offsetHeight - big.offsetHeight) + 'px';
+    };
+</script>
+</body>
+</html>

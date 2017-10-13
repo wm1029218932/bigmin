@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>信泰保险</title>
+    <link rel="stylesheet" type="text/css" href="css/mfel.css"/>
+    <link rel="stylesheet" type="text/css" href="css/mobiscroll.custom-2.17.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/add.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/mobiscroll.custom-2.17.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="center">
+        <div class="form-group">
+            <label><span class="txt-label">出生日期</span>
+                <input  value="" readonly=""  id="birthday" type="text" class="choose-bg" placeholder="请选择出生日期" onfocus="tab1()"/>
+                30天-50周岁
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="normal"><span class="txt-label">性别</span>
+                <label for="male" class="radio-label">
+                    <div class="radio-group">
+                        <input type="radio" name="sex" checked="checked" class="radio" id="male"/>
+                        <span class="radio-style">男</span>
+                    </div>
+
+                </label>
+                <label for="female"  class="radio-label">
+                    <div class="radio-group">
+                        <input type="radio" name="sex" class="radio" id="female"/>
+                        <span class="radio-style">女</span>
+                    </div>
+                </label>
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="normal"><span class="txt-label">保障计划</span>
+                <label for="radio1" class="radio-label">
+                    <div class="radio-group">
+                        <input type="radio" name="radio2" checked="checked" class="radio" id="radio1"/>
+                        <span class="radio-style">10年交</span>
+                    </div>
+
+                </label>
+                <label for="radio2"  class="radio-label">
+                    <div class="radio-group">
+                        <input type="radio" name="radio2" class="radio" id="radio2"/>
+                        <span class="radio-style">20年交</span>
+                    </div>
+                </label>
+            </label>
+        </div>
+
+
+        <div class="form-group">
+            <label><span class="txt-label">份数</span>
+                <input  value=""  type="tel" class="small-input" placeholder="" />
+            </label>份/人<span class="smallfont">(每个被保人最多投保30份)</span>
+        </div>
+
+        <div class="form-group">
+            <label><span class="txt-label">保障额度</span>
+                <input  value=""  type="tel" class="small-input" placeholder="" />
+            </label>万元
+        </div>
+        <div class="price">
+            <p>
+                <b>价格:</b>
+                <em><strong class="ft14">￥</strong>65.<strong class="ft14">00</strong>-159.<strong class="ft14">00</strong></em>
+            </p>
+            <a>立即投保</a>
+        </div>
+    </div>
+    <div class="detail">
+        <div class="top">
+            <img src="images/top-img.png" alt=""/>
+        </div>
+        <div class="box box-bg box1">
+            <img src="images/top-img2.png" alt="" width="100%"/>
+            <div class="title">70种疾病保障计划</div>
+            <div class="boxcontent">
+                <div class="left-top">
+                    <div class="pic">
+                        <img src="images/icon-01.png" alt=""/>
+                    </div>
+                    <div class="txt">白血病、骨癌、脑癌<br/>150% 赔付</div>
+                </div>
+                <div class="left-top">
+                    <div class="pic">
+                        <img src="images/icon-02.png" alt=""/>
+                    </div>
+                    <div class="txt">高达55种<br/>重疾保障</div>
+                </div>
+                <div class="left-top">
+                    <div class="pic">
+                        <img src="images/icon-03.png" alt=""/>
+                    </div>
+                    <div class="txt">轻症癌症+其他14种<br/>特定癌症保障责任</div>
+                </div>
+                <div class="left-top">
+                    <div class="pic">
+                        <img src="images/icon-04.png" alt=""/>
+                    </div>
+                    <div class="txt">一经确诊<br/>立即赔付</div>
+                </div>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="box box2">
+            <!--<div class="title">我们统统有保障</div>
+            <div class="list">
+                <div class="highlight pull-left"><span>常见重疾</span></div>
+                <div class="txt pull-left">如急性心肌梗塞、脑中风后遗症、严重Ⅲ度烧伤、溃疡性结肠炎、严重肠胃炎。</div>
+            </div>
+            <div class="list">
+                <div class="highlight pull-left"><span>其他</span></div>
+                <div class="txt pull-left">如系统性红斑狼疮、溃疡性结肠炎等很多重疾保险不保的重症疾病。</div>
+            </div>-->
+            <div class="items">
+                <div class="btn">
+                    <button id="slidedown">查看70种保障疾病 <img src="images/arrow1.png" alt=""/> </button>
+                </div>
+                <div class="outbox" id="slide-content">
+                    <div class="innerbox">
+                        <div class="title-txt">重疾55种</div>
+                        <div class="list list-col-1 pull-left">
+                            <ul>
+                                <li>恶性肿瘤</li>
+                                <li>瘫痪</li>
+                                <li>深度昏迷</li>
+                                <li>终末期肾病</li>
+                                <li>脑外科手术</li>
+                                <li>终末期肺病</li>
+                                <li>严重克隆病</li>
+                                <li>良性脑肿瘤</li>
+                                <li>急性心肌梗塞</li>
+                                <li>坏死性筋膜炎</li>
+                                <li>肝豆状核变性</li>
+                                <li>严重Ⅲ度烧伤</li>
+                                <li>语言能力丧失</li>
+                                <li>多发性硬化</li>
+                            </ul>
+                        </div>
+                        <div class="list list-col-2 pull-left">
+                            <ul>
+                                <li>象皮病</li>
+                                <li>疯牛病</li>
+                                <li>硬皮病</li>
+                                <li>双耳失聪</li>
+                                <li>双目失明</li>
+                                <li>严重冠心病</li>
+                                <li>严重肠胃炎</li>
+                                <li>严重脑损伤</li>
+                                <li>溃疡性结肠炎</li>
+                                <li>脑中风后遗症</li>
+                                <li>急性脊髓灰质炎</li>
+                                <li>冠状动脉搭桥术</li>
+                                <li>经输血导致的艾滋病</li>
+                            </ul>
+                        </div>
+                        <div class="list list-col-3 pull-left">
+                            <ul>
+                                <li>胰腺移植</li>
+                                <li>重症肌无力</li>
+                                <li>主动脉手术</li>
+                                <li>严重心肌炎</li>
+                                <li>多个肢体缺失</li>
+                                <li>心脏瓣膜手术</li>
+                                <li>严重帕金森病</li>
+                                <li>肾髓质囊性病</li>
+                                <li>原发性心肌病</li>
+                                <li>系统性红斑狼疮</li>
+                                <li>慢性复发性胰腺炎</li>
+                                <li>严重运动神经元病</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="list list-col-4 pull-left">
+                            <ul>
+                                <li>急性坏死性胰腺炎</li>
+                                <li>严重阿尔茨海默病</li>
+                                <li>严重肌营养不良症</li>
+                                <li>急性或亚急性重症肝炎</li>
+                                <li>慢性肝功能衰竭失代偿期</li>
+                                <li>因职业关系导致的HIV感染</li>
+                                <li>疾病或外伤所致智力障碍（残疾）</li>
+                                <li>严重类风湿性关节炎</li>
+                            </ul>
+                        </div>
+
+                        <div class="list list-col-5 pull-left">
+                            <ul>
+                                <li>非阿尔茨海默病所导致的严重痴呆</li>
+                                <li>重型再生障碍性贫血</li>
+                                <li>原发性硬化性胆管炎</li>
+                                <li>严重原发性肺动脉高压</li>
+                                <li>脑炎后遗症或脑膜炎后遗症</li>
+                                <li>特发性慢性肾上腺皮质功能减退</li>
+                                <li>侵蚀性葡萄胎(或称恶性葡萄胎)</li>
+                                <li>重大器官移植术或造血干细胞移植术</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="innerbox innerbox2">
+                        <div class="title-txt">特定轻症15种</div>
+                        <div class="list list-col-6 pull-left">
+                            <ul>
+                                <li>癌症轻症</li>
+                                <li>不典型的急性心肌梗塞</li>
+                                <li>轻微脑中风</li>
+                                <li>冠状动脉介入手术</li>
+                                <li>慢性肾功能损害</li>
+                                <li>一肢缺失</li>
+                                <li>听力严重受损</li>
+                                <li>脑垂体瘤、脑囊肿、脑动脉瘤及脑血管瘤</li>
+                            </ul>
+                        </div>
+                        <div class="list list-col-6 pull-left">
+                            <ul>
+                                <li>视力严重受损</li>
+                                <li>主动脉内手术</li>
+                                <li>轻度脑炎或脑膜炎后遗症</li>
+                                <li>心脏瓣膜经皮导管介入手术</li>
+                                <li>轻度头颅外伤</li>
+                                <li>继发性肺动脉高压</li>
+                                <li>早期运动神经性疾病</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn btn2">
+                        <button id="slideup">收 起 <img src="images/arrow2.png" alt=""/> </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--<div class="box box-bg box3">
+            <div class="title">2款保障，自由可选<br/><span>至80周岁</span></div>
+            <div class="content">
+                <div class="outbox">
+                    <div class="innerbox">
+                        <div class="list">
+                            <div class="list-col-1 pull-left">经典款</div>
+                            <div class="list-col-2 pull-left">恶性肿瘤+特定癌症+甲状腺疾病等</div>
+                        </div>
+                    </div>
+                    <div class="innerbox innerbox2">
+                        <div class="list">
+                            <div class="list-col-1 pull-left">尊贵款</div>
+                            <div class="list-col-2 pull-left"><span class="yellow">含经典款所有保障</span>+54种重疾及14种轻症</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>-->
+        <div class="hr"></div>
+        <div class="box box4">
+            <div class="title">保障责任</div>
+            <!--<div class="outbox">
+                <div class="table-title">经典款</div>
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <th>保障类别</th>
+                        <th>保障内容</th>
+                        <th>保障金额</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>癌症</td>
+                        <td>恶性肿瘤</td>
+                        <td>1万/份<span>(高达30万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>轻症疾病</td>
+                        <td>癌症轻症（包含原位癌）</td>
+                        <td>2千/份<span>(高达6万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>特定癌症</td>
+                        <td>骨癌、脑癌、白血病保障</td>
+                        <td>1.5万/份<span>(高达45万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>甲状腺癌</td>
+                        <td>甲状腺癌特定疾病保障</td>
+                        <td>2千/份<span>(高达6万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>身故保障</td>
+                        <td>意外或疾病身故导致的身故</td>
+                        <td>≥已交保费</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>-->
+            <div class="outbox">
+                <!--<div class="table-title">尊贵款</div>-->
+                <table border="0" cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <th>保障类别</th>
+                        <th>保障内容</th>
+                        <th>保障金额</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>重大疾病</td>
+                        <td>癌症+54种大病保障</td>
+                        <td>1万/份<span>(高达30万保障)</span> </td>
+                    </tr>
+                    <tr>
+                        <td>轻症疾病</td>
+                        <td>癌症轻症（包含原位癌）<br/>+14种轻症保障</td>
+                        <td>2千/份<span>(高达6万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>特定癌症</td>
+                        <td>骨癌、脑癌、白血病保障</td>
+                        <td>1.5万/份<span>(高达45万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>甲状腺癌</td>
+                        <td>甲状腺癌特定疾病保障</td>
+                        <td>2千/份 <span>(高达6万保障)</span></td>
+                    </tr>
+                    <tr>
+                        <td>身故保障</td>
+                        <td>意外或疾病导致的身故</td>
+                        <td>≥已交保费</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <img src="images/box4-img.png" alt="" width="100%"/>
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        <div class="title">购买须知</div>
+        <p>产品名称：莫非尔丽癌症疾病保险D款</p>
+        <p>投保年龄：首次投保30天-50周岁</p>
+        <p>保障期间：保障至80周岁</p>
+        <p>等待期：180天</p>
+        <p>投保范围：仅限本人、父母为其子女投保</p>
+        <p>可购买地区：本产品由信泰人寿保险股份有限公司承保，本产品面向全国销售。本公司在浙江、江苏、北京、河北、福建、河南、山东、黑龙江、辽宁、上海、湖北、江西、广东设有分公司，如您在非以上地区购买，后续服务可能会受到影响。</p>
+        <p>备案编号：信泰发〔2016〕70号-4</p>
+        <p><b>如实告知：</b>订立本合同时，我们就您和被保险人的有关情况提出询问，您应当如实告知。若您故意或者因重大过失未履行前款规定的如实告知义务，足以影响我们决定是否同意承保或提高保险费率的，我们有权解除本合同。若您故意不履行如实告知义务，对于本合同解除前发生的保险事故，我们不承担给付保险金的责任，并不退还保险费。若您因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，对于本合同解除前发生的保险事故，我们不承担给付保险金的责任，但退还您所支付的保险费。我们在合同订立时已经知道您未如实告知的情况的，我们不得解除合同；发生保险事故的，我们承担给付保险金的责任。</p>
+
+        <div class="link">
+            <a href="###" class="pull-left">产品条款</a>
+            <a href="###" class="pull-right">产品费率</a>
+        </div>
+    </div>
+
+    <div class="add">
+        <div class="add-title">
+            <span class="text">保单服务</span>
+            <span class="arrow-bg"><img src="images/arrow-right.png" alt=""/></span>
+        </div>
+        <div class="add-content">
+            <div class="block block1">
+                <h3>理赔服务</h3>
+                <div class="detail">
+                    <img src="images/block01.png" alt=""/>
+                    <ul class="desc">
+                        <li>全国客服<br/>电话95365</li>
+                        <li>24小时内专职理赔人员与您联系</li>
+                        <li>资料齐全、事故责任明确无需调查的案件，5个工作日内结案，对理赔资料齐全但需要理赔调查的案件，在三十日内结案。</li>
+                        <li>结案后，24小时回访客户</li>
+                    </ul>
+                </div>
+                <div class="flex-wrap">
+                    <div><img src="images/block03.png" alt=""/></div>
+                    <div class="text">
+                        <p>全国通赔，理赔无限制</p>
+                        <p>支持跨地域的理赔业务受理，客户可以在任何一个运营服务柜面享受同样高效的理赔标准化服务。</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block">
+                <h3>承保服务</h3>
+                <div class="detail">
+                    <p >提供在线承保服务。</p>
+                </div>
+            </div>
+            <div class="block">
+                <h3>保全服务</h3>
+                <div class="detail">
+                    <p>您好，如果您需要了解保全的具体情况，您可拨打全国客服电话95365 进行咨询，或者您可通过信泰人寿保险股份有限公司各分支机构与营业网点进行咨询。</p>
+                    <p class="word-wrap">具体地址您可以参考：<a href="http://www.xintai.com/organization/findOrganizations.do">http://www.xintai.com/organization/findOrganizations.do</a></p>
+                </div>
+            </div>
+            <div class="block">
+                <h3>支付服务</h3>
+                <div class="detail">
+                    <p>保险金、理赔款、退保金的收付方式，您可通过拨打全国客服电话 95365 进行咨询，或者您可通过信泰人寿保险股份有限公司各分支机构与营业网点进行咨询。</p>
+                    <p class="word-wrap">具体地址您可以参考：<a href="http://www.xintai.com/organization/findOrganizations.do">http://www.xintai.com/organization/findOrganizations.do</a></p>
+                </div>
+            </div>
+            <div class="block">
+                <h3>常见问题</h3>
+                <div class="detail">
+                    <div class="question">
+                        <p><b><span>Q：</span><span>交易成功后，保单是什么形式？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>本合同采用电子保险单形式承保，您可通过网<a href="http://etrust.bjca.org.cn/tdmm/">http://etrust.bjca.org.cn/tdmm/</a>验证电子保单的真伪。登录该网站后上传电子保单，即可完成电子保单的验证，查询保单。如您需要纸质保单，请自行下载打印即可。</span></p>
+                    </div>
+                    <div class="question">
+                        <p><b><span>Q：</span><span>如果我的权益受到侵犯，如何投诉？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>欢迎客户及社会各界对服务质量全程监督，监督电话95365。邮箱：<a href="mailto:kf@sinatay.com">kf@sinatay.com</a></span></p>
+                    </div>
+                    <div class="question">
+                        <p><b class="flex-wrap"><span>Q：</span><span>投保人（被保险人或者受益人）的个人信息、投保交易信息和交易安全的保障是否安全？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>我公司采集的客户信息，特别是联系电话与联系地址的用途，包括但不限于用于计算保费、核保、寄送保单和客户回访等。本公司在对投保人，被保险人个人信息严格保密的基础上，因业务需要对投保人或被保险人之个人资料，有搜集、计算机处理、传递的权利。本公司承诺未经客户同意，不会将客户信息用于本公司和第三方机构的销售活动。</span></p>
+                    </div>
+                    <div class="question">
+                        <p><b><span>Q：</span><span>如何索取发票？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>如果您需要发票，请将您的相关信息留言给我们客服，我们会以挂号信的方式，邮寄给您。</span></p>
+                    </div>
+                    <div class="question">
+                        <p><b><span>Q：</span><span>信泰人寿全国客服热线？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>我们的全国客服电话95365，欢迎您致电！</span></p>
+                    </div>
+                    <div class="question">
+                        <p><b><span>Q：</span><span>什么是犹豫期？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>为充分保障您的权益，本合同设有犹豫期。电子保单合同发出次日视为您的合同签收日，自您签收保险合同之日起10日内为犹豫期，具体期限以保险单上载明的期限为准。保险监督管理机构对犹豫期另有规定的，从其规定。您在犹豫期内解除合同的，本公司扣除工本费后无息退还您的所交保费，如您在犹豫期后解除保险合同，我们将退还您的现金价值。犹豫期后退保，您将遭受一定的损失。</span></p>
+                    </div>
+                    <div class="question">
+                        <p><b><span>Q：</span><span>什么是保单现价？</span></b></p>
+                        <p class="flex-wrap"><span>A：</span><span>所谓保单现金价值，是指带有储蓄性质的人身保险单所具有的价值。保险人为履行合同责任通常提存责任准备金，如果您中途退保，即以该保单的责任准备金作为给付解约的退还金。被保险人要求解约或退保时，寿险公司应该发还的金额。</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function tab1(){
+        var currentTime = new Date(),
+                maxDiff = new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate()-30);
+        var now = new Date();
+        var currYear = now.getFullYear();
+        var startYear = currYear-50;
+        var headerText ='';
+        $("#birthday").mobiscroll().date({
+            theme: 'mobiscroll',
+            lang: 'zh',
+            display:'bottom',
+            mode: 'scroller',
+            dateFormat: 'yy-mm-dd', //返回结果格式化为年月格式
+            dateOrder : 'yymmdd',
+            yearText: '年',
+            monthText: '月',
+            dayText: '日',
+            endYear: currYear,//结束年份
+            maxDate:maxDiff,
+            startYear:startYear,
+            headerText:"请选择出生日期 " //自定义弹出框头部格式
+        });
+    };
+
+    $('.add-title').click(function(){
+        var slideContent=$(this).next('.add-content');
+        if(slideContent.is(':hidden')){
+            $(this).addClass('rotate');
+            slideContent.slideDown();
+        }else{
+            $(this).removeClass('rotate');
+            slideContent.slideUp();
+        };
+    });
+
+    $('#slidedown').click(function(){
+        $(this).find('img').addClass('rotateimg');
+        $('#slide-content').slideDown();
+    });
+    $('#slideup').click(function(){
+        $('#slidedown').find('img').removeClass('rotateimg');
+        $('#slide-content').slideUp();
+    });
+</script>
+</body>
+</html>

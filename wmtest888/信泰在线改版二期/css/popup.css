@@ -1,0 +1,88 @@
+
+/*弹框*/
+.popup{
+    display: none;
+}
+.popup .mask{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:#000;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    z-index:800;
+}
+.popup .txt-wrp{
+    position:fixed;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius:0.5rem;
+    z-index:1000;
+    width: 80%;
+    max-width:30rem;
+    background: #fff;
+}
+.popup .title{
+    position: relative;
+    border-radius: 4px;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.close_btn{
+    position: absolute;
+    color: #fff;
+    top:0;
+    right:0;
+    font-size: 2rem;
+    width: 4rem;
+    height:4rem;
+    line-height: 4rem;
+    background: #FB4343;
+    border-top-right-radius: 0.5rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.triangle-bottomleft{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 5rem solid #fff;
+    border-right: 5rem solid transparent;
+    position: absolute;
+    top:-0.5rem;
+    right:-0.5rem;
+}
+.closetxt{
+    position: absolute;
+    top:-1rem;
+    right:6px;
+}
+
+.popup .txt-wrp .txt{
+    padding:10px 20px 20px;
+    font-size: 1.4rem;
+    line-height: 160%;
+}
+.popup .txt-wrp .links{
+    margin:0 auto;
+    background: #fff;
+    width: 92%;
+    border-top:1px solid #ccc;
+}
+.popup .txt-wrp .links .btn{
+    display: inline-block;
+    color: #FF6666;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+}

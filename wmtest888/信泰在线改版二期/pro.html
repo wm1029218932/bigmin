@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/pro.css"/>
     <link rel="stylesheet" href="css/add.css"/>
+    <link rel="stylesheet" href="css/popup.css"/>
     <link rel="stylesheet" href="css/mobiscroll.custom-2.17.0.min.css"/>
     <script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
     <script type="text/javascript" src="js/mobiscroll.custom-2.17.0.min.js"></script>
@@ -281,7 +282,9 @@
     $(function(){
         //设置banner宽高比例，750/430
         $('.banner').height($(window).width()*0.573);
-
+        $(window).resize(function(){
+            $('.banner').height($(window).width()*0.573);
+        });
         //tab
         $('.menu').on('click',function(){
             var index = $(this).index();

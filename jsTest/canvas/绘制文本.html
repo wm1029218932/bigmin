@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="drawing" width="800" height="800">
+
+    </canvas>
+<script>
+    var drawing = document.getElementById('drawing');
+    //确定浏览器支持canvas元素
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');
+
+        //开始路径
+        context.beginPath();
+
+        //绘制圆心为(100,100)，半径为99的圆
+        context.arc(100,100,99,0,2*Math.PI,false);
+
+        //绘制内圆
+        context.moveTo(194,100);
+        context.arc(100,100,94,0,2*Math.PI,false);
+
+        //绘制分针
+        context.moveTo(100,100);
+        context.lineTo(100,15);
+
+        //绘制时针
+        context.moveTo(100,100);
+        context.lineTo(35,100);
+
+        //描边
+        context.stroke();
+
+        //绘制文本
+        context.font = 'bold 14px Arial';
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        context.fillText('12',100,15);
+
+        var fontSize = 100;
+        context.font = fontSize + 'px Arial';
+
+        //measureText()利用font、textAlign、textBaseLine的当前值计算指定文本的大小
+        while(context.measureText('Hello World').width > 140){
+            fontSize--;
+            context.font = fontSize + 'px Arial';
+        }
+        context.textAlign = 'start';
+        context.fillText('Hello World',10,300);
+        context.fillText('fontsize is ' + fontSize + 'px',10,400);
+
+    }
+</script>
+</body>
+</html>

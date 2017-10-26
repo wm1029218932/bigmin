@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="drawing" width="800" height="800">
+
+    </canvas>
+<script>
+    var drawing = document.getElementById('drawing');
+    //确定浏览器支持canvas元素
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');
+        context.beginPath();
+        context.arc(100,100,99,0,2*Math.PI,false);
+
+    }
+</script>
+</body>
+</html>

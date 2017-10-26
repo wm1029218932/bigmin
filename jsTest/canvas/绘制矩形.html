@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="drawing" width="300" height="300">
+
+    </canvas>
+<script>
+    var drawing = document.getElementById('drawing');
+    //确定浏览器支持canvas元素
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');
+
+        //设置描边和填充，所有涉及描边和填充的都会应用这个样式，直至重新设置这两个值
+        context.strokeStyle = 'pink';
+        context.fillStyle = 'pink';
+
+        //绘制红色矩形，以(10,10)为起点，width为50,height为50
+        context.fillRect(10,10,50,50);
+
+        //绘制蓝色半透明矩形
+        context.fillStyle = 'rgba(0,0,255,0.5)';
+        context.fillRect(30,30,50,50);
+
+        //绘制红色描边矩形
+        context.strokeRect(50,50,50,50);
+
+        //绘制蓝色半透明描边矩形
+        context.strokeStyle = 'rgba(0,0,255,0.5)';
+        context.strokeRect(70,70,50,50);
+
+        //清楚指定区域矩形
+        context.clearRect(30,30,30,30);
+
+    }
+</script>
+</body>
+</html>
